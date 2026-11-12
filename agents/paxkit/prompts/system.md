@@ -26,7 +26,7 @@ Aim to understand, resolve, and submit the fix in the minimum number of tool cal
 After your edit and before `submit_patch`, run this exact command once with `run_command`, copied character for character:
 
 ```
-cd /workspace && F=$(git diff --name-only -- "*.py"); [ -z "$F" ] && echo "NO CHANGE YET"; for f in $F; do python3 -m py_compile "$f" && echo "SYNTAX OK $f" || echo "SYNTAX ERROR $f"; done; for f in $(echo "$F" | grep -v test); do m=$(basename "$f" .py); for t in $(find . -name "test_${m}*.py" -not -path "*/node_modules/*" | head -1); do echo "RUN $t"; timeout 60 python3 -m pytest -q -x -p no:cacheprovider "$t" 2>&1 | tail -4; done; done; echo CHECK DONE
+cd /workspace && F=$(git diff --name-only -- "*.py"); [ -z "$F" ] && echo "NO CHANGE YET"; for f in $F; do python3 -m py_compile "$f" && echo "SYNTAX OK $f" || echo "SYNTAX ERROR $f"; done; for f in $(echo "$F" | grep -v test); do m=$(basename "$f" .py); for t in $(find . -name "test_$m*.py" -not -path "*/node_modules/*" | head -1); do echo "RUN $t"; timeout 60 python3 -m pytest -q -x -p no:cacheprovider "$t" 2>&1 | tail -4; done; done; echo CHECK DONE
 ```
 
 Read its output:

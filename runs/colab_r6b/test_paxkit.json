@@ -1,0 +1,60 @@
+{
+ "treat": [
+  "colab_r6a:cb_paxkit_r1_e4b_L0",
+  "colab_r6b:cb_paxkit_r2_e4b_L0"
+ ],
+ "control": [
+  "colab_r5a:cb_base_r3_e4b_L0",
+  "colab_r5b:cb_base_r4_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "colab_r6a:cb_paxkit_r1_e4b_L0 vs colab_r5a:cb_base_r3_e4b_L0": {
+   "n": 127,
+   "treat_solved": 0,
+   "control_solved": 16,
+   "only_treat": 0,
+   "only_control": 16,
+   "net": -16,
+   "p_mcnemar": 3.0517578125e-05,
+   "d011_outcome": false
+  },
+  "colab_r6a:cb_paxkit_r1_e4b_L0 vs colab_r5b:cb_base_r4_e4b_L0": {
+   "n": 127,
+   "treat_solved": 0,
+   "control_solved": 16,
+   "only_treat": 0,
+   "only_control": 16,
+   "net": -16,
+   "p_mcnemar": 3.0517578125e-05,
+   "d011_outcome": false
+  },
+  "colab_r6b:cb_paxkit_r2_e4b_L0 vs colab_r5a:cb_base_r3_e4b_L0": {
+   "n": 127,
+   "treat_solved": 0,
+   "control_solved": 16,
+   "only_treat": 0,
+   "only_control": 16,
+   "net": -16,
+   "p_mcnemar": 3.0517578125e-05,
+   "d011_outcome": false
+  },
+  "colab_r6b:cb_paxkit_r2_e4b_L0 vs colab_r5b:cb_base_r4_e4b_L0": {
+   "n": 127,
+   "treat_solved": 0,
+   "control_solved": 16,
+   "only_treat": 0,
+   "only_control": 16,
+   "net": -16,
+   "p_mcnemar": 3.0517578125e-05,
+   "d011_outcome": false
+  }
+ },
+ "rule": "signflip: D > 0 and p < 0.01",
+ "signflip": {
+  "D": -32,
+  "n_nonzero": 20,
+  "p_two_sided": 1.9073486328125e-06
+ },
+ "verdict": "not shown"
+}
