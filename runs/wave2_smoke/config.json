@@ -1,0 +1,17 @@
+{
+ "run_id": "wave2_smoke",
+ "purpose": "Smoke for wave 2: does the patch bundle (no edit_file/write_file; changes go through one `git apply` heredoc in run_command) validate, run and get graded in the official harness?",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "patch_L3",
+   "bundle": "patch",
+   "level": "L3"
+  }
+ ],
+ "n_tasks": 6,
+ "seed": 7,
+ "concurrency": 6,
+ "deadline_minutes": 40
+}

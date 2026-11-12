@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-wave3",
+ "script_sha256": "70a1850bd05e46bbd80e32b7e522f75bfa7b020e83fb5874646cb8344db41282",
+ "payload_sha256": "3745257dc0822bf11e13418fc954483751c311615077e727f6c72b2901623e06",
+ "bundles": {
+  "hunk": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

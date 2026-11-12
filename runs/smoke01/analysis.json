@@ -1,0 +1,215 @@
+{
+ "reference_arm": "base_L0",
+ "n_rows": 12,
+ "status_counts": {
+  "base_L3": {
+   "done": 6
+  },
+  "base_L0": {
+   "done": 6
+  }
+ },
+ "n_common_tasks": 6,
+ "arms": {
+  "base_L0": {
+   "k": 0,
+   "n": 6,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.3903
+   ],
+   "all_tasks_run": {
+    "k": 0,
+    "n": 6,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.3903
+    ]
+   },
+   "no_patch": 2,
+   "median_seconds": 160.0,
+   "total_hours": 0.29,
+   "mean_tool_calls": 10.67,
+   "level": "L0",
+   "bundle": "base"
+  },
+  "base_L3": {
+   "k": 1,
+   "n": 6,
+   "rate": 0.1667,
+   "ci95": [
+    0.0301,
+    0.5635
+   ],
+   "all_tasks_run": {
+    "k": 1,
+    "n": 6,
+    "rate": 0.1667,
+    "ci95": [
+     0.0301,
+     0.5635
+    ]
+   },
+   "no_patch": 2,
+   "median_seconds": 179.5,
+   "total_hours": 0.31,
+   "mean_tool_calls": 8.67,
+   "level": "L3",
+   "bundle": "base"
+  }
+ },
+ "paired_vs_reference": {
+  "base_L3": {
+   "n": 6,
+   "arm": 1,
+   "reference": 0,
+   "both": 0,
+   "only_arm": 1,
+   "only_reference": 0,
+   "p_mcnemar": 1.0
+  }
+ },
+ "by_repo": {
+  "Textualize/rich": {
+   "base_L0": {
+    "k": 0,
+    "n": 2,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.6576
+    ]
+   },
+   "base_L3": {
+    "k": 1,
+    "n": 2,
+    "rate": 0.5,
+    "ci95": [
+     0.0945,
+     0.9055
+    ]
+   }
+  },
+  "encode/httpx": {
+   "base_L0": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "base_L3": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   }
+  },
+  "fastapi/fastapi": {
+   "base_L0": {
+    "k": 0,
+    "n": 3,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.5615
+    ]
+   },
+   "base_L3": {
+    "k": 0,
+    "n": 3,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.5615
+    ]
+   }
+  }
+ },
+ "by_patch_size": {
+  "1 file, 1 hunk": {
+   "base_L0": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "base_L3": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   }
+  },
+  "1 file, 2+ hunks": {
+   "base_L0": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "base_L3": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   }
+  },
+  "2+ files": {
+   "base_L0": {
+    "k": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.4899
+    ]
+   },
+   "base_L3": {
+    "k": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.4899
+    ]
+   }
+  }
+ },
+ "solved_tasks": {
+  "base_L0": [],
+  "base_L3": [
+   "rich_3105"
+  ]
+ },
+ "common_tasks": [
+  "fastapi_13786",
+  "fastapi_14099",
+  "fastapi_14262",
+  "httpx_3672",
+  "rich_3105",
+  "rich_3480"
+ ],
+ "run_ids": [
+  "smoke01"
+ ]
+}

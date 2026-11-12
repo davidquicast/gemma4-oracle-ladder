@@ -1,0 +1,20 @@
+{
+ "run_id": "wave4",
+ "purpose": "Wave 4 (D-020): the starter agent on E4B at L0 and L2, to complete the ladder on a second model (L3 is wave3b). Descriptive only, no rule. Also the dev-set estimate for an E4B leaderboard bundle (a project task).",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "base_e4b_L0",
+   "bundle": "base_e4b",
+   "level": "L0"
+  },
+  {
+   "name": "base_e4b_L2",
+   "bundle": "base_e4b",
+   "level": "L2"
+  }
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 100
+}

@@ -1,0 +1,39 @@
+{
+ "base": "google/gemma-4/transformers/gemma-4-e2b-it-qat-q4_0-unquantized/2",
+ "rank": 16,
+ "alpha": 16,
+ "target_modules": ".*language_model.*\\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)$",
+ "steps": 20,
+ "seq_len": 512,
+ "lr": 0.0001,
+ "losses": [
+  2.9519,
+  3.5725,
+  3.3199,
+  2.5968,
+  2.3931,
+  2.3303,
+  2.8281,
+  2.7962,
+  3.0983,
+  2.1289,
+  1.7716,
+  1.6225,
+  1.838,
+  1.6202,
+  1.9782,
+  2.0346,
+  1.7138,
+  1.4932,
+  1.6469,
+  1.5552
+ ],
+ "text": "CPython stdlib source: json.decoder, argparse, textwrap",
+ "n_tensors": 410,
+ "versions": {
+  "torch": "2.14.1+cu130",
+  "transformers": "5.22.2",
+  "peft": "0.21.2"
+ },
+ "gpu": "NVIDIA L4"
+}

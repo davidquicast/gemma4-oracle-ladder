@@ -1,0 +1,28 @@
+[{"stream_name":"stdout","time":1.70690865,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":68.599150793,"data":"[     68s] harness installed\n"}
+,{"stream_name":"stdout","time":107.164741678,"data":"[    106s] adapter lora_probe from /kaggle/input/datasets/d410qc/g4-lora-probe -\u003e /tmp/ladder/agents/lora_probe/adapters/lora_probe\n"}
+,{"stream_name":"stdout","time":107.166840475,"data":"[    106s] bundles valid: ['lora_probe'] adapters: {'lora_probe': '/tmp/ladder/agents/lora_probe/adapters/lora_probe/adapter_model.safetensors'}\n"}
+,{"stream_name":"stdout","time":107.762289087,"data":"[    107s] gpus ['NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4'] tp 4 dtype bfloat16 cpus 48\n"}
+,{"stream_name":"stdout","time":489.238992372,"data":"[    488s] model ready\n"}
+,{"stream_name":"stdout","time":489.305244127,"data":"[    488s] 6 tasks; 127 gradable of 129\n"}
+,{"stream_name":"stderr","time":489.316008495,"data":"/kaggle/src/script.py:210: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":489.316027284,"data":"  t.extractall(dest)\n"}
+,{"stream_name":"stdout","time":528.078352362,"data":"[    527s] sandbox images built\n"}
+,{"stream_name":"stderr","time":528.08025394,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.\n"}
+,{"stream_name":"stderr","time":528.080272295,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stderr","time":528.080281674,"data":"/kaggle/src/script.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":528.08028495,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stdout","time":813.584009632,"data":"[    813s]  lora_probe_L0 fastapi_14099    done           resolved=False calls=10 285.5s | 0/1\n"}
+,{"stream_name":"stdout","time":820.817737204,"data":"[    820s]  lora_probe_L0 fastapi_13786    done           resolved=False calls=8 292.7s | 0/2\n"}
+,{"stream_name":"stdout","time":828.710442031,"data":"[    828s]  lora_probe_L0 httpx_3672       done           resolved=False calls=6 300.6s | 0/3\n"}
+,{"stream_name":"stdout","time":831.521163548,"data":"[    831s]  lora_probe_L0 rich_3105        done           resolved=False calls=10 303.4s | 0/4\n"}
+,{"stream_name":"stdout","time":831.530404467,"data":"[    831s]  lora_probe_L0 rich_3480        done           resolved=False calls=7 303.4s | 0/5\n"}
+,{"stream_name":"stdout","time":834.602789157,"data":"[    834s]  lora_probe_L0 fastapi_14262    done           resolved=False calls=6 306.5s | 0/6\n"}
+,{"stream_name":"stdout","time":840.652915519,"data":"[    840s] done {'lora_probe_L0': [0, 6]}\n"}
+,{"stream_name":"stderr","time":844.995324,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":844.995349496,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":845.166452194,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":845.166473828,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":845.861726111,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":846.745885242,"data":"[NbConvertApp] Writing 404587 bytes to __results__.html\n"}
+]

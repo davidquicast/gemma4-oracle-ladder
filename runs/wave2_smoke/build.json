@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-wave2-smoke",
+ "script_sha256": "01fd2cd149c8b0129d288b8870ae533b0295f97dbbedd9d79e9504663bf77003",
+ "payload_sha256": "2cd37013327e95fc01c977031ddfc569efdb1759492f41ce9c680ebd941ffd39",
+ "bundles": {
+  "patch": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

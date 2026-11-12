@@ -1,0 +1,46 @@
+[{"stream_name":"stdout","time":1.385445125,"data":"[      0s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":66.384571513,"data":"[     65s] harness installed\n"}
+,{"stream_name":"stdout","time":104.164031754,"data":"[    103s] bundles valid: ['base']\n"}
+,{"stream_name":"stdout","time":104.377205318,"data":"[    103s] gpus [] tp 1 cpus 4\n"}
+,{"stream_name":"stderr","time":139.43122493,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":139.431272699,"data":"  File \"/kaggle/src/script.py\", line 142, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":139.431290319,"data":"    server.start()\n"}
+,{"stream_name":"stderr","time":139.43129639,"data":"  File \"/usr/local/lib/python3.12/dist-packages/adk_submission/server.py\", line 305, in start\n"}
+,{"stream_name":"stderr","time":139.43149417,"data":"    self._wait_until_ready()\n"}
+,{"stream_name":"stderr","time":139.43150519,"data":"  File \"/usr/local/lib/python3.12/dist-packages/adk_submission/server.py\", line 326, in _wait_until_ready\n"}
+,{"stream_name":"stderr","time":139.431642059,"data":"    raise ServerStartupError(\n"}
+,{"stream_name":"stderr","time":139.431649959,"data":"adk_submission.errors.ServerStartupError: Inference server exited prematurely with code 1.\n"}
+,{"stream_name":"stderr","time":139.431654459,"data":"Server output:\n"}
+,{"stream_name":"stderr","time":139.43165863,"data":"W1111 03:44:22.666000 21 torch/utils/cpp_extension.py:118] No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'\n"}
+,{"stream_name":"stderr","time":139.43166389,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":139.43166869,"data":"  File \"\u003cfrozen runpy\u003e\", line 198, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":139.43167387,"data":"  File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\n"}
+,{"stream_name":"stderr","time":139.43167845,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py\", line 708, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":139.431683699,"data":"    parser = make_arg_parser(parser)\n"}
+,{"stream_name":"stderr","time":139.431688339,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.43169295,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/cli_args.py\", line 349, in make_arg_parser\n"}
+,{"stream_name":"stderr","time":139.431697359,"data":"    parser = AsyncEngineArgs.add_cli_args(parser)\n"}
+,{"stream_name":"stderr","time":139.43170137,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.43170537,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/engine/arg_utils.py\", line 2264, in add_cli_args\n"}
+,{"stream_name":"stderr","time":139.43170967,"data":"    parser = EngineArgs.add_cli_args(parser)\n"}
+,{"stream_name":"stderr","time":139.43171377,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.431717779,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/engine/arg_utils.py\", line 1294, in add_cli_args\n"}
+,{"stream_name":"stderr","time":139.43172207,"data":"    vllm_kwargs = get_kwargs(VllmConfig)\n"}
+,{"stream_name":"stderr","time":139.43172613,"data":"                  ^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.43173099,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/engine/arg_utils.py\", line 369, in get_kwargs\n"}
+,{"stream_name":"stderr","time":139.43175745,"data":"    return copy.deepcopy(_compute_kwargs(cls))\n"}
+,{"stream_name":"stderr","time":139.4317598,"data":"                         ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.43176172,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/engine/arg_utils.py\", line 280, in _compute_kwargs\n"}
+,{"stream_name":"stderr","time":139.43176386,"data":"    default = default.default_factory()  # type: ignore[call-arg]\n"}
+,{"stream_name":"stderr","time":139.43176576,"data":"              ^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.43176761,"data":"  File \"/usr/local/lib/python3.12/dist-packages/pydantic/_internal/_dataclasses.py\", line 121, in __init__\n"}
+,{"stream_name":"stderr","time":139.43176968,"data":"    s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)\n"}
+,{"stream_name":"stderr","time":139.43177169,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/config/device.py\", line 56, in __post_init__\n"}
+,{"stream_name":"stderr","time":139.43177366,"data":"    raise RuntimeError(\n"}
+,{"stream_name":"stderr","time":139.43177554,"data":"RuntimeError: Failed to infer device type, please set the environment variable `VLLM_LOGGING_LEVEL=DEBUG` to turn on verbose logging to help debug the issue.\n"}
+,{"stream_name":"stderr","time":139.43177794,"data":"\n"}
+,{"stream_name":"stderr","time":143.970927151,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":144.155686285,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":144.897632574,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":145.669767363,"data":"[NbConvertApp] Writing 394082 bytes to __results__.html\n"}
+]

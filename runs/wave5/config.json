@@ -1,0 +1,15 @@
+{
+ "run_id": "wave5",
+ "purpose": "Wave 5 (D-022): the rebuilt Personaxis persona (pax2: personaxis.md with ten layers, compiled PERSONA.md, delivering skill with guarantee, sourced knowledge exposed as a skill) on E4B at L0, against base_e4b_L0 of wave 4, same machine shape.",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "pax2_e4b_L0",
+   "bundle": "pax2_e4b",
+   "level": "L0"
+  }
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 70
+}

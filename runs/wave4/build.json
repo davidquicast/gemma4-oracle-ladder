@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-wave4",
+ "script_sha256": "fe6f7b98ba3c882718330748f2251e7e2e1880317f225d56ca23cf43fa958601",
+ "payload_sha256": "33bf3afb34917d19cd42ea74b3e1018b769777fb8134ac621d65a4d232a5b27c",
+ "bundles": {
+  "base_e4b": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

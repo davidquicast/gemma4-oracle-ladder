@@ -1,0 +1,17 @@
+{
+ "run_id": "wave3b_smoke",
+ "purpose": "Smoke for wave 3b: does base_e4b (E4B checkpoint, otherwise identical to base) load, run and get graded in the official harness?",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "base_e4b_L3",
+   "bundle": "base_e4b",
+   "level": "L3"
+  }
+ ],
+ "n_tasks": 6,
+ "seed": 7,
+ "concurrency": 6,
+ "deadline_minutes": 50
+}

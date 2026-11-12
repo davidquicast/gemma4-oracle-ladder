@@ -1,0 +1,17 @@
+{
+ "run_id": "wave3_smoke",
+ "purpose": "Smoke for wave 3: does the hunk bundle (one `git apply --recount --reject --unidiff-zero --ignore-whitespace` heredoc per file in run_command) validate, run and get graded in the official harness?",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "hunk_L3",
+   "bundle": "hunk",
+   "level": "L3"
+  }
+ ],
+ "n_tasks": 6,
+ "seed": 7,
+ "concurrency": 6,
+ "deadline_minutes": 40
+}

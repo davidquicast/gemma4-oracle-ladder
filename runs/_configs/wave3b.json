@@ -1,0 +1,20 @@
+{
+ "run_id": "wave3b",
+ "purpose": "Wave 3b (D-018, the work plan): base and hunk at L3 on E4B, descriptive only, no rule. Answers whether 'handed the fix, still failing' is specific to the 2.3B model.",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "base_e4b_L3",
+   "bundle": "base_e4b",
+   "level": "L3"
+  },
+  {
+   "name": "hunk_e4b_L3",
+   "bundle": "hunk_e4b",
+   "level": "L3"
+  }
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 300
+}

@@ -1,0 +1,9 @@
+{
+ "name": "lb01",
+ "submission_ref": 58229054,
+ "bundle": "base",
+ "status": "SubmissionStatus.COMPLETE",
+ "public_score": 0.03,
+ "read_utc": "2026-11-11T17:40:00Z",
+ "source": "kaggle competitions submissions -c gemma-4-developer-agent"
+}

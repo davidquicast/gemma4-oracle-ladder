@@ -1,0 +1,201 @@
+[{"stream_name":"stdout","time":2.8718842970000003,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":59.40374891,"data":"[     57s] harness installed\n"}
+,{"stream_name":"stdout","time":110.461793352,"data":"[    108s] bundles valid: ['hunk'] adapters: {}\n"}
+,{"stream_name":"stdout","time":111.440889114,"data":"[    109s] gpus ['NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4'] tp 4 dtype bfloat16 cpus 48\n"}
+,{"stream_name":"stdout","time":448.869138784,"data":"[    447s] model ready\n"}
+,{"stream_name":"stdout","time":448.99964974,"data":"[    447s] 6 tasks; 127 gradable of 129\n"}
+,{"stream_name":"stderr","time":449.123421087,"data":"/kaggle/src/script.py:210: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":449.123445816,"data":"  t.extractall(dest)\n"}
+,{"stream_name":"stdout","time":488.312240176,"data":"[    486s] sandbox images built\n"}
+,{"stream_name":"stderr","time":488.313344886,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.\n"}
+,{"stream_name":"stderr","time":488.313362593,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stderr","time":488.313407859,"data":"/kaggle/src/script.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":488.313415631,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stdout","time":528.941475507,"data":"[    527s]        hunk_L3 rich_3105        done           resolved=True calls=2 40.6s | 1/1\n"}
+,{"stream_name":"stdout","time":528.99237846,"data":"[    527s]        hunk_L3 rich_3480        done           resolved=True calls=4 40.7s | 2/2\n"}
+,{"stream_name":"stdout","time":536.793431699,"data":"[    535s]        hunk_L3 fastapi_14099    done           resolved=False calls=2 48.5s | 2/3\n"}
+,{"stream_name":"stderr","time":564.408633161,"data":"ERROR:swegemma.harness.agent_runner:Error during sandbox execution for task fastapi_13786\n"}
+,{"stream_name":"stderr","time":564.408662867,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":564.408667008,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 929, in acompletion\n"}
+,{"stream_name":"stderr","time":564.408669951,"data":"    headers, response = await self.make_openai_chat_completion_request(\n"}
+,{"stream_name":"stderr","time":564.408673032,"data":"                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408675705,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/litellm_core_utils/logging_utils.py\", line 297, in async_wrapper\n"}
+,{"stream_name":"stderr","time":564.408678637,"data":"    result = await func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.408681233,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408683702,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 460, in make_openai_chat_completion_request\n"}
+,{"stream_name":"stderr","time":564.408686324,"data":"    raise e\n"}
+,{"stream_name":"stderr","time":564.408688899,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 437, in make_openai_chat_completion_request\n"}
+,{"stream_name":"stderr","time":564.408702251,"data":"    await openai_aclient.chat.completions.with_raw_response.create(\n"}
+,{"stream_name":"stderr","time":564.4087044,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/_legacy_response.py\", line 384, in wrapped\n"}
+,{"stream_name":"stderr","time":564.408706404,"data":"    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))\n"}
+,{"stream_name":"stderr","time":564.408708302,"data":"                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408710158,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/resources/chat/completions/completions.py\", line 2714, in create\n"}
+,{"stream_name":"stderr","time":564.408712117,"data":"    return await self._post(\n"}
+,{"stream_name":"stderr","time":564.408713867,"data":"           ^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408715794,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/_base_client.py\", line 1913, in post\n"}
+,{"stream_name":"stderr","time":564.408717787,"data":"    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n"}
+,{"stream_name":"stderr","time":564.408719686,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408721536,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/_base_client.py\", line 1698, in request\n"}
+,{"stream_name":"stderr","time":564.408723526,"data":"    raise self._make_status_error_from_response(err.response) from None\n"}
+,{"stream_name":"stderr","time":564.408726602,"data":"openai.BadRequestError: Error code: 400 - {'error': {'message': \"This model's maximum context length is 32768 tokens. However, you requested 16384 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)\", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}\n"}
+,{"stream_name":"stderr","time":564.408730303,"data":"\n"}
+,{"stream_name":"stderr","time":564.408731998,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":564.40873404,"data":"\n"}
+,{"stream_name":"stderr","time":564.408735749,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":564.408737557,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/main.py\", line 620, in acompletion\n"}
+,{"stream_name":"stderr","time":564.408739488,"data":"    response = await init_response\n"}
+,{"stream_name":"stderr","time":564.408741318,"data":"               ^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408743063,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 989, in acompletion\n"}
+,{"stream_name":"stderr","time":564.408745029,"data":"    raise OpenAIError(\n"}
+,{"stream_name":"stderr","time":564.408746827,"data":"litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'message': \"This model's maximum context length is 32768 tokens. However, you requested 16384 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)\", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}\n"}
+,{"stream_name":"stderr","time":564.408749634,"data":"\n"}
+,{"stream_name":"stderr","time":564.408751331,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":564.408755784,"data":"\n"}
+,{"stream_name":"stderr","time":564.40875761,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":564.408759399,"data":"  File \"/usr/local/lib/python3.12/dist-packages/swegemma/harness/agent_runner.py\", line 806, in run_agent_sandbox\n"}
+,{"stream_name":"stderr","time":564.408761347,"data":"    async for _event in runner.run_async(\n"}
+,{"stream_name":"stderr","time":564.408763104,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 613, in run_async\n"}
+,{"stream_name":"stderr","time":564.408765315,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.40876746,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 596, in _run_with_trace\n"}
+,{"stream_name":"stderr","time":564.408769474,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.408771254,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 858, in _exec_with_plugin\n"}
+,{"stream_name":"stderr","time":564.408773262,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.40877496,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 585, in execute\n"}
+,{"stream_name":"stderr","time":564.408776867,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.408778662,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/agents/base_agent.py\", line 295, in run_async\n"}
+,{"stream_name":"stderr","time":564.408780593,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.40878244,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/agents/llm_agent.py\", line 488, in _run_async_impl\n"}
+,{"stream_name":"stderr","time":564.408784764,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.40878663,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 869, in run_async\n"}
+,{"stream_name":"stderr","time":564.408788645,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.408790392,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 946, in _run_one_step_async\n"}
+,{"stream_name":"stderr","time":564.408792391,"data":"    async for llm_response in agen:\n"}
+,{"stream_name":"stderr","time":564.408794128,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 1328, in _call_llm_async\n"}
+,{"stream_name":"stderr","time":564.408796102,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":564.408798005,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 1306, in _call_llm_with_tracing\n"}
+,{"stream_name":"stderr","time":564.40880003,"data":"    async for llm_response in agen:\n"}
+,{"stream_name":"stderr","time":564.408801846,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 1389, in _run_and_handle_error\n"}
+,{"stream_name":"stderr","time":564.408803843,"data":"    async for response in agen:\n"}
+,{"stream_name":"stderr","time":564.408805603,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 418, in _run_and_handle_error\n"}
+,{"stream_name":"stderr","time":564.408807554,"data":"    raise model_error\n"}
+,{"stream_name":"stderr","time":564.408809272,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 391, in _run_and_handle_error\n"}
+,{"stream_name":"stderr","time":564.40881319,"data":"    async for llm_response in agen:\n"}
+,{"stream_name":"stderr","time":564.40881513,"data":"  File \"/usr/local/lib/python3.12/dist-packages/adk_submission/resolvers/generation.py\", line 322, in _patched_generate_content_async\n"}
+,{"stream_name":"stderr","time":564.408817174,"data":"    async for llm_response in orig_generate_async(\n"}
+,{"stream_name":"stderr","time":564.408819018,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/models/lite_llm.py\", line 2467, in generate_content_async\n"}
+,{"stream_name":"stderr","time":564.408821013,"data":"    response = await self.llm_client.acompletion(**completion_args)\n"}
+,{"stream_name":"stderr","time":564.40882282,"data":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.40882462,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/models/lite_llm.py\", line 513, in acompletion\n"}
+,{"stream_name":"stderr","time":564.408826553,"data":"    return await acompletion(\n"}
+,{"stream_name":"stderr","time":564.408828289,"data":"           ^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408830148,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/utils.py\", line 2072, in wrapper_async\n"}
+,{"stream_name":"stderr","time":564.408832128,"data":"    raise e\n"}
+,{"stream_name":"stderr","time":564.408833897,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/utils.py\", line 1892, in wrapper_async\n"}
+,{"stream_name":"stderr","time":564.408835841,"data":"    result = await original_function(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.408837655,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.408839721,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/main.py\", line 639, in acompletion\n"}
+,{"stream_name":"stderr","time":564.408841659,"data":"    raise exception_type(\n"}
+,{"stream_name":"stderr","time":564.40884339,"data":"          ^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.40884523,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 2456, in exception_type\n"}
+,{"stream_name":"stderr","time":564.408847336,"data":"    raise e\n"}
+,{"stream_name":"stderr","time":564.408849065,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 400, in exception_type\n"}
+,{"stream_name":"stderr","time":564.408851245,"data":"    raise ContextWindowExceededError(\n"}
+,{"stream_name":"stderr","time":564.408853091,"data":"litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 32768 tokens. However, you requested 16384 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)\n"}
+,{"stream_name":"stdout","time":572.021089365,"data":"[    570s]        hunk_L3 fastapi_13786    done           resolved=False calls=9 83.7s | 2/4\n"}
+,{"stream_name":"stdout","time":605.869388327,"data":"[    604s]        hunk_L3 fastapi_14262    done           resolved=False calls=5 117.5s | 2/5\n"}
+,{"stream_name":"stderr","time":711.649252565,"data":"ERROR:swegemma.harness.agent_runner:Error during sandbox execution for task httpx_3672\n"}
+,{"stream_name":"stderr","time":711.649296257,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":711.649308261,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 929, in acompletion\n"}
+,{"stream_name":"stderr","time":711.649310807,"data":"    headers, response = await self.make_openai_chat_completion_request(\n"}
+,{"stream_name":"stderr","time":711.649312796,"data":"                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649314673,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/litellm_core_utils/logging_utils.py\", line 297, in async_wrapper\n"}
+,{"stream_name":"stderr","time":711.649316822,"data":"    result = await func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":711.649318603,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649320466,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 460, in make_openai_chat_completion_request\n"}
+,{"stream_name":"stderr","time":711.649322423,"data":"    raise e\n"}
+,{"stream_name":"stderr","time":711.649324145,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 437, in make_openai_chat_completion_request\n"}
+,{"stream_name":"stderr","time":711.649326138,"data":"    await openai_aclient.chat.completions.with_raw_response.create(\n"}
+,{"stream_name":"stderr","time":711.64932796,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/_legacy_response.py\", line 384, in wrapped\n"}
+,{"stream_name":"stderr","time":711.649329943,"data":"    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))\n"}
+,{"stream_name":"stderr","time":711.649331852,"data":"                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649333696,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/resources/chat/completions/completions.py\", line 2714, in create\n"}
+,{"stream_name":"stderr","time":711.649335774,"data":"    return await self._post(\n"}
+,{"stream_name":"stderr","time":711.64933759,"data":"           ^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649339291,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/_base_client.py\", line 1913, in post\n"}
+,{"stream_name":"stderr","time":711.649341201,"data":"    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n"}
+,{"stream_name":"stderr","time":711.649343041,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649344856,"data":"  File \"/usr/local/lib/python3.12/dist-packages/openai/_base_client.py\", line 1698, in request\n"}
+,{"stream_name":"stderr","time":711.649346855,"data":"    raise self._make_status_error_from_response(err.response) from None\n"}
+,{"stream_name":"stderr","time":711.649351187,"data":"openai.BadRequestError: Error code: 400 - {'error': {'message': \"This model's maximum context length is 32768 tokens. However, you requested 16384 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)\", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}\n"}
+,{"stream_name":"stderr","time":711.649355157,"data":"\n"}
+,{"stream_name":"stderr","time":711.64936618,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":711.649368103,"data":"\n"}
+,{"stream_name":"stderr","time":711.649369741,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":711.649371512,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/main.py\", line 620, in acompletion\n"}
+,{"stream_name":"stderr","time":711.649376192,"data":"    response = await init_response\n"}
+,{"stream_name":"stderr","time":711.649378072,"data":"               ^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649379859,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/llms/openai/openai.py\", line 989, in acompletion\n"}
+,{"stream_name":"stderr","time":711.649381893,"data":"    raise OpenAIError(\n"}
+,{"stream_name":"stderr","time":711.649383717,"data":"litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'message': \"This model's maximum context length is 32768 tokens. However, you requested 16384 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)\", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}\n"}
+,{"stream_name":"stderr","time":711.64938636,"data":"\n"}
+,{"stream_name":"stderr","time":711.649387957,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":711.649389756,"data":"\n"}
+,{"stream_name":"stderr","time":711.649391485,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":711.649400312,"data":"  File \"/usr/local/lib/python3.12/dist-packages/swegemma/harness/agent_runner.py\", line 806, in run_agent_sandbox\n"}
+,{"stream_name":"stderr","time":711.649402497,"data":"    async for _event in runner.run_async(\n"}
+,{"stream_name":"stderr","time":711.649404289,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 613, in run_async\n"}
+,{"stream_name":"stderr","time":711.649406352,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649408166,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 596, in _run_with_trace\n"}
+,{"stream_name":"stderr","time":711.649410094,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649411862,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 858, in _exec_with_plugin\n"}
+,{"stream_name":"stderr","time":711.649413826,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649415621,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/runners.py\", line 585, in execute\n"}
+,{"stream_name":"stderr","time":711.649417529,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649419457,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/agents/base_agent.py\", line 295, in run_async\n"}
+,{"stream_name":"stderr","time":711.649421463,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649423164,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/agents/llm_agent.py\", line 488, in _run_async_impl\n"}
+,{"stream_name":"stderr","time":711.649425142,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649427282,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 869, in run_async\n"}
+,{"stream_name":"stderr","time":711.649429419,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649431155,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 946, in _run_one_step_async\n"}
+,{"stream_name":"stderr","time":711.649433188,"data":"    async for llm_response in agen:\n"}
+,{"stream_name":"stderr","time":711.649434997,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 1328, in _call_llm_async\n"}
+,{"stream_name":"stderr","time":711.649439083,"data":"    async for event in agen:\n"}
+,{"stream_name":"stderr","time":711.649440923,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 1306, in _call_llm_with_tracing\n"}
+,{"stream_name":"stderr","time":711.649442922,"data":"    async for llm_response in agen:\n"}
+,{"stream_name":"stderr","time":711.64944472,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 1389, in _run_and_handle_error\n"}
+,{"stream_name":"stderr","time":711.649446723,"data":"    async for response in agen:\n"}
+,{"stream_name":"stderr","time":711.649448529,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 418, in _run_and_handle_error\n"}
+,{"stream_name":"stderr","time":711.649450554,"data":"    raise model_error\n"}
+,{"stream_name":"stderr","time":711.649452303,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/flows/llm_flows/base_llm_flow.py\", line 391, in _run_and_handle_error\n"}
+,{"stream_name":"stderr","time":711.649454247,"data":"    async for llm_response in agen:\n"}
+,{"stream_name":"stderr","time":711.649455985,"data":"  File \"/usr/local/lib/python3.12/dist-packages/adk_submission/resolvers/generation.py\", line 322, in _patched_generate_content_async\n"}
+,{"stream_name":"stderr","time":711.649466891,"data":"    async for llm_response in orig_generate_async(\n"}
+,{"stream_name":"stderr","time":711.64947036,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/models/lite_llm.py\", line 2467, in generate_content_async\n"}
+,{"stream_name":"stderr","time":711.649472369,"data":"    response = await self.llm_client.acompletion(**completion_args)\n"}
+,{"stream_name":"stderr","time":711.649474218,"data":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649476045,"data":"  File \"/usr/local/lib/python3.12/dist-packages/google/adk/models/lite_llm.py\", line 513, in acompletion\n"}
+,{"stream_name":"stderr","time":711.649478,"data":"    return await acompletion(\n"}
+,{"stream_name":"stderr","time":711.649479741,"data":"           ^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649481455,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/utils.py\", line 2072, in wrapper_async\n"}
+,{"stream_name":"stderr","time":711.649483573,"data":"    raise e\n"}
+,{"stream_name":"stderr","time":711.64948532,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/utils.py\", line 1892, in wrapper_async\n"}
+,{"stream_name":"stderr","time":711.649487222,"data":"    result = await original_function(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":711.649489046,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.64949127,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/main.py\", line 639, in acompletion\n"}
+,{"stream_name":"stderr","time":711.649493179,"data":"    raise exception_type(\n"}
+,{"stream_name":"stderr","time":711.649494914,"data":"          ^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":711.649496608,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 2456, in exception_type\n"}
+,{"stream_name":"stderr","time":711.649498683,"data":"    raise e\n"}
+,{"stream_name":"stderr","time":711.64950038,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 400, in exception_type\n"}
+,{"stream_name":"stderr","time":711.649505081,"data":"    raise ContextWindowExceededError(\n"}
+,{"stream_name":"stderr","time":711.649506993,"data":"litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 32768 tokens. However, you requested 16384 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)\n"}
+,{"stream_name":"stdout","time":713.124953009,"data":"[    711s]        hunk_L3 httpx_3672       done           resolved=False calls=7 224.8s | 2/6\n"}
+,{"stream_name":"stdout","time":719.121266289,"data":"[    717s] done {'hunk_L3': [2, 6]}\n"}
+,{"stream_name":"stderr","time":723.539245537,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":723.539266317,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":723.783175978,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":723.783197855,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":724.609065625,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":725.408223192,"data":"[NbConvertApp] Writing 405259 bytes to __results__.html\n"}
+]

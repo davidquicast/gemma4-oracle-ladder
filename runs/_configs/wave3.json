@@ -1,0 +1,30 @@
+{
+ "run_id": "wave3",
+ "purpose": "Wave 3 (D-018): confirmatory test of the hunk edit protocol. hunk_L3 and hunk_r2_L3 are two runs of the same arm, tested against the two existing base L3 runs with the rule fixed in docs/rules.md; hunk_L2 and hunk_L0 test whether the gain carries over to conditions where the model must write the fix.",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "hunk_L3",
+   "bundle": "hunk",
+   "level": "L3"
+  },
+  {
+   "name": "hunk_r2_L3",
+   "bundle": "hunk",
+   "level": "L3"
+  },
+  {
+   "name": "hunk_L2",
+   "bundle": "hunk",
+   "level": "L2"
+  },
+  {
+   "name": "hunk_L0",
+   "bundle": "hunk",
+   "level": "L0"
+  }
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 330
+}

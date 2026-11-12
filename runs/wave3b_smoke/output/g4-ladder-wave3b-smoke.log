@@ -1,0 +1,27 @@
+[{"stream_name":"stdout","time":1.7445441499999998,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":53.508856418,"data":"[     52s] harness installed\n"}
+,{"stream_name":"stdout","time":94.212233785,"data":"[     93s] bundles valid: ['base_e4b'] adapters: {}\n"}
+,{"stream_name":"stdout","time":95.015001092,"data":"[     94s] gpus ['NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4'] tp 4 dtype bfloat16 cpus 48\n"}
+,{"stream_name":"stdout","time":425.427547294,"data":"[    424s] model ready\n"}
+,{"stream_name":"stdout","time":425.605088849,"data":"[    425s] 6 tasks; 127 gradable of 129\n"}
+,{"stream_name":"stderr","time":425.982113824,"data":"/kaggle/src/script.py:210: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":425.982157525,"data":"  t.extractall(dest)\n"}
+,{"stream_name":"stdout","time":464.535836375,"data":"[    463s] sandbox images built\n"}
+,{"stream_name":"stderr","time":464.536951379,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.\n"}
+,{"stream_name":"stderr","time":464.536969974,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stderr","time":464.536982398,"data":"/kaggle/src/script.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":464.536995041,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stdout","time":490.470027707,"data":"[    489s]    base_e4b_L3 rich_3105        done           resolved=True calls=2 25.9s | 1/1\n"}
+,{"stream_name":"stdout","time":514.838437256,"data":"[    514s]    base_e4b_L3 rich_3480        done           resolved=True calls=4 50.3s | 2/2\n"}
+,{"stream_name":"stdout","time":581.07547932,"data":"[    580s]    base_e4b_L3 httpx_3672       done           resolved=False calls=16 116.5s | 2/3\n"}
+,{"stream_name":"stdout","time":619.528596718,"data":"[    618s]    base_e4b_L3 fastapi_13786    done           resolved=False calls=13 155.0s | 2/4\n"}
+,{"stream_name":"stdout","time":657.60520977,"data":"[    657s]    base_e4b_L3 fastapi_14262    done           resolved=False calls=7 193.1s | 2/5\n"}
+,{"stream_name":"stdout","time":698.952539342,"data":"[    698s]    base_e4b_L3 fastapi_14099    done           resolved=False calls=22 234.4s | 2/6\n"}
+,{"stream_name":"stdout","time":704.906653847,"data":"[    704s] done {'base_e4b_L3': [2, 6]}\n"}
+,{"stream_name":"stderr","time":709.27462185,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":709.274646475,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":709.465509997,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":709.465529379,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":710.191002124,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":711.100394705,"data":"[NbConvertApp] Writing 404959 bytes to __results__.html\n"}
+]

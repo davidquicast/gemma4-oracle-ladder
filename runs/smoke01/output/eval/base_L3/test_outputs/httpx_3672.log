@@ -1,0 +1,27 @@
+STDOUT:
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_parsers.py ____________________
+ImportError while importing test module '/tmp/swegemma_sandbox_d250ea38-25a_t_yjcr26/workspace/tests/test_parsers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/tmp/ladder/pycp313/python/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_parsers.py:1: in <module>
+    import httpx
+src/httpx/__init__.py:2: in <module>
+    from ._client import *  # Client
+    ^^^^^^^^^^^^^^^^^^^^^^
+src/httpx/_client.py:6: in <module>
+    from ._pool import ConnectionPool, Transport
+src/httpx/_pool.py:7: in <module>
+    from ._network import Lock, NetworkBackend, Semaphore
+E   ImportError: cannot import name 'Lock' from 'httpx._network' (/tmp/swegemma_sandbox_d250ea38-25a_t_yjcr26/workspace/src/httpx/_network.py)
+- generated xml file: /tmp/swegemma_sandbox_d250ea38-25a_t_yjcr26/tmp/_swegemma_junit_28f8e966eccb.xml -
+=========================== short test summary info ============================
+ERROR tests/test_parsers.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.19s
+
+STDERR:

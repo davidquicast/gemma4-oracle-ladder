@@ -1,0 +1,1238 @@
+diff --git a/src/ahttpx/_parsers.py b/src/ahttpx/_parsers.py
+index 8a52a56..3b078b3 100644
+--- a/src/ahttpx/_parsers.py
++++ b/src/ahttpx/_parsers.py
+@@ -1,515 +1,14 @@
+-import enum
++async def recv_body(self) -> bytes:
++    self.recv_state = State.DONE
++    return body
+ 
+-from ._streams import Stream
+-
+-__all__ = ['HTTPParser', 'Mode', 'ProtocolError']
+-
+-
+-# TODO...
+-
+-# * Upgrade
+-# * CONNECT
+-
+-# * Support 'Expect: 100 Continue'
+-# * Add 'Error' state transitions
+-# * Add tests to trickle data
+-# * Add type annotations
+-
+-# * Optional... HTTP/1.0 support
+-# * Read trailing headers on Transfer-Encoding: chunked. Not just '\r\n'.
+-# * When writing Transfer-Encoding: chunked, split large writes into buffer size.
+-# * When reading Transfer-Encoding: chunked, handle incomplete reads from large chunk sizes.
+-# * .read() doesn't document if will always return maximum available.
+-
+-# * validate method, target, protocol in request line
+-# * validate protocol, status_code, reason_phrase in response line
+-# * validate name, value on headers
+-
+-
+-class State(enum.Enum):
+-    WAIT = 0
+-    SEND_METHOD_LINE = 1
+-    SEND_STATUS_LINE = 2
+-    SEND_HEADERS = 3
+-    SEND_BODY = 4
+-    RECV_METHOD_LINE = 5
+-    RECV_STATUS_LINE = 6
+-    RECV_HEADERS = 7
+-    RECV_BODY = 8
+-    DONE = 9
+-    CLOSED = 10
+-
+-
+-class Mode(enum.Enum):
+-    CLIENT = 0
+-    SERVER = 1
+-
+-
+-# The usual transitions will be...
+-
+-# IDLE, IDLE
+-# SEND_HEADERS, IDLE
+-# SEND_BODY, IDLE
+-# DONE, IDLE
+-# DONE, SEND_HEADERS
+-# DONE, SEND_BODY
+-# DONE, DONE
+-
+-# Then either back to IDLE, IDLE
+-# or move to CLOSED, CLOSED
+-
+-# 1. It is also valid for the server to start
+-#    sending the response without waiting for the
+-#    complete request.
+-# 2. 1xx status codes are interim states, and
+-#    transition from SEND_HEADERS back to IDLE
+-# 3. ...
+-
+-class ProtocolError(Exception):
+-    pass
+-
+-
+-class HTTPParser:
+-    """
+-    Usage...
+-
+-    client = HTTPParser(writer, reader)
+-    client.send_method_line()
+-    client.send_headers()
+-    client.send_body()
+-    client.recv_status_line()
+-    client.recv_headers()
+-    client.recv_body()
+-    client.complete()
+-    client.close()
+-    """
+-    def __init__(self, stream: Stream, mode: str) -> None:
+-        self.stream = stream
+-        self.parser = ReadAheadParser(stream)
+-        self.mode = {'CLIENT': Mode.CLIENT, 'SERVER': Mode.SERVER}[mode]
+-
+-        # Track state...
+-        if self.mode == Mode.CLIENT:
+-            self.send_state: State = State.SEND_METHOD_LINE
+-            self.recv_state: State = State.WAIT
+-        else:
+-            self.recv_state = State.RECV_METHOD_LINE
+-            self.send_state = State.WAIT
+-
+-        # Track message framing...
+-        self.send_content_length: int | None = 0
+-        self.recv_content_length: int | None = 0
+-        self.send_seen_length = 0
+-        self.recv_seen_length = 0
+-
+-        # Track connection keep alive...
+-        self.send_keep_alive = True
+-        self.recv_keep_alive = True
+-
+-        # Special states...
+-        self.processing_1xx = False
+-
+-    async def send_method_line(self, method: bytes, target: bytes, protocol: bytes) -> None:
+-        """
+-        Send the initial request line:
+-
+-        >>> p.send_method_line(b'GET', b'/', b'HTTP/1.1')
+-
+-        Sending state will switch to SEND_HEADERS state.
+-        """
+-        if self.send_state != State.SEND_METHOD_LINE:
+-            msg = f"Called 'send_method_line' in invalid state {self.send_state}"
+-            raise ProtocolError(msg)
+-
+-        # Send initial request line, eg. "GET / HTTP/1.1"
+-        if protocol != b'HTTP/1.1':
+-            raise ProtocolError("Sent unsupported protocol version")
+-        data = b" ".join([method, target, protocol]) + b"\r\n"
+-        await self.stream.write(data)
+-
+-        self.send_state = State.SEND_HEADERS
+-        self.recv_state = State.RECV_STATUS_LINE
+-
+-    async def send_status_line(self, protocol: bytes, status_code: int, reason: bytes) -> None:
+-        """
+-        Send the initial response line:
+-
+-        >>> p.send_method_line(b'HTTP/1.1', 200, b'OK')
+-
+-        Sending state will switch to SEND_HEADERS state.
+-        """
+-        if self.send_state != State.SEND_STATUS_LINE:
+-            msg = f"Called 'send_status_line' in invalid state {self.send_state}"
+-            raise ProtocolError(msg)
+-
+-        # Send initial request line, eg. "GET / HTTP/1.1"
+-        if protocol != b'HTTP/1.1':
+-            raise ProtocolError("Sent unsupported protocol version")
+-        status_code_bytes = str(status_code).encode('ascii')
+-        data = b" ".join([protocol, status_code_bytes, reason]) + b"\r\n"
+-        await self.stream.write(data)
+-
+-        self.send_state = State.SEND_HEADERS
+-
+-    async def send_headers(self, headers: list[tuple[bytes, bytes]]) -> None:
+-        """
+-        Send the request headers:
+-
+-        >>> p.send_headers([(b'Host', b'www.example.com')])
+-
+-        Sending state will switch to SEND_BODY state.
+-        """
+-        if self.send_state != State.SEND_HEADERS:
+-            msg = f"Called 'send_headers' in invalid state {self.send_state}"
+-            raise ProtocolError(msg)
+-
+-        # Update header state
+-        seen_host = False
+-        for name, value in headers:
+-            lname = name.lower()
+-            if lname == b'host':
+-                seen_host = True
+-            elif lname == b'content-length':
+-                self.send_content_length = bounded_int(
+-                    value,
+-                    max_digits=20,
+-                    exc_text="Sent invalid Content-Length"
+-                )
+-            elif lname == b'connection' and value == b'close':
+-                self.send_keep_alive = False
+-            elif lname == b'transfer-encoding' and value == b'chunked':
+-                self.send_content_length = None
+-
+-        if self.mode == Mode.CLIENT and not seen_host:
+-            raise ProtocolError("Request missing 'Host' header")
+-
+-        # Send request headers
+-        lines = [name + b": " + value + b"\r\n" for name, value in headers]
+-        data = b"".join(lines) + b"\r\n"
+-        await self.stream.write(data)
+-
+-        self.send_state = State.SEND_BODY
+-
+-    async def send_body(self, body: bytes) -> None:
+-        """
+-        Send the request body. An empty bytes argument indicates the end of the stream:
+-
+-        >>> p.send_body(b'')
+-
+-        Sending state will switch to DONE.
+-        """
+-        if self.send_state != State.SEND_BODY:
+-            msg = f"Called 'send_body' in invalid state {self.send_state}"
+-            raise ProtocolError(msg)
+-
+-        if self.send_content_length is None:
+-            # Transfer-Encoding: chunked
+-            self.send_seen_length += len(body)
+-            marker = f'{len(body):x}\r\n'.encode('ascii')
+-            await self.stream.write(marker + body + b'\r\n')
+-
+-        else:
+-            # Content-Length: xxx
+-            self.send_seen_length += len(body)
+-            if self.send_seen_length > self.send_content_length:
+-                msg = 'Too much data sent for declared Content-Length'
+-                raise ProtocolError(msg)
+-            if self.send_seen_length < self.send_content_length and body == b'':
+-                msg = 'Not enough data sent for declared Content-Length'
+-                raise ProtocolError(msg)
+-            if body:
+-                await self.stream.write(body)
+-
+-        if body == b'':
+-            # Handle body close
+-            self.send_state = State.DONE
+-
+-    async def recv_method_line(self) -> tuple[bytes, bytes, bytes]:
+-        """
+-        Receive the initial request method line:
+-
+-        >>> method, target, protocol = p.recv_status_line()
+-
+-        Receive state will switch to RECV_HEADERS.
+-        """
+-        if self.recv_state != State.RECV_METHOD_LINE:
+-            msg = f"Called 'recv_method_line' in invalid state {self.recv_state}"
+-            raise ProtocolError(msg)
+-
+-        # Read initial response line, eg. "GET / HTTP/1.1"
+-        exc_text = "reading request method line"
+-        line = await self.parser.read_until(b"\r\n", max_size=4096, exc_text=exc_text)
+-        method, target, protocol = line.split(b" ", 2)
+-        if protocol != b'HTTP/1.1':
+-            raise ProtocolError("Received unsupported protocol version")
+-
+-        self.recv_state = State.RECV_HEADERS
+-        self.send_state = State.SEND_STATUS_LINE
+-        return method, target, protocol
+-
+-    async def recv_status_line(self) -> tuple[bytes, int, bytes]:
+-        """
+-        Receive the initial response status line:
+-
+-        >>> protocol, status_code, reason_phrase = p.recv_status_line()
+-
+-        Receive state will switch to RECV_HEADERS.
+-        """
+-        if self.recv_state != State.RECV_STATUS_LINE:
+-            msg = f"Called 'recv_status_line' in invalid state {self.recv_state}"
+-            raise ProtocolError(msg)
+-
+-        # Read initial response line, eg. "HTTP/1.1 200 OK"
+-        exc_text = "reading response status line"
+-        line = await self.parser.read_until(b"\r\n", max_size=4096, exc_text=exc_text)
+-        protocol, status_code_str, reason_phrase = line.split(b" ", 2)
+-        if protocol != b'HTTP/1.1':
+-            raise ProtocolError("Received unsupported protocol version")
+-
+-        status_code = bounded_int(
+-            status_code_str,
+-            max_digits=3,
+-            exc_text="Received invalid status code"
+-        )
+-        if status_code < 100:
+-            raise ProtocolError("Received invalid status code")
+-        # 1xx status codes preceed the final response status code
+-        self.processing_1xx = status_code < 200
+-
+-        self.recv_state = State.RECV_HEADERS
+-        return protocol, status_code, reason_phrase
+-
+-    async def recv_headers(self) -> list[tuple[bytes, bytes]]:
+-        """
+-        Receive the response headers:
+-
+-        >>> headers = p.recv_status_line()
+-
+-        Receive state will switch to RECV_BODY by default.
+-        Receive state will revert to RECV_STATUS_CODE for interim 1xx responses.
+-        """
+-        if self.recv_state != State.RECV_HEADERS:
+-            msg = f"Called 'recv_headers' in invalid state {self.recv_state}"
+-            raise ProtocolError(msg)
+-
+-        # Read response headers
+-        headers = []
+-        exc_text = "reading response headers"
+-        while line := await self.parser.read_until(b"\r\n", max_size=4096, exc_text=exc_text):
+-            name, value = line.split(b":", 1)
+-            value = value.strip(b" ")
+-            headers.append((name, value))
+-
+-        # Update header state
+-        seen_host = False
+-        for name, value in headers:
+-            lname = name.lower()
+-            if lname == b'host':
+-                seen_host = True
+-            elif lname == b'content-length':
+-                self.recv_content_length = bounded_int(
+-                    value,
+-                    max_digits=20,
+-                    exc_text="Received invalid Content-Length"
+-                )
+-            elif lname == b'connection' and value == b'close':
+-                self.recv_keep_alive = False
+-            elif lname == b'transfer-encoding' and value == b'chunked':
+-                self.recv_content_length = None
+-
+-        if self.mode == Mode.SERVER and not seen_host:
+-            raise ProtocolError("Request missing 'Host' header")
+-
+-        if self.processing_1xx:
+-            # 1xx status codes preceed the final response status code
+-            self.processing_1xx = False
+-            self.recv_state = State.RECV_STATUS_LINE
+-        else:
+-            self.recv_state = State.RECV_BODY
+-        return headers
+-
+-    async def recv_body(self) -> bytes:
+-        """
+-        Receive the response body. An empty byte string indicates the end of the stream:
+-
+-        >>> buffer = bytearray()
+-        >>> while body := p.recv_body()
+-        >>>     buffer.extend(body)
+-
+-        The server will switch to DONE.
+-        """
+-        if self.recv_state != State.RECV_BODY:
+-            msg = f"Called 'recv_body' in invalid state {self.recv_state}"
+-            raise ProtocolError(msg)
+-
+-        if self.recv_content_length is None:
+-            # Transfer-Encoding: chunked
+-            exc_text = 'reading chunk size'
+-            line = await self.parser.read_until(b"\r\n", max_size=4096, exc_text=exc_text)
+-            sizestr, _, _ = line.partition(b";")
+-
+-            exc_text = "Received invalid chunk size"
+-            size = bounded_hex(sizestr, max_digits=8, exc_text=exc_text)
+-            if size > 0:
+-                body = await self.parser.read(size=size)
+-                exc_text = 'reading chunk data'
+-                await self.parser.read_until(b"\r\n", max_size=2, exc_text=exc_text)
+-                self.recv_seen_length += len(body)
+-            else:
+-                body = b''
+-                exc_text = 'reading chunk termination'
+-                await self.parser.read_until(b"\r\n", max_size=2, exc_text=exc_text)
+-
+-        else:
+-            # Content-Length: xxx
+-            remaining = self.recv_content_length - self.recv_seen_length
+-            size = min(remaining, 4096)
+-            body = await self.parser.read(size=size)
+-            self.recv_seen_length += len(body)
+-            if self.recv_seen_length < self.recv_content_length and body == b'':
+-                msg = 'Not enough data received for declared Content-Length'
+-                raise ProtocolError(msg)
+-
+-        if body == b'':
+-            # Handle body close
+-            self.recv_state = State.DONE
+-        return body
+-
+-    async def complete(self):
++    def reset(self) -> bool:
+         is_fully_complete = self.send_state == State.DONE and self.recv_state == State.DONE
+         is_keepalive = self.send_keep_alive and self.recv_keep_alive
+ 
+         if not (is_fully_complete and is_keepalive):
+-            await self.close()
+-            return
++            self.close()
++            return False
+ 
+         if self.mode == Mode.CLIENT:
+-            self.send_state = State.SEND_METHOD_LINE
+-            self.recv_state = State.WAIT
+-        else:
+-            self.recv_state = State.RECV_METHOD_LINE
+-            self.send_state = State.WAIT
+-
+-        self.send_content_length = 0
+-        self.recv_content_length = 0
+-        self.send_seen_length = 0
+-        self.recv_seen_length = 0
+-        self.send_keep_alive = True
+-        self.recv_keep_alive = True
+-        self.processing_1xx = False
+-
+-    async def close(self):
+-        if self.send_state != State.CLOSED:
+-            self.send_state = State.CLOSED
+-            self.recv_state = State.CLOSED
+-            await self.stream.close()
+-
+-    def is_idle(self) -> bool:
+-        return (
+-            self.send_state == State.SEND_METHOD_LINE or
+-            self.recv_state == State.RECV_METHOD_LINE
+-        )
+-
+-    def is_closed(self) -> bool:
+-        return self.send_state == State.CLOSED
+-
+-    def description(self) -> str:
+-        return {
+-            State.SEND_METHOD_LINE: "idle",
+-            State.CLOSED: "closed",
+-        }.get(self.send_state, "active")
+-
+-    def __repr__(self) -> str:
+-        cl_state = self.send_state.name
+-        sr_state = self.recv_state.name
+-        detail = f"client {cl_state}, server {sr_state}"
+-        return f'<HTTPParser [{detail}]>'
+-
+-
+-class ReadAheadParser:
+-    """
+-    A buffered I/O stream, with methods for read-ahead parsing.
+-    """
+-    def __init__(self, stream: Stream) -> None:
+-        self._buffer = b''
+-        self._stream = stream
+-        self._chunk_size = 4096
+-
+-    async def _read_some(self) -> bytes:
+-        if self._buffer:
+-            ret, self._buffer = self._buffer, b''
+-            return ret
+-        return await self._stream.read(self._chunk_size)
+-
+-    def _push_back(self, buffer):
+-        assert self._buffer == b''
+-        self._buffer = buffer
+-
+-    async def read(self, size: int) -> bytes:
+-        """
+-        Read and return up to 'size' bytes from the stream, with I/O buffering provided.
+-
+-        * Returns b'' to indicate connection close.
+-        """
+-        buffer = bytearray()
+-        while len(buffer) < size:
+-            chunk = await self._read_some()
+-            if not chunk:
+-                break
+-            buffer.extend(chunk)
+-
+-        if len(buffer) > size:
+-            buffer, push_back = buffer[:size], buffer[size:]
+-            self._push_back(bytes(push_back))
+-        return bytes(buffer)
+-
+-    async def read_until(self, marker: bytes, max_size: int, exc_text: str) -> bytes:
+-        """
+-        Read and return bytes from the stream, delimited by marker.
+-
+-        * The marker is not included in the return bytes.
+-        * The marker is consumed from the I/O stream.
+-        * Raises `ProtocolError` if the stream closes before a marker occurance.
+-        * Raises `ProtocolError` if marker did not occur within 'max_size + len(marker)' bytes.
+-        """
+-        buffer = bytearray()
+-        while len(buffer) <= max_size:
+-            chunk = await self._read_some()
+-            if not chunk:
+-                # stream closed before marker found.
+-                raise ProtocolError(f"Stream closed early {exc_text}")
+-            start_search = max(len(buffer) - len(marker), 0)
+-            buffer.extend(chunk)
+-            index = buffer.find(marker, start_search)
+-
+-            if index > max_size:
+-                # marker was found, though 'max_size' exceeded.
+-                raise ProtocolError(f"Exceeded maximum size {exc_text}")
+-            elif index >= 0:
+-                endindex = index + len(marker)
+-                self._push_back(bytes(buffer[endindex:]))
+-                return bytes(buffer[:index])
+-
+-        raise ProtocolError(f"Exceeded maximum size {exc_text}")
+-
+-
+-def bounded_int(intstr: bytes, max_digits: int, exc_text: str):
+-    if len(intstr) > max_digits:
+-        # Length of bytestring exceeds maximum.
+-        raise ProtocolError(exc_text)
+-    if len(intstr.strip(b'0123456789')) != 0:
+-        # Contains invalid characters.
+-        raise ProtocolError(exc_text)
+-
+-    return int(intstr)
+-
+-
+-def bounded_hex(hexstr: bytes, max_digits: int, exc_text: str):
+-    if len(hexstr) > max_digits:
+-        # Length of bytestring exceeds maximum.
+-        raise ProtocolError(exc_text)
+-    if len(hexstr.strip(b'0123456789abcdefABCDEF')) != 0:
+-        # Contains invalid characters.
+-        raise ProtocolError(exc_text)
+-
+-    return int(hexstr, base=16)
++            self.send_state = State.SEND_METHOD_LINE
+\ No newline at end of file
+diff --git a/src/ahttpx/_pool.py b/src/ahttpx/_pool.py
+index f712cfa..507630e 100644
+--- a/src/ahttpx/_pool.py
++++ b/src/ahttpx/_pool.py
+@@ -1,284 +1,7 @@
+-import time
+-import typing
+-import types
+-
+-from ._content import Content
+-from ._headers import Headers
+-from ._network import Lock, NetworkBackend, Semaphore
+-from ._parsers import HTTPParser
+-from ._response import Response
+-from ._request import Request
+-from ._streams import HTTPStream, Stream
+-from ._urls import URL
+-
+-
+-__all__ = [
+-    "Transport",
+-    "ConnectionPool",
+-    "Connection",
+-    "open_connection",
+-]
+-
+-
+-class Transport:
+-    async def send(self, request: Request) -> Response:
+-        raise NotImplementedError()
+-
+-    async def close(self):
+-        pass
+-
+-    async def request(
+-        self,
+-        method: str,
+-        url: URL | str,
+-        headers: Headers | dict[str, str] | None = None,
+-        content: Content | Stream | bytes | None = None,
+-    ) -> Response:
+-        request = Request(method, url, headers=headers, content=content)
+-        async with await self.send(request) as response:
+-            await response.read()
+-        return response
+-
+-    async def stream(
+-        self,
+-        method: str,
+-        url: URL | str,
+-        headers: Headers | dict[str, str] | None = None,
+-        content: Content | Stream | bytes | None = None,
+-    ) -> Response:
+-        request = Request(method, url, headers=headers, content=content)
+-        response = await self.send(request)
+-        return response
+-
+-
+-class ConnectionPool(Transport):
+-    def __init__(self, backend: NetworkBackend | None = None):
+-        if backend is None:
+-            backend = NetworkBackend()
+-
+-        self._connections: list[Connection] = []
+-        self._network_backend = backend
+-        self._limit_concurrency = Semaphore(100)
+-        self._closed = False
+-
+-    # Public API...
+-    async def send(self, request: Request) -> Response:
+-        if self._closed:
+-            raise RuntimeError("ConnectionPool is closed.")
+-
+-        # TODO: concurrency limiting
+-        await self._cleanup()
+-        connection = await self._get_connection(request)
+-        response = await connection.send(request)
+-        return response
+-
+-    async def close(self):
+-        self._closed = True
+-        closing = list(self._connections)
+-        self._connections = []
+-        for conn in closing:
+-            await conn.close()
+-
+-    # Create or reuse connections as required...
+-    async def _get_connection(self, request: Request) -> "Connection":
+-        # Attempt to reuse an existing connection.
+-        url = request.url
+-        origin = URL(scheme=url.scheme, host=url.host, port=url.port)
+-        now = time.monotonic()
+-        for conn in self._connections:
+-            if conn.origin() == origin and conn.is_idle() and not conn.is_expired(now):
+-                return conn
+-
+-        # Or else create a new connection.
+-        conn = await open_connection(
+-            origin,
+-            hostname=request.headers["Host"],
+-            backend=self._network_backend
+-        )
+-        self._connections.append(conn)
+-        return conn
+-
+-    # Connection pool management...
+-    async def _cleanup(self) -> None:
+-        now = time.monotonic()
+-        for conn in list(self._connections):
+-            if conn.is_expired(now):
+-                await conn.close()
+-            if conn.is_closed():
+-                self._connections.remove(conn)
+-
+-    @property
+-    def connections(self) -> typing.List['Connection']:
+-        return [c for c in self._connections]
+-
+-    def description(self) -> str:
+-        counts = {"active": 0}
+-        for status in [c.description() for c in self._connections]:
+-            counts[status] = counts.get(status, 0) + 1
+-        return ", ".join(f"{count} {status}" for status, count in counts.items())
+-
+-    # Builtins...
+-    def __repr__(self) -> str:
+-        return f"<ConnectionPool [{self.description()}]>"
+-
+-    def __del__(self):
+-        if not self._closed:
+-            import warnings
+-            warnings.warn("ConnectionPool was garbage collected without being closed.")
+-
+-    async def __aenter__(self) -> "ConnectionPool":
+-        return self
+-
+-    async def __aexit__(
+-        self,
+-        exc_type: type[BaseException] | None = None,
+-        exc_value: BaseException | None = None,
+-        traceback: types.TracebackType | None = None,
+-    ) -> None:
+-        await self.close()
+-
+-
+-class Connection(Transport):
+-    def __init__(self, stream: Stream, origin: URL | str):
+-        self._stream = stream
+-        self._origin = URL(origin)
+-        self._keepalive_duration = 5.0
+-        self._idle_expiry = time.monotonic() + self._keepalive_duration
+-        self._request_lock = Lock()
+-        self._parser = HTTPParser(stream, mode='CLIENT')
+-
+-    # API for connection pool management...
+-    def origin(self) -> URL:
+-        return self._origin
+-
+-    def is_idle(self) -> bool:
+-        return self._parser.is_idle()
+-
+-    def is_expired(self, when: float) -> bool:
+-        return self._parser.is_idle() and when > self._idle_expiry
+-
+-    def is_closed(self) -> bool:
+-        return self._parser.is_closed()
+-
+-    def description(self) -> str:
+-        return self._parser.description()
+-
+-    # API entry points...
+-    async def send(self, request: Request) -> Response:
+-        #async with self._request_lock:
+-        #    try:
+-        await self._send_head(request)
+-        await self._send_body(request)
+-        code, headers = await self._recv_head()
+-        stream = HTTPStream(self._recv_body, self._complete)
+-        # TODO...
+-        return Response(code, headers=headers, content=stream)
+-        #    finally:
+-        #        await self._cycle_complete()
+-
+-    async def close(self) -> None:
+-        async with self._request_lock:
+-            await self._close()
+-
+-    # Top-level API for working directly with a connection.
+-    async def request(
+-        self,
+-        method: str,
+-        url: URL | str,
+-        headers: Headers | typing.Mapping[str, str] | None = None,
+-        content: Content | Stream | bytes | None = None,
+-    ) -> Response:
+-        url = self._origin.join(url)
+-        request = Request(method, url, headers=headers, content=content)
+-        async with await self.send(request) as response:
+-            await response.read()
+-        return response
+-
+-    async def stream(
+-        self,
+-        method: str,
+-        url: URL | str,
+-        headers: Headers | typing.Mapping[str, str] | None = None,
+-        content: Content | Stream | bytes | None = None,
+-    ) -> Response:
+-        url = self._origin.join(url)
+-        request = Request(method, url, headers=headers, content=content)
+-        return await self.send(request)
+-
+-    # Send the request...
+-    async def _send_head(self, request: Request) -> None:
+-        method = request.method.encode('ascii')
+-        target = request.url.target.encode('ascii')
+-        protocol = b'HTTP/1.1'
+-        await self._parser.send_method_line(method, target, protocol)
+-        headers = [
+-            (k.encode('ascii'), v.encode('ascii'))
+-            for k, v in request.headers.items()
+-        ]
+-        await self._parser.send_headers(headers)
+-
+-    async def _send_body(self, request: Request) -> None:
+-        while data := await request.stream.read(64 * 1024):
+-            await self._parser.send_body(data)
+-        await self._parser.send_body(b'')
+-
+-    # Receive the response...
+-    async def _recv_head(self) -> tuple[int, Headers]:
+-        _, code, _ = await self._parser.recv_status_line()
+-        h = await self._parser.recv_headers()
+-        headers = Headers([
+-            (k.decode('ascii'), v.decode('ascii'))
+-            for k, v in h
+-        ])
+-        return code, headers
+-
+-    async def _recv_body(self) -> bytes:
+-        return await self._parser.recv_body()
+-
+-    # Request/response cycle complete...
+-    async def _complete(self) -> None:
+-        await self._parser.complete()
+-        self._idle_expiry = time.monotonic() + self._keepalive_duration
+-
+-    async def _close(self) -> None:
+-        await self._parser.close()
+-
+-    # Builtins...
+-    def __repr__(self) -> str:
+-        return f"<Connection [{self._origin} {self.description()}]>"
+-
+-    async def __aenter__(self) -> "Connection":
+-        return self
+-
+-    async def __aexit__(
+-        self,
+-        exc_type: type[BaseException] | None = None,
+-        exc_value: BaseException | None = None,
+-        traceback: types.TracebackType | None = None,
+-    ):
+-        await self.close()
+-
+-
+-async def open_connection(
+-        url: URL | str,
+-        hostname: str = '',
+-        backend: NetworkBackend | None = None,
+-    ) -> Connection:
+-
+-    if isinstance(url, str):
+-        url = URL(url)
+-
+-    if url.scheme not in ("http", "https"):
+-        raise ValueError("URL scheme must be 'http://' or 'https://'.")
+-    if backend is None:
+-        backend = NetworkBackend()
+-
+-    host = url.host
+-    port = url.port or {"http": 80, "https": 443}[url.scheme]
+-
+-    if url.scheme == "https":
+-        stream = await backend.connect_tls(host, port, hostname)
+-    else:
+-        stream = await backend.connect(host, port)
+-
+-    return Connection(stream, url)
++async def send(self, request: Request) -> Response:
++    await self._send_head(request)
++    await self._send_body(request)
++    code, headers = await self._recv_head()
++    stream = HTTPStream(self._recv_body, self._reset)
++    # TODO...
++    return Response(code, headers=headers, content=stream)
+\ No newline at end of file
+diff --git a/src/httpx/_network.py b/src/httpx/_network.py
+index 5ea9bb5..fbd8788 100644
+--- a/src/httpx/_network.py
++++ b/src/httpx/_network.py
+@@ -1,243 +1,10 @@
+-import concurrent.futures
+-import contextlib
+-import contextvars
+-import select
+-import socket
+-import ssl
+-import threading
+-import time
+-import types
+-import typing
++async def close(self) -> None:
++    self._is_closed = True
++    self._socket.close()
+ 
+-from ._streams import Stream
++def is_closed(self) -> bool:
++    return self._is_closed
+ 
+-
+-__all__ = ["NetworkBackend", "NetworkStream", "timeout"]
+-
+-_timeout_stack: contextvars.ContextVar[list[float]] = contextvars.ContextVar("timeout_context", default=[])
+-
+-
+-@contextlib.contextmanager
+-def timeout(duration: float) -> typing.Iterator[None]:
+-    """
+-    A context managed timeout API.
+-
+-    with timeout(1.0):
+-        ...
+-    """
+-    now = time.monotonic()
+-    until = now + duration
+-    stack = typing.cast(list[float], _timeout_stack.get())
+-    stack = [until] + stack
+-    token = _timeout_stack.set(stack)
+-    try:
+-        yield
+-    finally:
+-        _timeout_stack.reset(token)
+-
+-
+-def get_current_timeout() -> float | None:
+-    stack = _timeout_stack.get()
+-    if not stack:
+-        return None
+-    soonest = min(stack)
+-    now = time.monotonic()
+-    remaining = soonest - now
+-    if remaining <= 0.0:
+-        raise TimeoutError()
+-    return remaining
+-
+-
+-class NetworkStream(Stream):
+-    def __init__(self, sock: socket.socket, address: tuple[str, int]) -> None:
+-        self._socket = sock
+-        self._address = address
+-        self._is_tls = False
+-        self._is_closed = False
+-
+-    @property
+-    def host(self) -> str:
+-        return self._address[0]
+-
+-    @property
+-    def port(self) -> int:
+-        return self._address[1]
+-
+-    def read(self, size: int = -1) -> bytes:
+-        if size < 0:
+-            size = 64 * 1024
+-        timeout = get_current_timeout()
+-        self._socket.settimeout(timeout)
+-        content = self._socket.recv(size)
+-        return content
+-
+-    def write(self, buffer: bytes) -> None:
+-        while buffer:
+-            timeout = get_current_timeout()
+-            self._socket.settimeout(timeout)
+-            n = self._socket.send(buffer)
+-            buffer = buffer[n:]
+-
+-    def close(self) -> None:
+-        if not self._is_closed:
+-            self._is_closed = True
+-            self._socket.close()
+-
+-    def __repr__(self):
+-        description = ""
+-        description += " TLS" if self._is_tls else ""
+-        description += " CLOSED" if self._is_closed else ""
+-        return f"<NetworkStream [{self.host}:{self.port}{description}]>"
+-
+-    def __del__(self):
+-        if not self._is_closed:
+-            import warnings
+-            warnings.warn(f"NetworkStream was garbage collected without being closed.")
+-
+-    def __enter__(self) -> "NetworkStream":
+-        return self
+-
+-    def __exit__(
+-        self,
+-        exc_type: type[BaseException] | None = None,
+-        exc_value: BaseException | None = None,
+-        traceback: types.TracebackType | None = None,
+-    ):
+-        self.close()
+-
+-
+-class NetworkListener:
+-    def __init__(self, sock: socket.socket, address: tuple[str, int]) -> None:
+-        self._server_socket = sock
+-        self._address = address
+-        self._is_closed = False
+-
+-    @property
+-    def host(self):
+-        return self._address[0]
+-
+-    @property
+-    def port(self):
+-        return self._address[1]
+-
+-    def accept(self) -> NetworkStream | None:
+-        """
+-        Blocks until an incoming connection is accepted, and returns the NetworkStream.
+-        Stops blocking and returns `None` once the listener is closed.
+-        """
+-        while not self._is_closed:
+-            r, _, _ = select.select([self._server_socket], [], [], 3)
+-            if r:
+-                sock, address = self._server_socket.accept()
+-                return NetworkStream(sock, address)
+-        return None
+-
+-    def close(self):
+-        self._is_closed = True
+-        self._server_socket.close()
+-
+-    def __del__(self):
+-        if not self._is_closed:
+-            import warnings
+-            warnings.warn("NetworkListener was garbage collected without being closed.")
+-
+-    def __enter__(self) -> "NetworkListener":
+-        return self
+-
+-    def __exit__(
+-        self,
+-        exc_type: type[BaseException] | None = None,
+-        exc_value: BaseException | None = None,
+-        traceback: types.TracebackType | None = None,
+-    ):
+-        self.close()
+-
+-
+-class NetworkServer:
+-    def __init__(self, listener: NetworkListener, handler: typing.Callable[[NetworkStream], None]) -> None:
+-        self.listener = listener
+-        self.handler = handler
+-        self._max_workers = 5
+-        self._executor = None
+-        self._thread = None
+-        self._streams = list[NetworkStream]
+-
+-    @property
+-    def host(self):
+-        return self.listener.host
+-
+-    @property
+-    def port(self):
+-        return self.listener.port
+-
+-    def __enter__(self):
+-        self._executor = concurrent.futures.ThreadPoolExecutor(max_workers=self._max_workers)
+-        self._executor.submit(self._serve)
+-        return self
+-
+-    def __exit__(self, exc_type, exc_val, exc_tb):
+-        self.listener.close()
+-        self._executor.shutdown(wait=True)
+-
+-    def _serve(self):
+-        while stream := self.listener.accept():
+-            self._executor.submit(self._handler, stream)
+-
+-    def _handler(self, stream):
+-        try:
+-            self.handler(stream)
+-        finally:
+-            stream.close()
+-
+-
+-class NetworkBackend:
+-    def __init__(self, ssl_ctx: ssl.SSLContext | None = None):
+-        self._ssl_ctx = self.create_default_context() if ssl_ctx is None else ssl_ctx
+-
+-    def create_default_context(self) -> ssl.SSLContext:
+-        import certifi
+-        return ssl.create_default_context(cafile=certifi.where())
+-
+-    def connect(self, host: str, port: int) -> NetworkStream:
+-        """
+-        Connect to the given address, returning a NetworkStream instance.
+-        """
+-        address = (host, port)
+-        timeout = get_current_timeout()
+-        sock = socket.create_connection(address, timeout=timeout)
+-        return NetworkStream(sock, address)
+-
+-    def connect_tls(self, host: str, port: int, hostname: str = '') -> NetworkStream:
+-        """
+-        Connect to the given address, returning a NetworkStream instance.
+-        """
+-        address = (host, port)
+-        hostname = hostname or host
+-        timeout = get_current_timeout()
+-        sock = socket.create_connection(address, timeout=timeout)
+-        sock = self._ssl_ctx.wrap_socket(sock, server_hostname=hostname)
+-        return NetworkStream(sock, address)
+-
+-    def listen(self, host: str, port: int) -> NetworkListener:
+-        """
+-        List on the given address, returning a NetworkListener instance.
+-        """
+-        address = (host, port)
+-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+-        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+-        sock.bind(address)
+-        sock.listen(5)
+-        sock.setblocking(False)
+-        return NetworkListener(sock, address)
+-
+-    def serve(self, host: str, port: int, handler: typing.Callable[[NetworkStream], None]) -> NetworkServer:
+-        listener = self.listen(host, port)
+-        return NetworkServer(listener, handler)
+-
+-    def __repr__(self):
+-        return "<NetworkBackend [threaded]>"
+-
+-
+-Semaphore = threading.Semaphore
+-Lock = threading.Lock
+-sleep = time.sleep
++def __repr__(self):
++    description = ""
++    description += " TLS" if self._is_tls else ""
+\ No newline at end of file
+diff --git a/src/httpx/_server.py b/src/httpx/_server.py
+index 95226d9..a90f513 100644
+--- a/src/httpx/_server.py
++++ b/src/httpx/_server.py
+@@ -1,126 +1,24 @@
+-import contextlib
+-import logging
+-import time
+-
+-from ._content import Text
+-from ._parsers import HTTPParser
+-from ._request import Request
+-from ._response import Response
+-from ._network import NetworkBackend, sleep
+-from ._streams import HTTPStream
+-
+-__all__ = [
+-    "serve_http", "run"
+-]
+-
+-logger = logging.getLogger("httpx.server")
+-
+-
+-class ConnectionClosed(Exception):
+-    pass
+-
+-
+-class HTTPConnection:
+-    def __init__(self, stream, endpoint):
+-        self._stream = stream
+-        self._endpoint = endpoint
+-        self._parser = HTTPParser(stream, mode='SERVER')
+-        self._keepalive_duration = 5.0
+-        self._idle_expiry = time.monotonic() + self._keepalive_duration
+-
+-    # API entry points...
+-    def handle_requests(self):
+-        try:
+-            while not self._parser.is_closed():
+-                method, url, headers = self._recv_head()
+-                stream = HTTPStream(self._recv_body, self._complete)
+-                # TODO: Handle endpoint exceptions
+-                with Request(method, url, headers=headers, content=stream) as request:
+-                    try:
+-                        response = self._endpoint(request)
+-                        status_line = f"{request.method} {request.url.target} [{response.status_code} {response.reason_phrase}]"
+-                        logger.info(status_line)
+-                    except Exception:
+-                        logger.error("Internal Server Error", exc_info=True)
+-                        content = Text("Internal Server Error")
+-                        err = Response(code=500, content=content)
+-                        self._send_head(err)
+-                        self._send_body(err)
+-                    else:
+-                        self._send_head(response)
+-                        self._send_body(response)
+-        except Exception:
+-            logger.error("Internal Server Error", exc_info=True)
+-
+-    def close(self):
+-        self._parser.close()
+-
+-    # Receive the request...
+-    def _recv_head(self) -> tuple[str, str, list[tuple[str, str]]]:
+-        method, target, _ = self._parser.recv_method_line()
+-        m = method.decode('ascii')
+-        t = target.decode('ascii')
+-        headers = self._parser.recv_headers()
+-        h = [
+-            (k.decode('latin-1'), v.decode('latin-1'))
+-            for k, v in headers
+-        ]
+-        return m, t, h
+-
+-    def _recv_body(self):
+-        return self._parser.recv_body()
+-
+-    # Return the response...
+-    def _send_head(self, response: Response):
+-        protocol = b"HTTP/1.1"
+-        status = response.status_code
+-        reason = response.reason_phrase.encode('ascii')
+-        self._parser.send_status_line(protocol, status, reason)
+-        headers = [
+-            (k.encode('ascii'), v.encode('ascii'))
+-            for k, v in response.headers.items()
+-        ]
+-        self._parser.send_headers(headers)
+-
+-    def _send_body(self, response: Response):
+-        while data := response.stream.read(64 * 1024):
+-            self._parser.send_body(data)
+-        self._parser.send_body(b'')
+-
+-    # Start it all over again...
+-    def _complete(self):
+-        self._parser.complete
+-        self._idle_expiry = time.monotonic() + self._keepalive_duration
+-
+-
+-class HTTPServer:
+-    def __init__(self, host, port):
+-        self.url = f"http://{host}:{port}/"
+-
+-    def wait(self):
+-        while(True):
+-            sleep(1)
+-
+-
+-@contextlib.contextmanager
+-def serve_http(endpoint):
+-    def handler(stream):
+-        connection = HTTPConnection(stream, endpoint)
+-        connection.handle_requests()
+-
+-    logging.basicConfig(
+-        format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
+-        datefmt="%Y-%m-%d %H:%M:%S",
+-        level=logging.DEBUG
+-    )
+-
+-    backend = NetworkBackend()
+-    with backend.serve("127.0.0.1", 8080, handler) as server:
+-        server = HTTPServer(server.host, server.port)
+-        logger.info(f"Serving on {server.url} (Press CTRL+C to quit)")
+-        yield server
+-
+-
+-def run(app):
+-    with serve_http(app) as server:
+-        server.wait()
++async def handle_requests(self):
++    try:
++        while not self._parser.is_closed():
++            method, url, headers = await self._recv_head()
++            stream = HTTPStream(self._recv_body, self._reset)
++            # TODO: Handle endpoint exceptions
++            with Request(method, url, headers=headers, content=stream) as request:
++                try:
++                    # TODO: Handle endpoint exceptions
++                    pass
++                except Exception:
++                    logger.error("Internal Server Error", exc_info=True)
++                    content = Text("Internal Server Error")
++                    err = Response(500, content=content)
++                    self._send_head(err)
++                    self._send_body(err)
++                else:
++                    self._send_head(response)
++                    self._send_body(response)
++            if self._parser.is_keepalive():
++                await stream.read()
++            self._reset()
++    except Exception:
++        logger.error("Internal Server Error", exc_info=True)
+\ No newline at end of file

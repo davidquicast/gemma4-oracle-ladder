@@ -1,0 +1,12 @@
+diff --git a/fastapi/dependencies/models.py b/fastapi/dependencies/models.py
+index 418c1172..fee37753 100644
+--- a/fastapi/dependencies/models.py
++++ b/fastapi/dependencies/models.py
+@@ -29,6 +29,7 @@ class Dependant:
+     background_tasks_param_name: Optional[str] = None
+     security_scopes_param_name: Optional[str] = None
+     security_scopes: Optional[List[str]] = None
++    scope: Optional[str] = None
+     use_cache: bool = True
+     path: Optional[str] = None
+     cache_key: Tuple[Optional[Callable[..., Any]], Tuple[str, ...]] = field(init=False)

@@ -1,0 +1,13 @@
+{
+ "run_id": "wave2",
+ "purpose": "Wave 2: is the L3 residual caused by the edit primitive? patch_L3 gives the same reference diff as base_L3 but the agent applies it with one `git apply` instead of edit_file/write_file. base_r2_L3 and base_r2_L0 rerun wave-1 arms unchanged to measure the run-to-run flip rate.",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {"name": "patch_L3", "bundle": "patch", "level": "L3"},
+  {"name": "base_r2_L3", "bundle": "base", "level": "L3"},
+  {"name": "base_r2_L0", "bundle": "base", "level": "L0"}
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 240
+}

@@ -1,0 +1,22 @@
+{
+ "run_id": "smoke01",
+ "purpose": "Smoke test: does the official harness run E2B end to end on L4x4 with concurrent tasks, and how long does an episode take?",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "base_L0",
+   "bundle": "base",
+   "level": "L0"
+  },
+  {
+   "name": "base_L3",
+   "bundle": "base",
+   "level": "L3"
+  }
+ ],
+ "n_tasks": 6,
+ "seed": 7,
+ "concurrency": 8,
+ "deadline_minutes": 40
+}

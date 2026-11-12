@@ -1,0 +1,16 @@
+{
+ "name": "lb01",
+ "bundle": "base",
+ "kernel": "d410qc/g4-submission-lb01",
+ "bundle_sha256": "4977e8bc2c22dbe3a3ffb8e153fbe4274a60842cab6ae67dfbb831aa990442b3",
+ "files": [
+  "agent.yaml",
+  "configs/sampling.yaml",
+  "eval_config.yaml",
+  "prompts/system.md"
+ ],
+ "kernel_version": 1,
+ "submission_ref": 58229054,
+ "submitted_utc": "2026-11-11T07:10:18Z",
+ "status_at_submit": "PENDING"
+}

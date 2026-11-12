@@ -1,0 +1,233 @@
+diff --git a/docs_src/authentication_error_status_code/tutorial001_an.py b/docs_src/authentication_error_status_code/tutorial001_an.py
+new file mode 100644
+index 00000000..ed830855
+--- /dev/null
++++ b/docs_src/authentication_error_status_code/tutorial001_an.py
+@@ -0,0 +1,20 @@
++from fastapi import Depends, FastAPI, HTTPException, status
++from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
++from typing_extensions import Annotated
++
++app = FastAPI()
++
++
++class HTTPBearer403(HTTPBearer):
++    def make_not_authenticated_error(self) -> HTTPException:
++        return HTTPException(
++            status_code=status.HTTP_403_FORBIDDEN, detail="Not authenticated"
++        )
++
++
++CredentialsDep = Annotated[HTTPAuthorizationCredentials, Depends(HTTPBearer403())]
++
++
++@app.get("/me")
++def read_me(credentials: CredentialsDep):
++    return {"message": "You are authenticated", "token": credentials.credentials}
+\ No newline at end of file
+diff --git a/docs_src/authentication_error_status_code/tutorial001_an_py39.py b/docs_src/authentication_error_status_code/tutorial001_an_py39.py
+new file mode 100644
+index 00000000..4c4b0f76
+--- /dev/null
++++ b/docs_src/authentication_error_status_code/tutorial001_an_py39.py
+@@ -0,0 +1,21 @@
++from typing import Annotated
++
++from fastapi import Depends, FastAPI, HTTPException, status
++from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
++
++app = FastAPI()
++
++
++class HTTPBearer403(HTTPBearer):
++    def make_not_authenticated_error(self) -> HTTPException:
++        return HTTPException(
++            status_code=status.HTTP_403_FORBIDDEN, detail="Not authenticated"
++        )
++
++
++CredentialsDep = Annotated[HTTPAuthorizationCredentials, Depends(HTTPBearer403())]
++
++
++@app.get("/me")
++def read_me(credentials: CredentialsDep):
++    return {"message": "You are authenticated", "token": credentials.credentials}
+\ No newline at end of file
+diff --git a/docs_src/security/tutorial003.py b/docs_src/security/tutorial003.py
+index 4b324866..fb6627c0 100644
+--- a/docs_src/security/tutorial003.py
++++ b/docs_src/security/tutorial003.py
+@@ -23,11 +23,9 @@ fake_users_db = {
+ 
+ app = FastAPI()
+ 
+-
+ def fake_hash_password(password: str):
+     return "fakehashed" + password
+ 
+-
+ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+ 
+ 
+@@ -37,17 +35,14 @@ class User(BaseModel):
+     full_name: Union[str, None] = None
+     disabled: Union[bool, None] = None
+ 
+-
+ class UserInDB(User):
+     hashed_password: str
+ 
+-
+ def get_user(db, username: str):
+     if username in db:
+         user_dict = db[username]
+         return UserInDB(**user_dict)
+ 
+-
+ def fake_decode_token(token):
+     # This doesn't provide any security at all
+     # Check the next version
+@@ -60,7 +55,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
+     if not user:
+         raise HTTPException(
+             status_code=status.HTTP_401_UNAUTHORIZED,
+-            detail="Invalid authentication credentials",
++            detail="Not authenticated",
+             headers={"WWW-Authenticate": "Bearer"},
+         )
+     return user
+@@ -82,9 +77,4 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+     if not hashed_password == user.hashed_password:
+         raise HTTPException(status_code=400, detail="Incorrect username or password")
+ 
+-    return {"access_token": user.username, "token_type": "bearer"}
+-
+-
+-@app.get("/users/me")
+-async def read_users_me(current_user: User = Depends(get_current_active_user)):
+-    return current_user
++    return {"access_token": user.username, "token_type": "bearer"}
+\ No newline at end of file
+diff --git a/docs_src/security/tutorial003_an.py b/docs_src/security/tutorial003_an.py
+index 8fb40dd4..36a42aa8 100644
+--- a/docs_src/security/tutorial003_an.py
++++ b/docs_src/security/tutorial003_an.py
+@@ -1,9 +1,8 @@
+-from typing import Union
++from typing import Annotated
+ 
+ from fastapi import Depends, FastAPI, HTTPException, status
+ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+ from pydantic import BaseModel
+-from typing_extensions import Annotated
+ 
+ fake_users_db = {
+     "johndoe": {
+@@ -24,72 +23,22 @@ fake_users_db = {
+ 
+ app = FastAPI()
+ 
+-
+ def fake_hash_password(password: str):
+     return "fakehashed" + password
+ 
+-
+ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+ 
+ 
+-class User(BaseModel):
+-    username: str
+-    email: Union[str, None] = None
+-    full_name: Union[str, None] = None
+-    disabled: Union[bool, None] = None
+-
+-
+-class UserInDB(User):
+-    hashed_password: str
+-
+-
+-def get_user(db, username: str):
+-    if username in db:
+-        user_dict = db[username]
+-        return UserInDB(**user_dict)
+-
+-
+-def fake_decode_token(token):
+-    # This doesn't provide any security at all
+-    # Check the next version
+-    user = get_user(fake_users_db, token)
+-    return user
+-
+-
+-async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
+-    user = fake_decode_token(token)
+-    if not user:
+-        raise HTTPException(
+-            status_code=status.HTTP_401_UNAUTHORIZED,
+-            detail="Invalid authentication credentials",
+-            headers={"WWW-Authenticate": "Bearer"},
++class HTTPBearer403(OAuth2PasswordBearer):
++    def make_not_authenticated_error(self) -> HTTPException:
++        return HTTPException(
++            status_code=status.HTTP_403_FORBIDDEN, detail="Not authenticated"
+         )
+-    return user
+-
+-
+-async def get_current_active_user(
+-    current_user: Annotated[User, Depends(get_current_user)],
+-):
+-    if current_user.disabled:
+-        raise HTTPException(status_code=400, detail="Inactive user")
+-    return current_user
+-
+ 
+-@app.post("/token")
+-async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
+-    user_dict = fake_users_db.get(form_data.username)
+-    if not user_dict:
+-        raise HTTPException(status_code=400, detail="Incorrect username or password")
+-    user = UserInDB(**user_dict)
+-    hashed_password = fake_hash_password(form_data.password)
+-    if not hashed_password == user.hashed_password:
+-        raise HTTPException(status_code=400, detail="Incorrect username or password")
+ 
+-    return {"access_token": user.username, "token_type": "bearer"}
++CredentialsDep = Annotated[OAuth2PasswordRequestForm, Depends(HTTPBearer403())]
+ 
+ 
+-@app.get("/users/me")
+-async def read_users_me(
+-    current_user: Annotated[User, Depends(get_current_active_user)],
+-):
+-    return current_user
++@app.get("/me")
++def read_me(credentials: CredentialsDep):
++    return {"message": "You are authenticated", "token": credentials.credentials}
+\ No newline at end of file
+diff --git a/fastapi/security/api_key.py b/fastapi/security/api_key.py
+index 496c815a..3d9b2bf3 100644
+--- a/fastapi/security/api_key.py
++++ b/fastapi/security/api_key.py
+@@ -15,7 +15,7 @@ class APIKeyBase(SecurityBase):
+         if not api_key:
+             if auto_error:
+                 raise HTTPException(
+-                    status_code=HTTP_403_FORBIDDEN, detail="Not authenticated"
++                    status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                 )
+             return None
+         return api_key
+diff --git a/fastapi/security/http.py b/fastapi/security/http.py
+index 3a598565..edeb4d2a 100644
+--- a/fastapi/security/http.py
++++ b/fastapi/security/http.py
+@@ -88,7 +88,7 @@ class HTTPBase(SecurityBase):
+         if not (authorization and scheme and credentials):
+             if self.auto_error:
+                 raise HTTPException(
+-                    status_code=HTTP_403_FORBIDDEN, detail="Not authenticated"
++                    status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                 )
+             else:
+                 return None

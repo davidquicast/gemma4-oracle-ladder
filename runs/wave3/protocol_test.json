@@ -1,0 +1,60 @@
+{
+ "treat": [
+  "wave3:hunk_L3",
+  "wave3:hunk_r2_L3"
+ ],
+ "control": [
+  "wave1:base_L3",
+  "wave2:base_r2_L3"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "wave3:hunk_L3 vs wave1:base_L3": {
+   "n": 127,
+   "treat_solved": 65,
+   "control_solved": 52,
+   "only_treat": 28,
+   "only_control": 15,
+   "net": 13,
+   "p_mcnemar": 0.0659940344557981,
+   "d011_outcome": false
+  },
+  "wave3:hunk_L3 vs wave2:base_r2_L3": {
+   "n": 127,
+   "treat_solved": 65,
+   "control_solved": 53,
+   "only_treat": 28,
+   "only_control": 16,
+   "net": 12,
+   "p_mcnemar": 0.09614175442061423,
+   "d011_outcome": false
+  },
+  "wave3:hunk_r2_L3 vs wave1:base_L3": {
+   "n": 127,
+   "treat_solved": 75,
+   "control_solved": 52,
+   "only_treat": 32,
+   "only_control": 9,
+   "net": 23,
+   "p_mcnemar": 0.000430857042374555,
+   "d011_outcome": true
+  },
+  "wave3:hunk_r2_L3 vs wave2:base_r2_L3": {
+   "n": 127,
+   "treat_solved": 75,
+   "control_solved": 53,
+   "only_treat": 28,
+   "only_control": 6,
+   "net": 22,
+   "p_mcnemar": 0.00019512558355927467,
+   "d011_outcome": true
+  }
+ },
+ "rule": "signflip: D > 0 and p < 0.01",
+ "signflip": {
+  "D": 35,
+  "n_nonzero": 59,
+  "p_two_sided": 0.0011217271752277935
+ },
+ "verdict": "shown"
+}

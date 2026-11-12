@@ -1,0 +1,22 @@
+{
+ "treat": [
+  "wave3b:hunk_e4b_L3"
+ ],
+ "control": [
+  "wave3b:base_e4b_L3"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "wave3b:hunk_e4b_L3 vs wave3b:base_e4b_L3": {
+   "n": 127,
+   "treat_solved": 97,
+   "control_solved": 83,
+   "only_treat": 21,
+   "only_control": 7,
+   "net": 14,
+   "p_mcnemar": 0.012540951371192932,
+   "d011_outcome": false
+  }
+ },
+ "rule": null
+}

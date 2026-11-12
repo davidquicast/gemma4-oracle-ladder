@@ -1,0 +1,19 @@
+{
+ "kernel": "d410qc/g4-ladder-wave2",
+ "script_sha256": "5446d10d935e3fe6bc1e4f14d1f01f29cd10e22561157a11cc6356ef4a01471d",
+ "payload_sha256": "0a4fe4561bca6cda2823ea81afda32c197621ac814ee4c7980717c91eba85bff",
+ "bundles": {
+  "base": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ],
+  "patch": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

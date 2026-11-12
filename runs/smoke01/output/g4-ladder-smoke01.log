@@ -1,0 +1,41 @@
+[{"stream_name":"stdout","time":2.430269952,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":58.459122954,"data":"[     57s] harness installed\n"}
+,{"stream_name":"stdout","time":109.81194759,"data":"[    108s] bundles valid: ['base']\n"}
+,{"stream_name":"stdout","time":110.754408716,"data":"[    109s] gpus ['NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4'] tp 4 dtype bfloat16 cpus 48\n"}
+,{"stream_name":"stdout","time":453.191675388,"data":"[    452s] model ready\n"}
+,{"stream_name":"stdout","time":453.356015849,"data":"[    452s] 6 tasks; 127 gradable of 129\n"}
+,{"stream_name":"stderr","time":453.527793246,"data":"/kaggle/src/script.py:185: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":453.527830713,"data":"  t.extractall(dest)\n"}
+,{"stream_name":"stdout","time":493.249230947,"data":"[    492s] sandbox images built\n"}
+,{"stream_name":"stderr","time":493.250338313,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.\n"}
+,{"stream_name":"stderr","time":493.250362394,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stderr","time":493.250371232,"data":"/kaggle/src/script.py:374: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":493.250375809,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stderr","time":493.251771331,"data":"/kaggle/src/script.py:374: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":493.251795203,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stdout","time":539.564413312,"data":"[    538s]        base_L3 rich_3105        done           resolved=True calls=5 46.3s | 1/1\n"}
+,{"stream_name":"stdout","time":551.947978802,"data":"[    550s]        base_L0 fastapi_13786    done           resolved=False calls=5 58.7s | 0/1\n"}
+,{"stream_name":"stdout","time":562.84690884,"data":"[    561s]        base_L0 rich_3105        done           resolved=False calls=5 69.6s | 0/2\n"}
+,{"stream_name":"stdout","time":589.356705716,"data":"[    588s]        base_L3 httpx_3672       done           resolved=False calls=10 96.1s | 1/2\n"}
+,{"stream_name":"stdout","time":641.142202751,"data":"[    640s]        base_L0 httpx_3672       done           resolved=False calls=7 147.9s | 0/3\n"}
+,{"stream_name":"stdout","time":672.727621019,"data":"[    671s]        base_L3 fastapi_13786    done           resolved=False calls=19 179.5s | 1/3\n"}
+,{"stream_name":"stdout","time":683.541444841,"data":"[    682s]        base_L3 fastapi_14099    done           resolved=False calls=7 131.6s | 1/4\n"}
+,{"stream_name":"stdout","time":722.890666642,"data":"[    721s]        base_L0 fastapi_14262    done           resolved=False calls=10 160.0s | 0/4\n"}
+,{"stream_name":"stdout","time":797.577212645,"data":"[    796s]        base_L0 rich_3480        done           resolved=False calls=22 304.3s | 0/5\n"}
+,{"stream_name":"stdout","time":844.771152146,"data":"[    843s]        base_L0 fastapi_14099    done           resolved=False calls=15 305.2s | 0/6\n"}
+,{"stream_name":"stdout","time":861.859472967,"data":"[    860s]        base_L3 rich_3480        done           resolved=False calls=5 368.6s | 1/5\n"}
+,{"stream_name":"stdout","time":891.34318273,"data":"[    890s]        base_L3 fastapi_14262    done           resolved=False calls=6 302.0s | 1/6\n"}
+,{"stream_name":"stderr","time":901.674665172,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":901.674719023,"data":"  File \"/kaggle/src/script.py\", line 451, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":901.674730618,"data":"    \"versions\": {m: __import__(m).__version__ for m in (\"vllm\", \"torch\", \"transformers\", \"litellm\")},\n"}
+,{"stream_name":"stderr","time":901.674786794,"data":"                    ^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":901.674811975,"data":"  File \"/usr/local/lib/python3.12/dist-packages/litellm/__init__.py\", line 2165, in __getattr__\n"}
+,{"stream_name":"stderr","time":901.675201822,"data":"    raise AttributeError(f\"module {__name__!r} has no attribute {name!r}\")\n"}
+,{"stream_name":"stderr","time":901.675557452,"data":"AttributeError: module 'litellm' has no attribute '__version__'\n"}
+,{"stream_name":"stderr","time":906.720470102,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":906.720511036,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":906.972373477,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":906.97240479,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":907.821543864,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":908.768243342,"data":"[NbConvertApp] Writing 395779 bytes to __results__.html\n"}
+]

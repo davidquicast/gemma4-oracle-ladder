@@ -1,0 +1,62 @@
+{
+ "run_id": "wave3b_smoke",
+ "config": {
+  "arms": [
+   {
+    "bundle": "base_e4b",
+    "level": "L3",
+    "name": "base_e4b_L3"
+   }
+  ],
+  "concurrency": 6,
+  "deadline_minutes": 50,
+  "machine_shape": "NvidiaL4",
+  "model": "gemma-4-e4b-it-qat-w4a16-ct",
+  "n_tasks": 6,
+  "purpose": "Smoke for wave 3b: does base_e4b (E4B checkpoint, otherwise identical to base) load, run and get graded in the official harness?",
+  "run_id": "wave3b_smoke",
+  "seed": 7
+ },
+ "model_path": "/kaggle/input/models/google/gemma-4/other/gemma-4-e4b-it-qat-w4a16-ct/2",
+ "gpus": [
+  "NVIDIA L4",
+  "NVIDIA L4",
+  "NVIDIA L4",
+  "NVIDIA L4"
+ ],
+ "tensor_parallel": 4,
+ "dtype": "bfloat16",
+ "cpus": 48,
+ "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+ "n_tasks": 6,
+ "task_ids": [
+  "rich_3480",
+  "rich_3105",
+  "httpx_3672",
+  "fastapi_13786",
+  "fastapi_14099",
+  "fastapi_14262"
+ ],
+ "wall_seconds": 704,
+ "summary": {
+  "base_e4b_L3": [
+   2,
+   6
+  ]
+ },
+ "versions": {
+  "vllm": "0.19.1",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.13.1",
+  "litellm": "1.82.4",
+  "swegemma": "0.2.11"
+ },
+ "bundles": {
+  "base_e4b": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

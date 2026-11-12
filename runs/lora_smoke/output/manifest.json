@@ -1,0 +1,69 @@
+{
+ "run_id": "lora_smoke",
+ "config": {
+  "adapters": [
+   {
+    "bundle": "lora_probe",
+    "dataset": "d410qc/g4-lora-probe",
+    "name": "lora_probe"
+   }
+  ],
+  "arms": [
+   {
+    "bundle": "lora_probe",
+    "level": "L0",
+    "name": "lora_probe_L0"
+   }
+  ],
+  "concurrency": 6,
+  "deadline_minutes": 40,
+  "machine_shape": "NvidiaL4",
+  "model": "gemma-4-e2b-it-qat-w4a16-ct",
+  "n_tasks": 6,
+  "purpose": "the work plan plumbing proof: does the official harness register a LoRA adapter on the W4A16 E2B checkpoint and grade an episode through it? The adapter is a 20-step rank-16 probe trained on generic text; its solve rate means nothing.",
+  "run_id": "lora_smoke",
+  "seed": 7
+ },
+ "model_path": "/kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2",
+ "gpus": [
+  "NVIDIA L4",
+  "NVIDIA L4",
+  "NVIDIA L4",
+  "NVIDIA L4"
+ ],
+ "tensor_parallel": 4,
+ "dtype": "bfloat16",
+ "cpus": 48,
+ "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+ "n_tasks": 6,
+ "task_ids": [
+  "rich_3480",
+  "rich_3105",
+  "httpx_3672",
+  "fastapi_13786",
+  "fastapi_14099",
+  "fastapi_14262"
+ ],
+ "wall_seconds": 840,
+ "summary": {
+  "lora_probe_L0": [
+   0,
+   6
+  ]
+ },
+ "versions": {
+  "vllm": "0.19.1",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.13.1",
+  "litellm": "1.82.4",
+  "swegemma": "0.2.11"
+ },
+ "bundles": {
+  "lora_probe": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

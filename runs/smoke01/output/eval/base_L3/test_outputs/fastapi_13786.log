@@ -1,0 +1,896 @@
+STDOUT:
+.F..F..F..F..F..F..F..F...FF...FF...FF..FF..FF..FF..FF...F.........F.    [100%]
+=================================== FAILURES ===================================
+_________________________ test_security_api_key_no_key _________________________
+
+    def test_security_api_key_no_key():
+        client = TestClient(app)
+>       response = client.get("/users/me")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_api_key_cookie.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../venv/lib/python3.13/site-packages/starlette/testclient.py:473: in get
+    return super().get(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1053: in get
+    return self.request(
+../venv/lib/python3.13/site-packages/starlette/testclient.py:445: in request
+    return super().request(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../venv/lib/python3.13/site-packages/starlette/testclient.py:348: in handle_request
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/testclient.py:345: in handle_request
+    portal.call(self.app, scope, receive, send)
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:338: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:460: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:402: in __get_result
+    raise self._exception
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:263: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/applications.py:1134: in __call__
+    await super().__call__(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/applications.py:107: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:186: in __call__
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/middleware/asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:736: in app
+    await route.handle(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:290: in handle
+    await self.app(scope, receive, send)
+fastapi/routing.py:125: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/routing.py:111: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+fastapi/routing.py:381: in app
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:616: in solve_dependencies
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:645: in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/security/api_key.py:289: in __call__
+    return self.check_api_key(api_key, self.auto_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+api_key = None, auto_error = True
+
+    @staticmethod
+    def check_api_key(api_key: Optional[str], auto_error: bool) -> Optional[str]:
+        if not api_key:
+            if auto_error:
+                raise HTTPException(
+>                   status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                                ^^^^^^^^^^^^^^^^^^^^^
+                )
+E               NameError: name 'HTTP_401_UNAUTHORIZED' is not defined
+
+fastapi/security/api_key.py:18: NameError
+_________________________ test_security_api_key_no_key _________________________
+
+    def test_security_api_key_no_key():
+        client = TestClient(app)
+>       response = client.get("/users/me")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_api_key_cookie_description.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../venv/lib/python3.13/site-packages/starlette/testclient.py:473: in get
+    return super().get(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1053: in get
+    return self.request(
+../venv/lib/python3.13/site-packages/starlette/testclient.py:445: in request
+    return super().request(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../venv/lib/python3.13/site-packages/starlette/testclient.py:348: in handle_request
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/testclient.py:345: in handle_request
+    portal.call(self.app, scope, receive, send)
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:338: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:460: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:402: in __get_result
+    raise self._exception
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:263: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/applications.py:1134: in __call__
+    await super().__call__(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/applications.py:107: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:186: in __call__
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/middleware/asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:736: in app
+    await route.handle(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:290: in handle
+    await self.app(scope, receive, send)
+fastapi/routing.py:125: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/routing.py:111: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+fastapi/routing.py:381: in app
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:616: in solve_dependencies
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:645: in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/security/api_key.py:289: in __call__
+    return self.check_api_key(api_key, self.auto_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+api_key = None, auto_error = True
+
+    @staticmethod
+    def check_api_key(api_key: Optional[str], auto_error: bool) -> Optional[str]:
+        if not api_key:
+            if auto_error:
+                raise HTTPException(
+>                   status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                                ^^^^^^^^^^^^^^^^^^^^^
+                )
+E               NameError: name 'HTTP_401_UNAUTHORIZED' is not defined
+
+fastapi/security/api_key.py:18: NameError
+_________________________ test_security_api_key_no_key _________________________
+
+    def test_security_api_key_no_key():
+>       response = client.get("/users/me")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_api_key_header.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../venv/lib/python3.13/site-packages/starlette/testclient.py:473: in get
+    return super().get(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1053: in get
+    return self.request(
+../venv/lib/python3.13/site-packages/starlette/testclient.py:445: in request
+    return super().request(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../venv/lib/python3.13/site-packages/starlette/testclient.py:348: in handle_request
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/testclient.py:345: in handle_request
+    portal.call(self.app, scope, receive, send)
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:338: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:460: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:402: in __get_result
+    raise self._exception
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:263: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/applications.py:1134: in __call__
+    await super().__call__(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/applications.py:107: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:186: in __call__
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/middleware/asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:736: in app
+    await route.handle(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:290: in handle
+    await self.app(scope, receive, send)
+fastapi/routing.py:125: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/routing.py:111: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+fastapi/routing.py:381: in app
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:616: in solve_dependencies
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:645: in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/security/api_key.py:201: in __call__
+    return self.check_api_key(api_key, self.auto_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+api_key = None, auto_error = True
+
+    @staticmethod
+    def check_api_key(api_key: Optional[str], auto_error: bool) -> Optional[str]:
+        if not api_key:
+            if auto_error:
+                raise HTTPException(
+>                   status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                                ^^^^^^^^^^^^^^^^^^^^^
+                )
+E               NameError: name 'HTTP_401_UNAUTHORIZED' is not defined
+
+fastapi/security/api_key.py:18: NameError
+_________________________ test_security_api_key_no_key _________________________
+
+    def test_security_api_key_no_key():
+>       response = client.get("/users/me")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_api_key_header_description.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../venv/lib/python3.13/site-packages/starlette/testclient.py:473: in get
+    return super().get(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1053: in get
+    return self.request(
+../venv/lib/python3.13/site-packages/starlette/testclient.py:445: in request
+    return super().request(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../venv/lib/python3.13/site-packages/starlette/testclient.py:348: in handle_request
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/testclient.py:345: in handle_request
+    portal.call(self.app, scope, receive, send)
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:338: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:460: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:402: in __get_result
+    raise self._exception
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:263: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/applications.py:1134: in __call__
+    await super().__call__(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/applications.py:107: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:186: in __call__
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/middleware/asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:736: in app
+    await route.handle(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:290: in handle
+    await self.app(scope, receive, send)
+fastapi/routing.py:125: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/routing.py:111: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+fastapi/routing.py:381: in app
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:616: in solve_dependencies
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:645: in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/security/api_key.py:201: in __call__
+    return self.check_api_key(api_key, self.auto_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+api_key = None, auto_error = True
+
+    @staticmethod
+    def check_api_key(api_key: Optional[str], auto_error: bool) -> Optional[str]:
+        if not api_key:
+            if auto_error:
+                raise HTTPException(
+>                   status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                                ^^^^^^^^^^^^^^^^^^^^^
+                )
+E               NameError: name 'HTTP_401_UNAUTHORIZED' is not defined
+
+fastapi/security/api_key.py:18: NameError
+_________________________ test_security_api_key_no_key _________________________
+
+    def test_security_api_key_no_key():
+>       response = client.get("/users/me")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_api_key_query.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../venv/lib/python3.13/site-packages/starlette/testclient.py:473: in get
+    return super().get(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1053: in get
+    return self.request(
+../venv/lib/python3.13/site-packages/starlette/testclient.py:445: in request
+    return super().request(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../venv/lib/python3.13/site-packages/starlette/testclient.py:348: in handle_request
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/testclient.py:345: in handle_request
+    portal.call(self.app, scope, receive, send)
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:338: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:460: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:402: in __get_result
+    raise self._exception
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:263: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/applications.py:1134: in __call__
+    await super().__call__(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/applications.py:107: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:186: in __call__
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/middleware/asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:736: in app
+    await route.handle(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:290: in handle
+    await self.app(scope, receive, send)
+fastapi/routing.py:125: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/routing.py:111: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+fastapi/routing.py:381: in app
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:616: in solve_dependencies
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:645: in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/security/api_key.py:113: in __call__
+    return self.check_api_key(api_key, self.auto_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+api_key = None, auto_error = True
+
+    @staticmethod
+    def check_api_key(api_key: Optional[str], auto_error: bool) -> Optional[str]:
+        if not api_key:
+            if auto_error:
+                raise HTTPException(
+>                   status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                                ^^^^^^^^^^^^^^^^^^^^^
+                )
+E               NameError: name 'HTTP_401_UNAUTHORIZED' is not defined
+
+fastapi/security/api_key.py:18: NameError
+_________________________ test_security_api_key_no_key _________________________
+
+    def test_security_api_key_no_key():
+>       response = client.get("/users/me")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_api_key_query_description.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../venv/lib/python3.13/site-packages/starlette/testclient.py:473: in get
+    return super().get(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1053: in get
+    return self.request(
+../venv/lib/python3.13/site-packages/starlette/testclient.py:445: in request
+    return super().request(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/image_fastapi_cp313/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../venv/lib/python3.13/site-packages/starlette/testclient.py:348: in handle_request
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/testclient.py:345: in handle_request
+    portal.call(self.app, scope, receive, send)
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:338: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:460: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/tmp/ladder/pycp313/python/lib/python3.13/concurrent/futures/_base.py:402: in __get_result
+    raise self._exception
+/tmp/ladder/image_fastapi_cp313/anyio/from_thread.py:263: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/applications.py:1134: in __call__
+    await super().__call__(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/applications.py:107: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:186: in __call__
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/middleware/asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:736: in app
+    await route.handle(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/routing.py:290: in handle
+    await self.app(scope, receive, send)
+fastapi/routing.py:125: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+../venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+fastapi/routing.py:111: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+fastapi/routing.py:381: in app
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:616: in solve_dependencies
+    solved_result = await solve_dependencies(
+fastapi/dependencies/utils.py:645: in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastapi/security/api_key.py:113: in __call__
+    return self.check_api_key(api_key, self.auto_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+api_key = None, auto_error = True
+
+    @staticmethod
+    def check_api_key(api_key: Optional[str], auto_error: bool) -> Optional[str]:
+        if not api_key:
+            if auto_error:
+                raise HTTPException(
+>                   status_code=HTTP_401_UNAUTHORIZED, detail="Not authenticated"
+                                ^^^^^^^^^^^^^^^^^^^^^
+                )
+E               NameError: name 'HTTP_401_UNAUTHORIZED' is not defined
+
+fastapi/security/api_key.py:18: NameError
+____________________ test_security_http_base_no_credentials ____________________
+
+    def test_security_http_base_no_credentials():
+        response = client.get("/users/me")
+        assert response.status_code == 401, response.text
+        assert response.json() == {"detail": "Not authenticated"}
+>       assert response.headers["WWW-Authenticate"] == "Other"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_http_base.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Headers({'content-length': '30', 'content-type': 'application/json'})
+key = 'WWW-Authenticate'
+
+    def __getitem__(self, key: str) -> str:
+        """
+        Return a single header value.
+    
+        If there are multiple headers with the same key, then we concatenate
+        them with commas. See: https://tools.ietf.org/html/rfc7230#section-3.2.2
+        """
+        normalized_key = key.lower().encode(self.encoding)
+    
+        items = [
+            header_value.decode(self.encoding)
+            for _, header_key, header_value in self._list
+            if header_key == normalized_key
+        ]
+    
+        if items:
+            return ", ".join(items)
+    
+>       raise KeyError(key)
+E       KeyError: 'WWW-Authenticate'
+
+/tmp/ladder/image_fastapi_cp313/httpx/_models.py:302: KeyError
+____________________ test_security_http_base_no_credentials ____________________
+
+    def test_security_http_base_no_credentials():
+        response = client.get("/users/me")
+        assert response.status_code == 401, response.text
+        assert response.json() == {"detail": "Not authenticated"}
+>       assert response.headers["WWW-Authenticate"] == "Other"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_security_http_base_description.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Headers({'content-length': '30', 'content-type': 'application/json'})
+key = 'WWW-Authenticate'
+
+    def __getitem__(self, key: str) -> str:
+        """
+        Return a single header value.
+    
+        If there are multiple headers with the same key, then we concatenate
+        them with commas. See: https://tools.ietf.org/html/rfc7230#section-3.2.2
+        """
+        normalized_key = key.lower().encode(self.encoding)
+    
+        items = [
+            header_value.decode(self.encoding)
+            for _, header_key, header_value in self._list
+            if header_key == normalized_key
+        ]
+    
+        if items:
+            return ", ".join(items)
+    
+>       raise KeyError(key)
+E       KeyError: 'WWW-Authenticate'
+
+/tmp/ladder/image_fastapi_cp313/httpx/_models.py:302: KeyError
+_________________ test_security_http_basic_invalid_credentials _________________
+
+    def test_security_http_basic_invalid_credentials():
+        response = client.get(
+            "/users/me", headers={"Authorization": "Basic notabase64token"}
+        )
+        assert response.status_code == 401, response.text
+        assert response.headers["WWW-Authenticate"] == "Basic"
+>       assert response.json() == {"detail": "Not authenticated"}
+E       AssertionError: assert {'detail': 'I... credentials'} == {'detail': 'N...uthenticated'}
+E         
+E         Differing items:
+E         {'detail': 'Invalid authentication credentials'} != {'detail': 'Not authenticated'}
+E         Use -v to get more diff
+
+tests/test_security_http_basic_optional.py:41: AssertionError
+________________ test_security_http_basic_non_basic_credentials ________________
+
+    def test_security_http_basic_non_basic_credentials():
+        payload = b64encode(b"johnsecret").decode("ascii")
+        auth_header = f"Basic {payload}"
+        response = client.get("/users/me", headers={"Authorization": auth_header})
+        assert response.status_code == 401, response.text
+        assert response.headers["WWW-Authenticate"] == "Basic"
+>       assert response.json() == {"detail": "Not authenticated"}
+E       AssertionError: assert {'detail': 'I... credentials'} == {'detail': 'N...uthenticated'}
+E         
+E         Differing items:
+E         {'detail': 'Invalid authentication credentials'} != {'detail': 'Not authenticated'}
+E         Use -v to get more diff
+
+tests/test_security_http_basic_optional.py:50: AssertionError
+_________________ test_security_http_basic_invalid_credentials _________________
+
+    def test_security_http_basic_invalid_credentials():
+        response = client.get(
+            "/users/me", headers={"Authorization": "Basic notabase64token"}
+        )
+        assert response.status_code == 401, response.text
+        assert response.headers["WWW-Authenticate"] == 'Basic realm="simple"'
+>       assert response.json() == {"detail": "Not authenticated"}
+E       AssertionError: assert {'detail': 'I... credentials'} == {'detail': 'N...uthenticated'}
+E         
+E         Differing items:
+E         {'detail': 'Invalid authentication credentials'} != {'detail': 'Not authenticated'}
+E         Use -v to get more diff
+
+tests/test_security_http_basic_realm.py:39: AssertionError
+________________ test_security_http_basic_non_basic_credentials ________________
+
+    def test_security_http_basic_non_basic_credentials():
+        payload = b64encode(b"johnsecret").decode("ascii")
+        auth_header = f"Basic {payload}"
+        response = client.get("/users/me", headers={"Authorization": auth_header})
+        assert response.status_code == 401, response.text
+        assert response.headers["WWW-Authenticate"] == 'Basic realm="simple"'
+>       assert response.json() == {"detail": "Not authenticated"}
+E       AssertionError: assert {'detail': 'I... credentials'} == {'detail': 'N...uthenticated'}
+E         
+E         Differing items:
+E         {'detail': 'Invalid authentication credentials'} != {'detail': 'Not authenticated'}
+E         Use -v to get more diff
+
+tests/test_security_http_basic_realm.py:48: AssertionError
+_________________ test_security_http_basic_invalid_credentials _________________
+
+    def test_security_http_basic_invalid_credentials():
+        response = client.get(
+            "/users/me", headers={"Authorization": "Basic notabase64token"}
+        )
+        assert response.status_code == 401, response.text
+        assert response.headers["WWW-Authenticate"] == 'Basic realm="simple"'
+>       assert response.json() == {"detail": "Not authenticated"}
+E       AssertionError: assert {'detail': 'I... credentials'} == {'detail': 'N...uthenticated'}
+E         
+E         Differing items:
+E         {'detail': 'Invalid authentication credentials'} != {'detail': 'Not authenticated'}
+E         Use -v to get more diff
+
+tests/test_security_http_basic_realm_description.py:39: AssertionError
+________________ test_security_http_basic_non_basic_credentials ________________
+
+    def test_security_http_basic_non_basic_credentials():
+        payload = b64encode(b"johnsecret").decode("ascii")
+        auth_header = f"Basic {payload}"
+        response = client.get("/users/me", headers={"Authorization": auth_header})
+        assert response.status_code == 401, response.text
+        assert response.headers["WWW-Authenticate"] == 'Basic realm="simple"'
+>       assert response.json() == {"detail": "Not authenticated"}
+E       AssertionError: assert {'detail': 'I... credentials'} == {'detail': 'N...uthenticated'}
+E         
+E         Differing items:
+E         {'detail': 'Invalid authentication credentials'} != {'detail': 'Not authenticated'}
+E         Use -v to get more diff
+
+tests/test_security_http_basic_realm_description.py:48: AssertionError
+___________________ test_security_http_bearer_no_credentials ___________________
+
+    def test_security_http_bearer_no_credentials():
+        response = client.get("/users/me")
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Not authenticated"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_bearer.py:26: AssertionError
+____________ test_security_http_bearer_incorrect_scheme_credentials ____________
+
+    def test_security_http_bearer_incorrect_scheme_credentials():
+        response = client.get("/users/me", headers={"Authorization": "Basic notreally"})
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Invalid authentication credentials"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_bearer.py:33: AssertionError
+___________________ test_security_http_bearer_no_credentials ___________________
+
+    def test_security_http_bearer_no_credentials():
+        response = client.get("/users/me")
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Not authenticated"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_bearer_description.py:26: AssertionError
+____________ test_security_http_bearer_incorrect_scheme_credentials ____________
+
+    def test_security_http_bearer_incorrect_scheme_credentials():
+        response = client.get("/users/me", headers={"Authorization": "Basic notreally"})
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Invalid authentication credentials"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_bearer_description.py:33: AssertionError
+___________________ test_security_http_digest_no_credentials ___________________
+
+    def test_security_http_digest_no_credentials():
+        response = client.get("/users/me")
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Not authenticated"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_digest.py:26: AssertionError
+____________ test_security_http_digest_incorrect_scheme_credentials ____________
+
+    def test_security_http_digest_incorrect_scheme_credentials():
+        response = client.get(
+            "/users/me", headers={"Authorization": "Other invalidauthorization"}
+        )
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Invalid authentication credentials"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_digest.py:35: AssertionError
+___________________ test_security_http_digest_no_credentials ___________________
+
+    def test_security_http_digest_no_credentials():
+        response = client.get("/users/me")
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Not authenticated"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_digest_description.py:26: AssertionError
+____________ test_security_http_digest_incorrect_scheme_credentials ____________
+
+    def test_security_http_digest_incorrect_scheme_credentials():
+        response = client.get(
+            "/users/me", headers={"Authorization": "Other invalidauthorization"}
+        )
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Invalid authentication credentials"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_http_digest_description.py:35: AssertionError
+________________ test_security_oauth2_password_bearer_no_header ________________
+
+    def test_security_oauth2_password_bearer_no_header():
+        response = client.get("/users/me")
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Not authenticated"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_oauth2.py:59: AssertionError
+________________ test_security_oauth2_password_bearer_no_header ________________
+
+    def test_security_oauth2_password_bearer_no_header():
+        response = client.get("/users/me")
+>       assert response.status_code == 401, response.text
+E       AssertionError: {"detail":"Not authenticated"}
+E       assert 403 == 401
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests/test_security_openid_connect.py:42: AssertionError
+- generated xml file: /tmp/swegemma_sandbox_14c6da47-919_3ro6hnqe/tmp/_swegemma_junit_a8ce85163579.xml -
+=========================== short test summary info ============================
+FAILED tests/test_security_api_key_cookie.py::test_security_api_key_no_key - ...
+FAILED tests/test_security_api_key_cookie_description.py::test_security_api_key_no_key
+FAILED tests/test_security_api_key_header.py::test_security_api_key_no_key - ...
+FAILED tests/test_security_api_key_header_description.py::test_security_api_key_no_key
+FAILED tests/test_security_api_key_query.py::test_security_api_key_no_key - N...
+FAILED tests/test_security_api_key_query_description.py::test_security_api_key_no_key
+FAILED tests/test_security_http_base.py::test_security_http_base_no_credentials
+FAILED tests/test_security_http_base_description.py::test_security_http_base_no_credentials
+FAILED tests/test_security_http_basic_optional.py::test_security_http_basic_invalid_credentials
+FAILED tests/test_security_http_basic_optional.py::test_security_http_basic_non_basic_credentials
+FAILED tests/test_security_http_basic_realm.py::test_security_http_basic_invalid_credentials
+FAILED tests/test_security_http_basic_realm.py::test_security_http_basic_non_basic_credentials
+FAILED tests/test_security_http_basic_realm_description.py::test_security_http_basic_invalid_credentials
+FAILED tests/test_security_http_basic_realm_description.py::test_security_http_basic_non_basic_credentials
+FAILED tests/test_security_http_bearer.py::test_security_http_bearer_no_credentials
+FAILED tests/test_security_http_bearer.py::test_security_http_bearer_incorrect_scheme_credentials
+FAILED tests/test_security_http_bearer_description.py::test_security_http_bearer_no_credentials
+FAILED tests/test_security_http_bearer_description.py::test_security_http_bearer_incorrect_scheme_credentials
+FAILED tests/test_security_http_digest.py::test_security_http_digest_no_credentials
+FAILED tests/test_security_http_digest.py::test_security_http_digest_incorrect_scheme_credentials
+FAILED tests/test_security_http_digest_description.py::test_security_http_digest_no_credentials
+FAILED tests/test_security_http_digest_description.py::test_security_http_digest_incorrect_scheme_credentials
+FAILED tests/test_security_oauth2.py::test_security_oauth2_password_bearer_no_header
+FAILED tests/test_security_openid_connect.py::test_security_oauth2_password_bearer_no_header
+24 failed, 45 passed in 2.83s
+
+STDERR:

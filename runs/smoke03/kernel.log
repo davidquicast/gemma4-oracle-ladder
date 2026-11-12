@@ -1,0 +1,370 @@
+[{"stream_name":"stdout","time":2.064804288,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":60.566394897,"data":"[     59s] harness installed\n"}
+,{"stream_name":"stdout","time":101.967413071,"data":"[    101s] bundles valid: ['base']\n"}
+,{"stream_name":"stdout","time":102.556599367,"data":"[    101s] gpus ['Tesla T4', 'Tesla T4'] tp 1 dtype float16 cpus 4\n"}
+,{"stream_name":"stderr","time":362.911658119,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":362.911713968,"data":"  File \"/kaggle/src/script.py\", line 144, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":362.911723407,"data":"    server.start()\n"}
+,{"stream_name":"stderr","time":362.911778422,"data":"  File \"/usr/local/lib/python3.12/dist-packages/adk_submission/server.py\", line 305, in start\n"}
+,{"stream_name":"stderr","time":362.91198676,"data":"    self._wait_until_ready()\n"}
+,{"stream_name":"stderr","time":362.912027626,"data":"  File \"/usr/local/lib/python3.12/dist-packages/adk_submission/server.py\", line 326, in _wait_until_ready\n"}
+,{"stream_name":"stderr","time":362.91220582,"data":"    raise ServerStartupError(\n"}
+,{"stream_name":"stderr","time":362.91245616,"data":"adk_submission.errors.ServerStartupError: Inference server exited prematurely with code 1.\n"}
+,{"stream_name":"stderr","time":362.912470759,"data":"Server output:\n"}
+,{"stream_name":"stderr","time":362.912475699,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:299] \n"}
+,{"stream_name":"stderr","time":362.912480192,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:299]        █     █     █▄   ▄█\n"}
+,{"stream_name":"stderr","time":362.912485435,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.1\n"}
+,{"stream_name":"stderr","time":362.912490006,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:299]   █▄█▀ █     █     █     █  model   /kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2\n"}
+,{"stream_name":"stderr","time":362.912494717,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀\n"}
+,{"stream_name":"stderr","time":362.912499526,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:299] \n"}
+,{"stream_name":"stderr","time":362.912523581,"data":"(APIServer pid=29) INFO 11-11 04:12:34 [utils.py:233] non-default args: {'enable_auto_tool_choice': True, 'tool_call_parser': 'gemma4', 'host': '127.0.0.1', 'model': '/kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2', 'dtype': 'float16', 'max_model_len': 32768, 'reasoning_parser': 'gemma4', 'scheduler_reserve_full_isl': False, 'reasoning_config': ReasoningConfig(reasoning_start_str='\u003c|channel\u003e', reasoning_end_str='\u003cchannel|\u003e')}\n"}
+,{"stream_name":"stderr","time":362.912533121,"data":"(APIServer pid=29) INFO 11-11 04:12:55 [model.py:549] Resolved architecture: Gemma4ForConditionalGeneration\n"}
+,{"stream_name":"stderr","time":362.912537253,"data":"(APIServer pid=29) WARNING 11-11 04:12:55 [model.py:2016] Casting torch.bfloat16 to torch.float16.\n"}
+,{"stream_name":"stderr","time":362.912542194,"data":"(APIServer pid=29) INFO 11-11 04:12:55 [model.py:1678] Using max model len 32768\n"}
+,{"stream_name":"stderr","time":362.912546369,"data":"(APIServer pid=29) INFO 11-11 04:12:56 [config.py:104] Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). Forcing TRITON_ATTN backend to prevent mixed-backend numerical divergence.\n"}
+,{"stream_name":"stderr","time":362.912566453,"data":"(APIServer pid=29) INFO 11-11 04:12:56 [vllm.py:790] Asynchronous scheduling is enabled.\n"}
+,{"stream_name":"stderr","time":362.912573196,"data":"(EngineCore pid=78) INFO 11-11 04:13:42 [core.py:105] Initializing a V1 LLM engine (v0.19.1) with config: model='/kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2', speculative_config=None, tokenizer='/kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=compressed-tensors, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='gemma4', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=/kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': \u003cCompilationMode.VLLM_COMPILE: 3\u003e, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': \u003cCUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)\u003e, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': \u003cDynamicShapesType.BACKED: 'backed'\u003e, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}\n"}
+,{"stream_name":"stderr","time":362.91259204,"data":"(EngineCore pid=78) INFO 11-11 04:13:45 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.19.2.2:46415 backend=nccl\n"}
+,{"stream_name":"stderr","time":362.912596044,"data":"[W1111 04:13:45.949403221 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n"}
+,{"stream_name":"stderr","time":362.91260324,"data":"(EngineCore pid=78) INFO 11-11 04:13:45 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n"}
+,{"stream_name":"stderr","time":362.912606598,"data":"(EngineCore pid=78) INFO 11-11 04:14:01 [gpu_model_runner.py:4735] Starting to load model /kaggle/input/models/google/gemma-4/other/gemma-4-e2b-it-qat-w4a16-ct/2...\n"}
+,{"stream_name":"stderr","time":362.912610191,"data":"(EngineCore pid=78) INFO 11-11 04:14:02 [vllm.py:790] Asynchronous scheduling is enabled.\n"}
+,{"stream_name":"stderr","time":362.912613628,"data":"(EngineCore pid=78) INFO 11-11 04:14:02 [compressed_tensors_wNa16.py:112] Using MarlinLinearKernel for CompressedTensorsWNA16\n"}
+,{"stream_name":"stderr","time":362.912617929,"data":"(EngineCore pid=78) INFO 11-11 04:14:02 [cuda.py:274] Using AttentionBackendEnum.TRITON_ATTN backend.\n"}
+,{"stream_name":"stderr","time":362.912621825,"data":"(EngineCore pid=78) INFO 11-11 04:14:02 [cuda.py:274] Using AttentionBackendEnum.TRITON_ATTN backend.\n"}
+,{"stream_name":"stderr","time":362.912634159,"data":"(EngineCore pid=78) INFO 11-11 04:14:02 [weight_utils.py:848] Prefetching checkpoint files into page cache started (in background)\n"}
+,{"stream_name":"stderr","time":362.912637681,"data":"(EngineCore pid=78) \n"}
+,{"stream_name":"stderr","time":362.912641021,"data":"Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":362.912644501,"data":"(EngineCore pid=78) INFO 11-11 04:14:35 [weight_utils.py:825] Prefetching checkpoint files: 10% (1/1)\n"}
+,{"stream_name":"stderr","time":362.912648092,"data":"(EngineCore pid=78) INFO 11-11 04:14:35 [weight_utils.py:843] Prefetching checkpoint files into page cache finished in 32.54s\n"}
+,{"stream_name":"stderr","time":362.91265157,"data":"(EngineCore pid=78) \n"}
+,{"stream_name":"stderr","time":362.912654981,"data":"Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:32\u003c00:00, 32.58s/it]\n"}
+,{"stream_name":"stderr","time":362.912658719,"data":"(EngineCore pid=78) \n"}
+,{"stream_name":"stderr","time":362.912670148,"data":"Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:32\u003c00:00, 32.58s/it]\n"}
+,{"stream_name":"stderr","time":362.912674218,"data":"(EngineCore pid=78) \n"}
+,{"stream_name":"stderr","time":362.912677581,"data":"(EngineCore pid=78) INFO 11-11 04:14:35 [default_loader.py:384] Loading weights took 32.63 seconds\n"}
+,{"stream_name":"stderr","time":362.912681486,"data":"(EngineCore pid=78) INFO 11-11 04:14:36 [gpu_model_runner.py:4820] Model loading took 7.23 GiB memory and 33.946884 seconds\n"}
+,{"stream_name":"stderr","time":362.912685644,"data":"(EngineCore pid=78) INFO 11-11 04:14:36 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 2496 tokens, and profiled with 1 video items of the maximum feature size.\n"}
+,{"stream_name":"stderr","time":362.912689771,"data":"(EngineCore pid=78) INFO 11-11 04:15:10 [backends.py:1051] Using cache directory: /root/.cache/vllm/torch_compile_cache/80453712df/rank_0_0/backbone for vLLM's torch.compile\n"}
+,{"stream_name":"stderr","time":362.912697299,"data":"(EngineCore pid=78) INFO 11-11 04:15:10 [backends.py:1111] Dynamo bytecode transform time: 17.46 s\n"}
+,{"stream_name":"stderr","time":362.912701173,"data":"(EngineCore pid=78) INFO 11-11 04:15:21 [backends.py:372] Cache the graph of compile range (1, 2048) for later use\n"}
+,{"stream_name":"stderr","time":362.912705058,"data":"(EngineCore pid=78) INFO 11-11 04:15:55 [backends.py:390] Compiling a graph for compile range (1, 2048) takes 43.60 s\n"}
+,{"stream_name":"stderr","time":362.912708924,"data":"(EngineCore pid=78) INFO 11-11 04:16:00 [decorators.py:655] saved AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/ffbfc02b1c71e452ae3b86623df6fef01bfaceb7e6d77eed8d2d2927912fdb59/rank_0_0/model\n"}
+,{"stream_name":"stderr","time":362.912713089,"data":"(EngineCore pid=78) INFO 11-11 04:16:00 [monitor.py:48] torch.compile took 67.70 s in total\n"}
+,{"stream_name":"stderr","time":362.912716778,"data":"(EngineCore pid=78) INFO 11-11 04:16:01 [monitor.py:76] Initial profiling/warmup run took 0.86 s\n"}
+,{"stream_name":"stderr","time":362.912720564,"data":"(EngineCore pid=78) INFO 11-11 04:16:11 [kv_cache_utils.py:829] Overriding num_gpu_blocks=0 with num_gpu_blocks_override=512\n"}
+,{"stream_name":"stderr","time":362.912724313,"data":"(EngineCore pid=78) INFO 11-11 04:16:11 [gpu_model_runner.py:5876] Profiling CUDA graph memory: PIECEWISE=51 (largest=512), FULL=35 (largest=256)\n"}
+,{"stream_name":"stderr","time":362.912728107,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108] EngineCore failed to start.\n"}
+,{"stream_name":"stderr","time":362.912731774,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108] Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":362.912735443,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1082, in run_engine_core\n"}
+,{"stream_name":"stderr","time":362.912739543,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912743453,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.91274719,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 848, in __init__\n"}
+,{"stream_name":"stderr","time":362.912751221,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     super().__init__(\n"}
+,{"stream_name":"stderr","time":362.912754568,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 124, in __init__\n"}
+,{"stream_name":"stderr","time":362.912758608,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     kv_cache_config = self._initialize_kv_caches(vllm_config)\n"}
+,{"stream_name":"stderr","time":362.912762419,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912766638,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 247, in _initialize_kv_caches\n"}
+,{"stream_name":"stderr","time":362.912771059,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     available_gpu_memory = self.model_executor.determine_available_memory()\n"}
+,{"stream_name":"stderr","time":362.912774984,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912781508,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/abstract.py\", line 136, in determine_available_memory\n"}
+,{"stream_name":"stderr","time":362.912785833,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self.collective_rpc(\"determine_available_memory\")\n"}
+,{"stream_name":"stderr","time":362.912789791,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.91279369,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/uniproc_executor.py\", line 80, in collective_rpc\n"}
+,{"stream_name":"stderr","time":362.912797813,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     result = run_method(self.driver_worker, method, args, kwargs)\n"}
+,{"stream_name":"stderr","time":362.912801572,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912804931,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/serial_utils.py\", line 510, in run_method\n"}
+,{"stream_name":"stderr","time":362.912808639,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912812299,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912816021,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":362.912820109,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912823901,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912828301,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_worker.py\", line 381, in determine_available_memory\n"}
+,{"stream_name":"stderr","time":362.912832025,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     cudagraph_memory_estimate = self.model_runner.profile_cudagraph_memory()\n"}
+,{"stream_name":"stderr","time":362.912835666,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912840363,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":362.912844489,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912847944,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912851395,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_model_runner.py\", line 5905, in profile_cudagraph_memory\n"}
+,{"stream_name":"stderr","time":362.912855983,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     self._warmup_and_capture(\n"}
+,{"stream_name":"stderr","time":362.912862788,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_model_runner.py\", line 6066, in _warmup_and_capture\n"}
+,{"stream_name":"stderr","time":362.912866948,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     self._dummy_run(\n"}
+,{"stream_name":"stderr","time":362.912870418,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":362.912874292,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912877587,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912881219,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_model_runner.py\", line 5474, in _dummy_run\n"}
+,{"stream_name":"stderr","time":362.912884853,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     outputs = self.model(\n"}
+,{"stream_name":"stderr","time":362.912888015,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]               ^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912891536,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/compilation/cuda_graph.py\", line 254, in __call__\n"}
+,{"stream_name":"stderr","time":362.912895617,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self.runnable(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912899097,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912902614,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1776, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":362.912906145,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912909389,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912912418,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1787, in _call_impl\n"}
+,{"stream_name":"stderr","time":362.912915702,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912919488,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912922778,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/models/gemma4_mm.py\", line 1320, in forward\n"}
+,{"stream_name":"stderr","time":362.912926428,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     hidden_states = self.language_model.model(\n"}
+,{"stream_name":"stderr","time":362.912930061,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912933271,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/compilation/decorators.py\", line 480, in __call__\n"}
+,{"stream_name":"stderr","time":362.912936978,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self.aot_compiled_fn(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912942914,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912946558,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/aot_compile.py\", line 124, in __call__\n"}
+,{"stream_name":"stderr","time":362.912949968,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self.fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912953579,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912957219,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/models/gemma4.py\", line 1211, in forward\n"}
+,{"stream_name":"stderr","time":362.912961386,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     def forward(\n"}
+,{"stream_name":"stderr","time":362.912964899,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/compilation/caching.py\", line 211, in __call__\n"}
+,{"stream_name":"stderr","time":362.912968954,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self.optimized_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.912972307,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912975794,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 936, in call_wrapped\n"}
+,{"stream_name":"stderr","time":362.912979794,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self._wrapped_call(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.91298348,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.912987375,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 455, in __call__\n"}
+,{"stream_name":"stderr","time":362.912991406,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     raise e\n"}
+,{"stream_name":"stderr","time":362.912994917,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 442, in __call__\n"}
+,{"stream_name":"stderr","time":362.912999139,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":362.913006764,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913010218,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1776, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":362.913013816,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913017214,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913020714,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1787, in _call_impl\n"}
+,{"stream_name":"stderr","time":362.913028323,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913032179,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913035588,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"\u003ceval_with_key\u003e.73\", line 1608, in forward\n"}
+,{"stream_name":"stderr","time":362.9130393,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     submod_9 = self.submod_9(getitem_54, s59, getitem_55, getitem_56, getitem_57);  getitem_54 = getitem_55 = getitem_56 = submod_9 = None\n"}
+,{"stream_name":"stderr","time":362.913043058,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913046708,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 936, in call_wrapped\n"}
+,{"stream_name":"stderr","time":362.913050474,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self._wrapped_call(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913053784,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.91305699,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 455, in __call__\n"}
+,{"stream_name":"stderr","time":362.913060381,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     raise e\n"}
+,{"stream_name":"stderr","time":362.913063579,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 442, in __call__\n"}
+,{"stream_name":"stderr","time":362.913067374,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":362.91307072,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913074241,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1776, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":362.913077808,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913081169,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913084944,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1787, in _call_impl\n"}
+,{"stream_name":"stderr","time":362.913088408,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913091809,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913095371,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"\u003ceval_with_key\u003e.83\", line 6, in forward\n"}
+,{"stream_name":"stderr","time":362.913098981,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     unified_attention_with_output = torch.ops.vllm.unified_attention_with_output(query_14, key_14, value_4, output_53, 'language_model.model.layers.4.self_attn.attn', kv_cache_dummy_dep = unified_kv_cache_update);  query_14 = key_14 = value_4 = output_53 = unified_kv_cache_update = unified_attention_with_output = None\n"}
+,{"stream_name":"stderr","time":362.913106158,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913110191,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/torch/_ops.py\", line 1209, in __call__\n"}
+,{"stream_name":"stderr","time":362.913114151,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return self._op(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913117482,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913121201,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/attention/kv_transfer_utils.py\", line 39, in wrapper\n"}
+,{"stream_name":"stderr","time":362.913124936,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913128299,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913131591,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/attention/attention.py\", line 720, in unified_attention_with_output\n"}
+,{"stream_name":"stderr","time":362.913135604,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     self.impl.forward(\n"}
+,{"stream_name":"stderr","time":362.91313916,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/attention/backends/triton_attn.py\", line 498, in forward\n"}
+,{"stream_name":"stderr","time":362.913142914,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     unified_attention(\n"}
+,{"stream_name":"stderr","time":362.913146238,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/attention/ops/triton_unified_attention.py\", line 989, in unified_attention\n"}
+,{"stream_name":"stderr","time":362.913150038,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     kernel_unified_attention_2d[\n"}
+,{"stream_name":"stderr","time":362.913153406,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/triton/runtime/jit.py\", line 370, in \u003clambda\u003e\n"}
+,{"stream_name":"stderr","time":362.913157478,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913161134,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913164743,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/triton/runtime/jit.py\", line 743, in run\n"}
+,{"stream_name":"stderr","time":362.913168338,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     launch_metadata = kernel.launch_metadata(grid, stream, *bound_args.values())\n"}
+,{"stream_name":"stderr","time":362.913172163,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913178618,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/triton/compiler/compiler.py\", line 482, in launch_metadata\n"}
+,{"stream_name":"stderr","time":362.913182355,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     self._init_handles()\n"}
+,{"stream_name":"stderr","time":362.913186124,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/triton/compiler/compiler.py\", line 456, in _init_handles\n"}
+,{"stream_name":"stderr","time":362.913189893,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     raise_(OutOfResources(self.metadata.shared, max_shared, \"shared memory\"))\n"}
+,{"stream_name":"stderr","time":362.913193538,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]   File \"/usr/local/lib/python3.12/dist-packages/triton/compiler/compiler.py\", line 448, in raise_\n"}
+,{"stream_name":"stderr","time":362.913198288,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108]     raise err\n"}
+,{"stream_name":"stderr","time":362.913202276,"data":"(EngineCore pid=78) ERROR 11-11 04:16:20 [core.py:1108] triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 98304, Hardware limit: 65536. Reducing block sizes or `num_stages` may help.\n"}
+,{"stream_name":"stderr","time":362.913205874,"data":"(EngineCore pid=78) Process EngineCore:\n"}
+,{"stream_name":"stderr","time":362.913209221,"data":"(EngineCore pid=78) Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":362.913212558,"data":"(EngineCore pid=78)   File \"/usr/lib/python3.12/multiprocessing/process.py\", line 314, in _bootstrap\n"}
+,{"stream_name":"stderr","time":362.913215973,"data":"(EngineCore pid=78)     self.run()\n"}
+,{"stream_name":"stderr","time":362.913220093,"data":"(EngineCore pid=78)   File \"/usr/lib/python3.12/multiprocessing/process.py\", line 108, in run\n"}
+,{"stream_name":"stderr","time":362.913223459,"data":"(EngineCore pid=78)     self._target(*self._args, **self._kwargs)\n"}
+,{"stream_name":"stderr","time":362.9132271,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1112, in run_engine_core\n"}
+,{"stream_name":"stderr","time":362.913231056,"data":"(EngineCore pid=78)     raise e\n"}
+,{"stream_name":"stderr","time":362.913234413,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1082, in run_engine_core\n"}
+,{"stream_name":"stderr","time":362.913238114,"data":"(EngineCore pid=78)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913241373,"data":"(EngineCore pid=78)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913244655,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 848, in __init__\n"}
+,{"stream_name":"stderr","time":362.913248759,"data":"(EngineCore pid=78)     super().__init__(\n"}
+,{"stream_name":"stderr","time":362.913252152,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 124, in __init__\n"}
+,{"stream_name":"stderr","time":362.91325594,"data":"(EngineCore pid=78)     kv_cache_config = self._initialize_kv_caches(vllm_config)\n"}
+,{"stream_name":"stderr","time":362.913259647,"data":"(EngineCore pid=78)                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913262956,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 247, in _initialize_kv_caches\n"}
+,{"stream_name":"stderr","time":362.913269561,"data":"(EngineCore pid=78)     available_gpu_memory = self.model_executor.determine_available_memory()\n"}
+,{"stream_name":"stderr","time":362.91327389,"data":"(EngineCore pid=78)                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913277031,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/abstract.py\", line 136, in determine_available_memory\n"}
+,{"stream_name":"stderr","time":362.913281633,"data":"(EngineCore pid=78)     return self.collective_rpc(\"determine_available_memory\")\n"}
+,{"stream_name":"stderr","time":362.913285361,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913288848,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/uniproc_executor.py\", line 80, in collective_rpc\n"}
+,{"stream_name":"stderr","time":362.913293011,"data":"(EngineCore pid=78)     result = run_method(self.driver_worker, method, args, kwargs)\n"}
+,{"stream_name":"stderr","time":362.913296519,"data":"(EngineCore pid=78)              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913300126,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/serial_utils.py\", line 510, in run_method\n"}
+,{"stream_name":"stderr","time":362.913303587,"data":"(EngineCore pid=78)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913307351,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913310852,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":362.913314473,"data":"(EngineCore pid=78)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913318127,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913321771,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_worker.py\", line 381, in determine_available_memory\n"}
+,{"stream_name":"stderr","time":362.91332557,"data":"(EngineCore pid=78)     cudagraph_memory_estimate = self.model_runner.profile_cudagraph_memory()\n"}
+,{"stream_name":"stderr","time":362.913328878,"data":"(EngineCore pid=78)                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913333941,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":362.913338719,"data":"(EngineCore pid=78)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913342061,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913345666,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_model_runner.py\", line 5905, in profile_cudagraph_memory\n"}
+,{"stream_name":"stderr","time":362.913349197,"data":"(EngineCore pid=78)     self._warmup_and_capture(\n"}
+,{"stream_name":"stderr","time":362.913352868,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_model_runner.py\", line 6066, in _warmup_and_capture\n"}
+,{"stream_name":"stderr","time":362.913356644,"data":"(EngineCore pid=78)     self._dummy_run(\n"}
+,{"stream_name":"stderr","time":362.913359662,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":362.913366161,"data":"(EngineCore pid=78)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913370479,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913374976,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_model_runner.py\", line 5474, in _dummy_run\n"}
+,{"stream_name":"stderr","time":362.913378537,"data":"(EngineCore pid=78)     outputs = self.model(\n"}
+,{"stream_name":"stderr","time":362.913381559,"data":"(EngineCore pid=78)               ^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.91338482,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/compilation/cuda_graph.py\", line 254, in __call__\n"}
+,{"stream_name":"stderr","time":362.913388589,"data":"(EngineCore pid=78)     return self.runnable(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913392388,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913395993,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1776, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":362.913399351,"data":"(EngineCore pid=78)     return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913403229,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913407386,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1787, in _call_impl\n"}
+,{"stream_name":"stderr","time":362.91341182,"data":"(EngineCore pid=78)     return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913415293,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913419058,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/models/gemma4_mm.py\", line 1320, in forward\n"}
+,{"stream_name":"stderr","time":362.913423417,"data":"(EngineCore pid=78)     hidden_states = self.language_model.model(\n"}
+,{"stream_name":"stderr","time":362.913426515,"data":"(EngineCore pid=78)                     ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913430281,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/compilation/decorators.py\", line 480, in __call__\n"}
+,{"stream_name":"stderr","time":362.913434407,"data":"(EngineCore pid=78)     return self.aot_compiled_fn(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913438009,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913442031,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/aot_compile.py\", line 124, in __call__\n"}
+,{"stream_name":"stderr","time":362.913446173,"data":"(EngineCore pid=78)     return self.fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913449569,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913453248,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/models/gemma4.py\", line 1211, in forward\n"}
+,{"stream_name":"stderr","time":362.913457907,"data":"(EngineCore pid=78)     def forward(\n"}
+,{"stream_name":"stderr","time":362.913461475,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/compilation/caching.py\", line 211, in __call__\n"}
+,{"stream_name":"stderr","time":362.913468661,"data":"(EngineCore pid=78)     return self.optimized_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913472186,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913475574,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 936, in call_wrapped\n"}
+,{"stream_name":"stderr","time":362.913479053,"data":"(EngineCore pid=78)     return self._wrapped_call(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.91348249,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913485686,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 455, in __call__\n"}
+,{"stream_name":"stderr","time":362.913489108,"data":"(EngineCore pid=78)     raise e\n"}
+,{"stream_name":"stderr","time":362.913492869,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 442, in __call__\n"}
+,{"stream_name":"stderr","time":362.913496091,"data":"(EngineCore pid=78)     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":362.913499863,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.91350333,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1776, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":362.913530601,"data":"(EngineCore pid=78)     return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913534529,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913538161,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1787, in _call_impl\n"}
+,{"stream_name":"stderr","time":362.913541869,"data":"(EngineCore pid=78)     return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913545171,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913548553,"data":"(EngineCore pid=78)   File \"\u003ceval_with_key\u003e.73\", line 1608, in forward\n"}
+,{"stream_name":"stderr","time":362.913552405,"data":"(EngineCore pid=78)     submod_9 = self.submod_9(getitem_54, s59, getitem_55, getitem_56, getitem_57);  getitem_54 = getitem_55 = getitem_56 = submod_9 = None\n"}
+,{"stream_name":"stderr","time":362.91355608,"data":"(EngineCore pid=78)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913559356,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 936, in call_wrapped\n"}
+,{"stream_name":"stderr","time":362.913563142,"data":"(EngineCore pid=78)     return self._wrapped_call(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913567134,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913571008,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 455, in __call__\n"}
+,{"stream_name":"stderr","time":362.913575223,"data":"(EngineCore pid=78)     raise e\n"}
+,{"stream_name":"stderr","time":362.913578295,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py\", line 442, in __call__\n"}
+,{"stream_name":"stderr","time":362.913582883,"data":"(EngineCore pid=78)     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":362.913593604,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913598053,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1776, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":362.913601581,"data":"(EngineCore pid=78)     return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913604577,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913608298,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1787, in _call_impl\n"}
+,{"stream_name":"stderr","time":362.913612003,"data":"(EngineCore pid=78)     return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913615612,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913619091,"data":"(EngineCore pid=78)   File \"\u003ceval_with_key\u003e.83\", line 6, in forward\n"}
+,{"stream_name":"stderr","time":362.913622632,"data":"(EngineCore pid=78)     unified_attention_with_output = torch.ops.vllm.unified_attention_with_output(query_14, key_14, value_4, output_53, 'language_model.model.layers.4.self_attn.attn', kv_cache_dummy_dep = unified_kv_cache_update);  query_14 = key_14 = value_4 = output_53 = unified_kv_cache_update = unified_attention_with_output = None\n"}
+,{"stream_name":"stderr","time":362.913627084,"data":"(EngineCore pid=78)                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913630876,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/torch/_ops.py\", line 1209, in __call__\n"}
+,{"stream_name":"stderr","time":362.913634586,"data":"(EngineCore pid=78)     return self._op(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913638141,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913641438,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/attention/kv_transfer_utils.py\", line 39, in wrapper\n"}
+,{"stream_name":"stderr","time":362.913645224,"data":"(EngineCore pid=78)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913648496,"data":"(EngineCore pid=78)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913652271,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/attention/attention.py\", line 720, in unified_attention_with_output\n"}
+,{"stream_name":"stderr","time":362.913656194,"data":"(EngineCore pid=78)     self.impl.forward(\n"}
+,{"stream_name":"stderr","time":362.913659351,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/attention/backends/triton_attn.py\", line 498, in forward\n"}
+,{"stream_name":"stderr","time":362.913670803,"data":"(EngineCore pid=78)     unified_attention(\n"}
+,{"stream_name":"stderr","time":362.91367435,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/attention/ops/triton_unified_attention.py\", line 989, in unified_attention\n"}
+,{"stream_name":"stderr","time":362.913677918,"data":"(EngineCore pid=78)     kernel_unified_attention_2d[\n"}
+,{"stream_name":"stderr","time":362.913681643,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/triton/runtime/jit.py\", line 370, in \u003clambda\u003e\n"}
+,{"stream_name":"stderr","time":362.913688645,"data":"(EngineCore pid=78)     return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":362.913691985,"data":"(EngineCore pid=78)                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913695679,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/triton/runtime/jit.py\", line 743, in run\n"}
+,{"stream_name":"stderr","time":362.913699253,"data":"(EngineCore pid=78)     launch_metadata = kernel.launch_metadata(grid, stream, *bound_args.values())\n"}
+,{"stream_name":"stderr","time":362.913702498,"data":"(EngineCore pid=78)                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913706338,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/triton/compiler/compiler.py\", line 482, in launch_metadata\n"}
+,{"stream_name":"stderr","time":362.913709932,"data":"(EngineCore pid=78)     self._init_handles()\n"}
+,{"stream_name":"stderr","time":362.913712894,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/triton/compiler/compiler.py\", line 456, in _init_handles\n"}
+,{"stream_name":"stderr","time":362.913716476,"data":"(EngineCore pid=78)     raise_(OutOfResources(self.metadata.shared, max_shared, \"shared memory\"))\n"}
+,{"stream_name":"stderr","time":362.913720073,"data":"(EngineCore pid=78)   File \"/usr/local/lib/python3.12/dist-packages/triton/compiler/compiler.py\", line 448, in raise_\n"}
+,{"stream_name":"stderr","time":362.913723713,"data":"(EngineCore pid=78)     raise err\n"}
+,{"stream_name":"stderr","time":362.913726919,"data":"(EngineCore pid=78) triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 98304, Hardware limit: 65536. Reducing block sizes or `num_stages` may help.\n"}
+,{"stream_name":"stderr","time":362.913734696,"data":"(APIServer pid=29) Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":362.913738241,"data":"(APIServer pid=29)   File \"\u003cfrozen runpy\u003e\", line 198, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":362.913741856,"data":"(APIServer pid=29)   File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\n"}
+,{"stream_name":"stderr","time":362.913745981,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py\", line 712, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":362.913750008,"data":"(APIServer pid=29)     uvloop.run(run_server(args))\n"}
+,{"stream_name":"stderr","time":362.913753276,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/uvloop/__init__.py\", line 96, in run\n"}
+,{"stream_name":"stderr","time":362.913757183,"data":"(APIServer pid=29)     return __asyncio.run(\n"}
+,{"stream_name":"stderr","time":362.913760353,"data":"(APIServer pid=29)            ^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913763966,"data":"(APIServer pid=29)   File \"/usr/lib/python3.12/asyncio/runners.py\", line 195, in run\n"}
+,{"stream_name":"stderr","time":362.913767331,"data":"(APIServer pid=29)     return runner.run(main)\n"}
+,{"stream_name":"stderr","time":362.913770801,"data":"(APIServer pid=29)            ^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913774384,"data":"(APIServer pid=29)   File \"/usr/lib/python3.12/asyncio/runners.py\", line 118, in run\n"}
+,{"stream_name":"stderr","time":362.913780353,"data":"(APIServer pid=29)     return self._loop.run_until_complete(task)\n"}
+,{"stream_name":"stderr","time":362.913783927,"data":"(APIServer pid=29)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913787939,"data":"(APIServer pid=29)   File \"uvloop/loop.pyx\", line 1518, in uvloop.loop.Loop.run_until_complete\n"}
+,{"stream_name":"stderr","time":362.913791349,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/uvloop/__init__.py\", line 48, in wrapper\n"}
+,{"stream_name":"stderr","time":362.913795463,"data":"(APIServer pid=29)     return await main\n"}
+,{"stream_name":"stderr","time":362.913798859,"data":"(APIServer pid=29)            ^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913802428,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py\", line 672, in run_server\n"}
+,{"stream_name":"stderr","time":362.913805744,"data":"(APIServer pid=29)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)\n"}
+,{"stream_name":"stderr","time":362.913809219,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py\", line 686, in run_server_worker\n"}
+,{"stream_name":"stderr","time":362.913813199,"data":"(APIServer pid=29)     async with build_async_engine_client(\n"}
+,{"stream_name":"stderr","time":362.913817246,"data":"(APIServer pid=29)                ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913820495,"data":"(APIServer pid=29)   File \"/usr/lib/python3.12/contextlib.py\", line 210, in __aenter__\n"}
+,{"stream_name":"stderr","time":362.913824038,"data":"(APIServer pid=29)     return await anext(self.gen)\n"}
+,{"stream_name":"stderr","time":362.91382789,"data":"(APIServer pid=29)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913831619,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py\", line 100, in build_async_engine_client\n"}
+,{"stream_name":"stderr","time":362.913835098,"data":"(APIServer pid=29)     async with build_async_engine_client_from_engine_args(\n"}
+,{"stream_name":"stderr","time":362.913838301,"data":"(APIServer pid=29)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.91384188,"data":"(APIServer pid=29)   File \"/usr/lib/python3.12/contextlib.py\", line 210, in __aenter__\n"}
+,{"stream_name":"stderr","time":362.913845269,"data":"(APIServer pid=29)     return await anext(self.gen)\n"}
+,{"stream_name":"stderr","time":362.913848781,"data":"(APIServer pid=29)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913852353,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py\", line 136, in build_async_engine_client_from_engine_args\n"}
+,{"stream_name":"stderr","time":362.913856017,"data":"(APIServer pid=29)     async_llm = AsyncLLM.from_vllm_config(\n"}
+,{"stream_name":"stderr","time":362.913859445,"data":"(APIServer pid=29)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913862838,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/async_llm.py\", line 225, in from_vllm_config\n"}
+,{"stream_name":"stderr","time":362.913866167,"data":"(APIServer pid=29)     return cls(\n"}
+,{"stream_name":"stderr","time":362.91386953,"data":"(APIServer pid=29)            ^^^^\n"}
+,{"stream_name":"stderr","time":362.913872586,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/async_llm.py\", line 154, in __init__\n"}
+,{"stream_name":"stderr","time":362.913879364,"data":"(APIServer pid=29)     self.engine_core = EngineCoreClient.make_async_mp_client(\n"}
+,{"stream_name":"stderr","time":362.91388311,"data":"(APIServer pid=29)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913886761,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py\", line 130, in make_async_mp_client\n"}
+,{"stream_name":"stderr","time":362.913891028,"data":"(APIServer pid=29)     return AsyncMPClient(*client_args)\n"}
+,{"stream_name":"stderr","time":362.913894259,"data":"(APIServer pid=29)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913898095,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py\", line 887, in __init__\n"}
+,{"stream_name":"stderr","time":362.913901494,"data":"(APIServer pid=29)     super().__init__(\n"}
+,{"stream_name":"stderr","time":362.913904656,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py\", line 535, in __init__\n"}
+,{"stream_name":"stderr","time":362.913909623,"data":"(APIServer pid=29)     with launch_core_engines(\n"}
+,{"stream_name":"stderr","time":362.913930085,"data":"(APIServer pid=29)          ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":362.913934596,"data":"(APIServer pid=29)   File \"/usr/lib/python3.12/contextlib.py\", line 144, in __exit__\n"}
+,{"stream_name":"stderr","time":362.913938017,"data":"(APIServer pid=29)     next(self.gen)\n"}
+,{"stream_name":"stderr","time":362.913942639,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py\", line 998, in launch_core_engines\n"}
+,{"stream_name":"stderr","time":362.913946432,"data":"(APIServer pid=29)     wait_for_engine_startup(\n"}
+,{"stream_name":"stderr","time":362.913949807,"data":"(APIServer pid=29)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py\", line 1057, in wait_for_engine_startup\n"}
+,{"stream_name":"stderr","time":362.913953872,"data":"(APIServer pid=29)     raise RuntimeError(\n"}
+,{"stream_name":"stderr","time":362.913957808,"data":"(APIServer pid=29) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}\n"}
+,{"stream_name":"stderr","time":362.913961686,"data":"\n"}
+,{"stream_name":"stderr","time":367.13470807,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":367.340482707,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":368.092302899,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":368.944708183,"data":"[NbConvertApp] Writing 395799 bytes to __results__.html\n"}
+]

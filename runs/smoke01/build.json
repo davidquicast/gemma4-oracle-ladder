@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-smoke01",
+ "script_sha256": "559c394d1429c5fe848059bf0c5e0599ee802c9851aa4a60e3131e69f93d1b24",
+ "payload_sha256": "e6fdf5089b8083a42244fb874de5bad8e45bfedc9692691fb6f9a9232a8a30ba",
+ "bundles": {
+  "base": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

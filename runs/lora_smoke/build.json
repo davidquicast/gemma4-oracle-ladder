@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-lora-smoke",
+ "script_sha256": "f66f7fc18175b935e74854419c9a2080fbc40bea655132bb0c1ebd4638a74c48",
+ "payload_sha256": "bf402d3ddc9716786353e676359bfc127efb8f5852795a391f0fb9d758c1686c",
+ "bundles": {
+  "lora_probe": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

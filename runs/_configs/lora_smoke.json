@@ -1,0 +1,16 @@
+{
+ "run_id": "lora_smoke",
+ "purpose": "the work plan plumbing proof: does the official harness register a LoRA adapter on the W4A16 E2B checkpoint and grade an episode through it? The adapter is a 20-step rank-16 probe trained on generic text; its solve rate means nothing.",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {"name": "lora_probe_L0", "bundle": "lora_probe", "level": "L0"}
+ ],
+ "adapters": [
+  {"bundle": "lora_probe", "name": "lora_probe", "dataset": "d410qc/g4-lora-probe"}
+ ],
+ "n_tasks": 6,
+ "seed": 7,
+ "concurrency": 6,
+ "deadline_minutes": 40
+}

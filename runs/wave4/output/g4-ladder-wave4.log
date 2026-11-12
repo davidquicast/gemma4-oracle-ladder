@@ -1,0 +1,282 @@
+[{"stream_name":"stdout","time":1.6539322699999999,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":52.863206464,"data":"[     52s] harness installed\n"}
+,{"stream_name":"stdout","time":92.082844288,"data":"[     91s] bundles valid: ['base_e4b'] adapters: {}\n"}
+,{"stream_name":"stdout","time":92.881002763,"data":"[     92s] gpus ['NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4'] tp 4 dtype bfloat16 cpus 48\n"}
+,{"stream_name":"stdout","time":418.312341986,"data":"[    417s] model ready\n"}
+,{"stream_name":"stdout","time":418.424416237,"data":"[    418s] 127 tasks; 127 gradable of 129\n"}
+,{"stream_name":"stderr","time":432.816462769,"data":"/kaggle/src/script.py:210: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":432.816494663,"data":"  t.extractall(dest)\n"}
+,{"stream_name":"stdout","time":493.768311988,"data":"[    493s] sandbox images built\n"}
+,{"stream_name":"stderr","time":493.76953531,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.\n"}
+,{"stream_name":"stderr","time":493.769554449,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stderr","time":493.769638316,"data":"/kaggle/src/script.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":493.769646907,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stderr","time":493.771071025,"data":"/kaggle/src/script.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":493.771080065,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stdout","time":575.286154151,"data":"[    574s]    base_e4b_L2 fastapi_15280    done           resolved=False calls=3 81.5s | 0/1\n"}
+,{"stream_name":"stdout","time":576.28357673,"data":"[    575s]    base_e4b_L0 fastapi_15030    done           resolved=False calls=4 82.5s | 0/1\n"}
+,{"stream_name":"stdout","time":579.871626085,"data":"[    579s]    base_e4b_L2 fastapi_15661    done           resolved=False calls=3 86.1s | 0/2\n"}
+,{"stream_name":"stdout","time":596.91888603,"data":"[    596s]    base_e4b_L2 fastapi_15588    done           resolved=False calls=5 103.1s | 0/3\n"}
+,{"stream_name":"stdout","time":597.40205581,"data":"[    597s]    base_e4b_L0 fastapi_15661    done           resolved=False calls=7 103.6s | 0/2\n"}
+,{"stream_name":"stdout","time":605.599710421,"data":"[    605s]    base_e4b_L0 fastapi_15280    done           resolved=False calls=6 111.8s | 0/3\n"}
+,{"stream_name":"stdout","time":619.790135738,"data":"[    619s]    base_e4b_L2 fastapi_15589    done           resolved=False calls=5 126.0s | 0/4\n"}
+,{"stream_name":"stdout","time":622.927334562,"data":"[    622s]    base_e4b_L0 fastapi_14962    done           resolved=False calls=7 129.1s | 0/4\n"}
+,{"stream_name":"stdout","time":638.831093937,"data":"[    638s]    base_e4b_L0 fastapi_15589    done           resolved=False calls=11 145.1s | 0/5\n"}
+,{"stream_name":"stdout","time":651.177828337,"data":"[    650s]    base_e4b_L2 fastapi_15023    done           resolved=False calls=2 54.3s | 0/5\n"}
+,{"stream_name":"stdout","time":687.202662639,"data":"[    686s]    base_e4b_L2 fastapi_14962    done           resolved=False calls=9 193.4s | 0/6\n"}
+,{"stream_name":"stdout","time":695.283427213,"data":"[    694s]    base_e4b_L0 fastapi_15023    done           resolved=False calls=12 115.4s | 0/6\n"}
+,{"stream_name":"stdout","time":707.532146709,"data":"[    707s]    base_e4b_L0 fastapi_14964    done           resolved=False calls=8 132.2s | 0/7\n"}
+,{"stream_name":"stdout","time":719.839186303,"data":"[    719s]    base_e4b_L0 fastapi_15588    done           resolved=False calls=10 226.1s | 0/8\n"}
+,{"stream_name":"stdout","time":727.645658627,"data":"[    727s]    base_e4b_L0 fastapi_14986    done           resolved=False calls=8 130.2s | 0/9\n"}
+,{"stream_name":"stdout","time":753.565156793,"data":"[    753s]    base_e4b_L2 fastapi_14986    done           resolved=False calls=5 148.0s | 0/7\n"}
+,{"stream_name":"stdout","time":836.877545438,"data":"[    836s]    base_e4b_L2 requests_7502    done           resolved=True calls=3 141.6s | 1/8\n"}
+,{"stream_name":"stdout","time":840.331840575,"data":"[    839s]    base_e4b_L2 fastapi_15030    done           resolved=False calls=12 346.5s | 1/9\n"}
+,{"stream_name":"stdout","time":859.066081948,"data":"[    858s]    base_e4b_L2 requests_7427    done           resolved=False calls=4 105.5s | 1/10\n"}
+,{"stream_name":"stdout","time":972.170583468,"data":"[    971s]    base_e4b_L2 requests_7433    done           resolved=True calls=5 252.3s | 2/11\n"}
+,{"stream_name":"stdout","time":976.851960736,"data":"[    976s]    base_e4b_L0 fastapi_14978    done           resolved=False calls=11 357.1s | 0/10\n"}
+,{"stream_name":"stdout","time":976.93646739,"data":"[    976s]    base_e4b_L2 fastapi_14964    done           resolved=False calls=14 400.7s | 2/12\n"}
+,{"stream_name":"stdout","time":977.14960099,"data":"[    976s]    base_e4b_L2 fastapi_14978    done           resolved=False calls=11 354.2s | 2/13\n"}
+,{"stream_name":"stdout","time":1115.994404983,"data":"[   1115s]    base_e4b_L0 requests_7505    done           resolved=False calls=17 477.2s | 0/11\n"}
+,{"stream_name":"stdout","time":1116.034912346,"data":"[   1115s]    base_e4b_L0 requests_7502    done           resolved=True calls=14 428.8s | 1/12\n"}
+,{"stream_name":"stdout","time":1116.050062174,"data":"[   1115s]    base_e4b_L0 requests_7427    done           resolved=False calls=8 388.4s | 1/13\n"}
+,{"stream_name":"stdout","time":1116.056126978,"data":"[   1115s]    base_e4b_L0 requests_7433    done           resolved=True calls=12 408.5s | 2/14\n"}
+,{"stream_name":"stdout","time":1116.057532619,"data":"[   1115s]    base_e4b_L2 requests_7505    done           resolved=True calls=6 464.9s | 3/14\n"}
+,{"stream_name":"stderr","time":1160.143184516,"data":"/usr/lib/python3.12/asyncio/base_events.py:1984: RuntimeWarning: coroutine 'OpenAIChatCompletion.acompletion' was never awaited\n"}
+,{"stream_name":"stderr","time":1160.143233645,"data":"  handle = self._ready.popleft()\n"}
+,{"stream_name":"stderr","time":1160.143238496,"data":"RuntimeWarning: Enable tracemalloc to get the object allocation traceback\n"}
+,{"stream_name":"stdout","time":1161.830469538,"data":"[   1161s]    base_e4b_L0 requests_7315    done           resolved=False calls=9 325.0s | 2/15\n"}
+,{"stream_name":"stdout","time":1163.707053103,"data":"[   1163s]    base_e4b_L2 requests_7315    done           resolved=True calls=7 323.4s | 4/15\n"}
+,{"stream_name":"stdout","time":1168.305206765,"data":"[   1167s]    base_e4b_L0 requests_7309    done           resolved=True calls=9 191.5s | 3/16\n"}
+,{"stream_name":"stdout","time":1172.698624475,"data":"[   1172s]    base_e4b_L2 requests_7309    done           resolved=True calls=4 195.8s | 5/16\n"}
+,{"stream_name":"stdout","time":1189.660311445,"data":"[   1189s]    base_e4b_L2 requests_7205    done           resolved=True calls=4 73.6s | 6/17\n"}
+,{"stream_name":"stdout","time":1209.754915239,"data":"[   1209s]    base_e4b_L2 rich_4077        done           resolved=False calls=6 93.7s | 6/18\n"}
+,{"stream_name":"stdout","time":1224.192682132,"data":"[   1223s]    base_e4b_L0 rich_4077        done           resolved=True calls=10 108.1s | 4/17\n"}
+,{"stream_name":"stdout","time":1236.002413405,"data":"[   1235s]    base_e4b_L0 rich_4075        done           resolved=False calls=5 46.3s | 4/18\n"}
+,{"stream_name":"stdout","time":1278.679435287,"data":"[   1278s]    base_e4b_L0 requests_7328    done           resolved=False calls=6 419.6s | 4/19\n"}
+,{"stream_name":"stdout","time":1278.686968498,"data":"[   1278s]    base_e4b_L2 requests_7328    done           resolved=False calls=5 306.5s | 6/19\n"}
+,{"stream_name":"stdout","time":1280.782416132,"data":"[   1280s]    base_e4b_L2 rich_4076        done           resolved=False calls=4 108.1s | 6/20\n"}
+,{"stream_name":"stdout","time":1281.118737159,"data":"[   1280s]    base_e4b_L0 requests_7205    done           resolved=True calls=13 304.0s | 5/20\n"}
+,{"stream_name":"stdout","time":1294.669296658,"data":"[   1294s]    base_e4b_L0 rich_4076        done           resolved=False calls=4 126.4s | 5/21\n"}
+,{"stream_name":"stdout","time":1300.456169569,"data":"[   1300s]    base_e4b_L2 rich_4079        done           resolved=False calls=4 136.7s | 6/21\n"}
+,{"stream_name":"stdout","time":1323.647644669,"data":"[   1323s]    base_e4b_L0 rich_4079        done           resolved=False calls=8 161.8s | 5/22\n"}
+,{"stream_name":"stdout","time":1381.181511588,"data":"[   1380s]    base_e4b_L2 rich_4075        done           resolved=False calls=10 171.4s | 6/22\n"}
+,{"stream_name":"stdout","time":1403.290304869,"data":"[   1402s]    base_e4b_L0 fastapi_14851    done           resolved=True calls=9 122.5s | 6/23\n"}
+,{"stream_name":"stdout","time":1412.716935406,"data":"[   1412s]    base_e4b_L2 fastapi_14873    done           resolved=False calls=4 112.3s | 6/23\n"}
+,{"stream_name":"stdout","time":1424.214121476,"data":"[   1423s]    base_e4b_L2 rich_4070        done           resolved=False calls=19 308.2s | 6/24\n"}
+,{"stream_name":"stdout","time":1424.282954141,"data":"[   1423s]    base_e4b_L0 rich_4070        done           resolved=False calls=15 308.2s | 6/24\n"}
+,{"stream_name":"stdout","time":1427.532798625,"data":"[   1427s]    base_e4b_L2 fastapi_14258    done           resolved=False calls=9 148.8s | 6/25\n"}
+,{"stream_name":"stdout","time":1453.261589989,"data":"[   1452s]    base_e4b_L2 fastapi_14851    done           resolved=True calls=12 172.1s | 7/26\n"}
+,{"stream_name":"stdout","time":1459.772196994,"data":"[   1459s]    base_e4b_L0 fastapi_13920    done           resolved=False calls=5 136.1s | 6/25\n"}
+,{"stream_name":"stdout","time":1461.209262267,"data":"[   1460s]    base_e4b_L2 fastapi_14786    done           resolved=True calls=2 36.9s | 8/27\n"}
+,{"stream_name":"stdout","time":1468.050533562,"data":"[   1467s]    base_e4b_L2 fastapi_14794    done           resolved=False calls=3 55.3s | 8/28\n"}
+,{"stream_name":"stdout","time":1468.726250726,"data":"[   1468s]    base_e4b_L0 fastapi_14786    done           resolved=True calls=5 44.5s | 7/26\n"}
+,{"stream_name":"stdout","time":1476.388773692,"data":"[   1476s]    base_e4b_L2 fastapi_14492    done           resolved=True calls=2 23.1s | 9/29\n"}
+,{"stream_name":"stdout","time":1502.521685115,"data":"[   1502s]    base_e4b_L2 fastapi_13920    done           resolved=False calls=6 121.3s | 9/30\n"}
+,{"stream_name":"stdout","time":1514.703882482,"data":"[   1514s]    base_e4b_L0 fastapi_14873    done           resolved=False calls=15 220.0s | 7/27\n"}
+,{"stream_name":"stdout","time":1520.064530749,"data":"[   1519s]    base_e4b_L0 fastapi_14492    done           resolved=False calls=7 92.5s | 7/28\n"}
+,{"stream_name":"stdout","time":1522.778687036,"data":"[   1522s]    base_e4b_L2 fastapi_14479    done           resolved=False calls=4 61.6s | 9/31\n"}
+,{"stream_name":"stdout","time":1544.926667475,"data":"[   1544s]    base_e4b_L2 fastapi_14463    done           resolved=True calls=5 76.2s | 10/32\n"}
+,{"stream_name":"stdout","time":1570.681100792,"data":"[   1570s]    base_e4b_L0 fastapi_14463    done           resolved=True calls=5 102.6s | 8/29\n"}
+,{"stream_name":"stdout","time":1584.868363843,"data":"[   1584s]    base_e4b_L0 fastapi_14258    done           resolved=False calls=24 306.2s | 8/30\n"}
+,{"stream_name":"stdout","time":1608.752102246,"data":"[   1608s]    base_e4b_L2 fastapi_12942    done           resolved=True calls=4 106.2s | 11/33\n"}
+,{"stream_name":"stdout","time":1626.477897948,"data":"[   1626s]    base_e4b_L0 rich_4006        done           resolved=False calls=5 402.3s | 8/31\n"}
+,{"stream_name":"stdout","time":1642.974947326,"data":"[   1642s]    base_e4b_L0 fastapi_14479    done           resolved=False calls=11 183.2s | 8/32\n"}
+,{"stream_name":"stdout","time":1662.181162732,"data":"[   1661s]    base_e4b_L2 rich_4006        done           resolved=False calls=5 426.2s | 11/34\n"}
+,{"stream_name":"stdout","time":1669.72848348,"data":"[   1669s]    base_e4b_L0 fastapi_14794    done           resolved=False calls=24 266.4s | 8/33\n"}
+,{"stream_name":"stdout","time":1702.425173165,"data":"[   1702s]    base_e4b_L2 fastapi_14372    done           resolved=True calls=4 117.6s | 12/35\n"}
+,{"stream_name":"stdout","time":1703.575172257,"data":"[   1703s]    base_e4b_L0 fastapi_14609    done           resolved=False calls=13 180.8s | 8/34\n"}
+,{"stream_name":"stdout","time":1730.515907233,"data":"[   1730s]    base_e4b_L2 fastapi_14349    done           resolved=False calls=4 104.0s | 12/36\n"}
+,{"stream_name":"stdout","time":1730.843328112,"data":"[   1730s]    base_e4b_L0 fastapi_12942    done           resolved=False calls=17 254.5s | 8/35\n"}
+,{"stream_name":"stdout","time":1735.223358557,"data":"[   1734s]    base_e4b_L0 fastapi_14487    done           resolved=False calls=3 65.5s | 8/36\n"}
+,{"stream_name":"stdout","time":1738.584723371,"data":"[   1738s]    base_e4b_L2 fastapi_14487    done           resolved=False calls=2 36.2s | 12/37\n"}
+,{"stream_name":"stdout","time":1783.097465771,"data":"[   1782s]    base_e4b_L2 fastapi_14099    done           resolved=False calls=15 263.0s | 12/38\n"}
+,{"stream_name":"stdout","time":1811.762562855,"data":"[   1811s]    base_e4b_L2 fastapi_14512    done           resolved=False calls=7 149.6s | 12/39\n"}
+,{"stream_name":"stdout","time":1820.362134569,"data":"[   1819s]    base_e4b_L0 fastapi_14099    done           resolved=False calls=19 305.7s | 8/37\n"}
+,{"stream_name":"stdout","time":1838.373447273,"data":"[   1838s]    base_e4b_L2 fastapi_11355    done           resolved=False calls=6 107.9s | 12/40\n"}
+,{"stream_name":"stdout","time":1855.33483963,"data":"[   1854s]    base_e4b_L2 fastapi_14609    done           resolved=False calls=20 310.4s | 12/41\n"}
+,{"stream_name":"stdout","time":1857.051554942,"data":"[   1856s]    base_e4b_L0 fastapi_14349    done           resolved=False calls=16 248.3s | 8/38\n"}
+,{"stream_name":"stdout","time":1864.328718719,"data":"[   1863s]    base_e4b_L0 fastapi_14485    done           resolved=False calls=8 133.5s | 8/39\n"}
+,{"stream_name":"stdout","time":1865.646242491,"data":"[   1865s]    base_e4b_L0 fastapi_14372    done           resolved=False calls=19 295.0s | 8/40\n"}
+,{"stream_name":"stdout","time":1873.516865627,"data":"[   1873s]    base_e4b_L2 fastapi_14485    done           resolved=True calls=8 138.3s | 13/42\n"}
+,{"stream_name":"stdout","time":1917.373909033,"data":"[   1917s]    base_e4b_L0 fastapi_14512    done           resolved=False calls=24 274.4s | 8/41\n"}
+,{"stream_name":"stdout","time":1925.788011353,"data":"[   1925s]    base_e4b_L0 fastapi_11355    done           resolved=False calls=10 222.2s | 8/42\n"}
+,{"stream_name":"stdout","time":1963.501205929,"data":"[   1963s]    base_e4b_L0 fastapi_14448    done           resolved=False calls=6 97.9s | 8/43\n"}
+,{"stream_name":"stdout","time":1968.242922634,"data":"[   1967s]    base_e4b_L0 fastapi_14458    done           resolved=True calls=7 129.9s | 9/44\n"}
+,{"stream_name":"stdout","time":2020.35096969,"data":"[   2019s]    base_e4b_L2 fastapi_14455    done           resolved=False calls=5 94.6s | 13/43\n"}
+,{"stream_name":"stdout","time":2033.303597168,"data":"[   2032s]    base_e4b_L0 fastapi_14459    done           resolved=False calls=9 176.3s | 9/45\n"}
+,{"stream_name":"stdout","time":2046.529458912,"data":"[   2046s]    base_e4b_L2 fastapi_14458    done           resolved=True calls=12 191.2s | 14/44\n"}
+,{"stream_name":"stdout","time":2048.887706555,"data":"[   2048s]    base_e4b_L0 fastapi_9753     done           resolved=True calls=8 85.4s | 10/46\n"}
+,{"stream_name":"stdout","time":2051.630931603,"data":"[   2051s]    base_e4b_L0 fastapi_14482    done           resolved=False calls=18 313.0s | 10/47\n"}
+,{"stream_name":"stdout","time":2051.635742971,"data":"[   2051s]    base_e4b_L2 fastapi_14482    done           resolved=False calls=21 268.5s | 14/45\n"}
+,{"stream_name":"stdout","time":2069.769638357,"data":"[   2069s]    base_e4b_L2 fastapi_14448    done           resolved=False calls=7 196.3s | 14/46\n"}
+,{"stream_name":"stdout","time":2070.332152726,"data":"[   2069s]    base_e4b_L0 fastapi_14455    done           resolved=False calls=9 153.0s | 10/48\n"}
+,{"stream_name":"stdout","time":2079.479947239,"data":"[   2079s]    base_e4b_L2 fastapi_9753     done           resolved=True calls=7 111.2s | 15/47\n"}
+,{"stream_name":"stdout","time":2087.767418666,"data":"[   2087s]    base_e4b_L2 fastapi_14459    done           resolved=False calls=4 223.4s | 15/48\n"}
+,{"stream_name":"stdout","time":2103.20121157,"data":"[   2102s]    base_e4b_L0 fastapi_14306    done           resolved=False calls=21 291.4s | 10/49\n"}
+,{"stream_name":"stdout","time":2107.722377093,"data":"[   2107s]    base_e4b_L2 fastapi_9555     done           resolved=False calls=4 56.1s | 15/49\n"}
+,{"stream_name":"stdout","time":2123.595907666,"data":"[   2123s]    base_e4b_L2 fastapi_14306    done           resolved=False calls=4 303.2s | 15/50\n"}
+,{"stream_name":"stdout","time":2127.840204755,"data":"[   2127s]    base_e4b_L0 fastapi_9555     done           resolved=False calls=7 76.2s | 10/50\n"}
+,{"stream_name":"stdout","time":2129.800916037,"data":"[   2129s]    base_e4b_L2 fastapi_14361    done           resolved=True calls=4 59.5s | 16/51\n"}
+,{"stream_name":"stdout","time":2140.354444988,"data":"[   2139s]    base_e4b_L2 fastapi_5077     done           resolved=False calls=8 91.5s | 16/52\n"}
+,{"stream_name":"stdout","time":2144.247602155,"data":"[   2143s]    base_e4b_L0 fastapi_5077     done           resolved=False calls=5 97.7s | 10/51\n"}
+,{"stream_name":"stdout","time":2147.955284895,"data":"[   2147s]    base_e4b_L0 fastapi_14430    done           resolved=False calls=10 127.6s | 10/52\n"}
+,{"stream_name":"stdout","time":2174.282041076,"data":"[   2173s]    base_e4b_L0 fastapi_14361    done           resolved=False calls=5 104.5s | 10/53\n"}
+,{"stream_name":"stdout","time":2192.689902086,"data":"[   2192s]    base_e4b_L2 fastapi_14360    done           resolved=False calls=4 85.0s | 16/53\n"}
+,{"stream_name":"stdout","time":2200.571481789,"data":"[   2200s]    base_e4b_L2 fastapi_13207    done           resolved=True calls=6 112.8s | 17/54\n"}
+,{"stream_name":"stdout","time":2217.7408841,"data":"[   2217s]    base_e4b_L0 fastapi_14419    done           resolved=False calls=5 73.5s | 10/54\n"}
+,{"stream_name":"stdout","time":2225.601272949,"data":"[   2225s]    base_e4b_L2 fastapi_14356    done           resolved=False calls=3 97.8s | 17/55\n"}
+,{"stream_name":"stdout","time":2227.287040134,"data":"[   2226s]    base_e4b_L0 fastapi_14360    done           resolved=False calls=7 124.1s | 10/55\n"}
+,{"stream_name":"stdout","time":2240.089304963,"data":"[   2239s]    base_e4b_L0 fastapi_13207    done           resolved=False calls=12 160.6s | 10/56\n"}
+,{"stream_name":"stdout","time":2243.382454069,"data":"[   2243s]    base_e4b_L2 fastapi_14301    done           resolved=True calls=4 50.7s | 18/56\n"}
+,{"stream_name":"stdout","time":2249.436510626,"data":"[   2249s]    base_e4b_L0 fastapi_14301    done           resolved=True calls=5 75.2s | 11/57\n"}
+,{"stream_name":"stdout","time":2258.967555551,"data":"[   2258s]    base_e4b_L2 fastapi_14430    done           resolved=False calls=9 225.7s | 18/57\n"}
+,{"stream_name":"stdout","time":2287.541236745,"data":"[   2287s]    base_e4b_L2 fastapi_5624     done           resolved=False calls=4 147.2s | 18/58\n"}
+,{"stream_name":"stdout","time":2291.408459839,"data":"[   2291s]    base_e4b_L0 fastapi_14262    done           resolved=False calls=4 90.8s | 11/58\n"}
+,{"stream_name":"stdout","time":2296.189399943,"data":"[   2295s]    base_e4b_L2 fastapi_14419    done           resolved=False calls=5 148.2s | 18/59\n"}
+,{"stream_name":"stdout","time":2307.811174685,"data":"[   2307s]    base_e4b_L2 fastapi_9425     done           resolved=True calls=4 48.8s | 19/60\n"}
+,{"stream_name":"stdout","time":2318.167483966,"data":"[   2317s]    base_e4b_L2 fastapi_14266    done           resolved=False calls=4 90.9s | 19/61\n"}
+,{"stream_name":"stdout","time":2321.059803946,"data":"[   2320s]    base_e4b_L2 fastapi_14246    done           resolved=False calls=4 77.7s | 19/62\n"}
+,{"stream_name":"stdout","time":2375.708650316,"data":"[   2375s]    base_e4b_L2 fastapi_13713    done           resolved=False calls=6 84.3s | 19/63\n"}
+,{"stream_name":"stdout","time":2376.560471739,"data":"[   2376s]    base_e4b_L0 fastapi_5624     done           resolved=False calls=20 246.8s | 11/59\n"}
+,{"stream_name":"stdout","time":2390.256834931,"data":"[   2389s]    base_e4b_L0 rich_3718        done           resolved=False calls=4 72.1s | 11/60\n"}
+,{"stream_name":"stdout","time":2392.359437972,"data":"[   2391s]    base_e4b_L0 fastapi_14356    done           resolved=False calls=14 268.8s | 11/61\n"}
+,{"stream_name":"stdout","time":2397.088595182,"data":"[   2396s]    base_e4b_L0 fastapi_14246    done           resolved=False calls=12 157.0s | 11/62\n"}
+,{"stream_name":"stdout","time":2397.333071557,"data":"[   2396s]    base_e4b_L2 rich_3718        done           resolved=True calls=7 76.3s | 20/64\n"}
+,{"stream_name":"stdout","time":2400.302495917,"data":"[   2399s]    base_e4b_L0 fastapi_14077    done           resolved=True calls=14 104.1s | 12/63\n"}
+,{"stream_name":"stdout","time":2411.688667853,"data":"[   2411s]    base_e4b_L0 fastapi_9425     done           resolved=False calls=6 162.3s | 12/64\n"}
+,{"stream_name":"stdout","time":2424.946843438,"data":"[   2424s]    base_e4b_L2 fastapi_14077    done           resolved=True calls=6 117.1s | 21/65\n"}
+,{"stream_name":"stdout","time":2481.003464007,"data":"[   2480s]    base_e4b_L2 rich_3944        done           resolved=False calls=4 83.7s | 21/66\n"}
+,{"stream_name":"stdout","time":2622.457827949,"data":"[   2622s]    base_e4b_L0 fastapi_13713    done           resolved=False calls=10 334.9s | 12/65\n"}
+,{"stream_name":"stdout","time":2622.465549371,"data":"[   2622s]    base_e4b_L0 fastapi_14266    done           resolved=False calls=12 396.9s | 12/66\n"}
+,{"stream_name":"stdout","time":2627.297165892,"data":"[   2626s]    base_e4b_L2 fastapi_14262    done           resolved=False calls=17 409.6s | 21/67\n"}
+,{"stream_name":"stdout","time":2668.641780733,"data":"[   2668s]    base_e4b_L0 rich_3953        done           resolved=False calls=12 278.4s | 12/67\n"}
+,{"stream_name":"stdout","time":2679.355827829,"data":"[   2678s]    base_e4b_L0 rich_3934        done           resolved=False calls=9 303.6s | 12/68\n"}
+,{"stream_name":"stdout","time":2679.427862366,"data":"[   2679s]    base_e4b_L2 rich_3934        done           resolved=False calls=13 302.9s | 21/68\n"}
+,{"stream_name":"stdout","time":2698.351040391,"data":"[   2697s]    base_e4b_L2 rich_3942        done           resolved=False calls=9 286.7s | 21/69\n"}
+,{"stream_name":"stdout","time":2699.71502819,"data":"[   2699s]    base_e4b_L0 rich_3944        done           resolved=False calls=17 302.6s | 12/69\n"}
+,{"stream_name":"stdout","time":2701.920992817,"data":"[   2701s]    base_e4b_L0 rich_3894        done           resolved=False calls=5 74.6s | 12/70\n"}
+,{"stream_name":"stdout","time":2704.386177318,"data":"[   2704s]    base_e4b_L0 rich_3942        done           resolved=False calls=12 304.1s | 12/71\n"}
+,{"stream_name":"stdout","time":2730.128742122,"data":"[   2729s]    base_e4b_L0 rich_3938        done           resolved=False calls=13 305.2s | 12/72\n"}
+,{"stream_name":"stdout","time":2754.40151064,"data":"[   2754s]    base_e4b_L2 rich_3894        done           resolved=False calls=5 85.8s | 21/70\n"}
+,{"stream_name":"stdout","time":2755.542961244,"data":"[   2755s]    base_e4b_L2 rich_3905        done           resolved=True calls=4 55.8s | 22/71\n"}
+,{"stream_name":"stdout","time":2783.31954863,"data":"[   2782s]    base_e4b_L2 rich_3938        done           resolved=False calls=12 302.3s | 22/72\n"}
+,{"stream_name":"stdout","time":2817.229731153,"data":"[   2816s]    base_e4b_L0 rich_3935        done           resolved=False calls=4 137.9s | 12/73\n"}
+,{"stream_name":"stdout","time":2827.262329054,"data":"[   2826s]    base_e4b_L0 fastapi_14791    done           resolved=False calls=4 71.7s | 12/74\n"}
+,{"stream_name":"stdout","time":2844.369314788,"data":"[   2844s]    base_e4b_L2 rich_3882        done           resolved=False calls=17 221.9s | 22/73\n"}
+,{"stream_name":"stdout","time":2852.229610408,"data":"[   2851s]    base_e4b_L0 rich_3905        done           resolved=True calls=12 153.9s | 13/75\n"}
+,{"stream_name":"stdout","time":2856.856091013,"data":"[   2856s]    base_e4b_L2 fastapi_14791    done           resolved=False calls=6 73.5s | 22/74\n"}
+,{"stream_name":"stdout","time":2860.648223409,"data":"[   2860s]    base_e4b_L0 rich_3882        done           resolved=False calls=13 238.2s | 13/76\n"}
+,{"stream_name":"stdout","time":2934.144225325,"data":"[   2933s]    base_e4b_L2 rich_3953        done           resolved=False calls=5 541.8s | 22/75\n"}
+,{"stream_name":"stdout","time":2950.4073577,"data":"[   2950s]    base_e4b_L0 httpx_3672       done           resolved=False calls=11 220.3s | 13/77\n"}
+,{"stream_name":"stdout","time":2976.285435026,"data":"[   2975s]    base_e4b_L2 rich_3935        done           resolved=False calls=21 296.9s | 22/76\n"}
+,{"stream_name":"stdout","time":2995.266891295,"data":"[   2994s]    base_e4b_L0 rich_3930        done           resolved=False calls=9 293.3s | 13/78\n"}
+,{"stream_name":"stdout","time":3007.979313922,"data":"[   3007s]    base_e4b_L2 rich_3930        done           resolved=False calls=9 303.6s | 22/77\n"}
+,{"stream_name":"stdout","time":3026.102556324,"data":"[   3025s]    base_e4b_L0 fastapi_15800    done           resolved=False calls=14 208.9s | 13/79\n"}
+,{"stream_name":"stdout","time":3052.304737329,"data":"[   3051s]    base_e4b_L0 fastapi_15785    done           resolved=False calls=15 207.9s | 13/80\n"}
+,{"stream_name":"stdout","time":3056.313221837,"data":"[   3055s]    base_e4b_L2 httpx_3672       done           resolved=False calls=11 301.9s | 22/78\n"}
+,{"stream_name":"stdout","time":3062.205705463,"data":"[   3061s]    base_e4b_L0 fastapi_14583    done           resolved=False calls=4 54.2s | 13/81\n"}
+,{"stream_name":"stdout","time":3128.630013924,"data":"[   3128s]    base_e4b_L2 fastapi_15763    done           resolved=False calls=4 133.4s | 22/79\n"}
+,{"stream_name":"stdout","time":3131.89039612,"data":"[   3131s]    base_e4b_L2 fastapi_15800    done           resolved=False calls=10 304.6s | 22/80\n"}
+,{"stream_name":"stdout","time":3132.40261538,"data":"[   3132s]    base_e4b_L2 fastapi_15785    done           resolved=False calls=8 280.2s | 22/81\n"}
+,{"stream_name":"stdout","time":3141.168151608,"data":"[   3140s]    base_e4b_L0 fastapi_14371    done           resolved=False calls=14 284.3s | 13/82\n"}
+,{"stream_name":"stdout","time":3141.93507403,"data":"[   3141s]    base_e4b_L2 fastapi_14371    done           resolved=False calls=14 281.3s | 22/82\n"}
+,{"stream_name":"stdout","time":3162.205474486,"data":"[   3161s]    base_e4b_L0 fastapi_14605    done           resolved=False calls=10 228.1s | 13/83\n"}
+,{"stream_name":"stdout","time":3190.501087744,"data":"[   3190s]    base_e4b_L0 fastapi_14303    done           resolved=True calls=4 58.6s | 14/84\n"}
+,{"stream_name":"stdout","time":3196.628850937,"data":"[   3196s]    base_e4b_L0 fastapi_14297    done           resolved=False calls=6 134.4s | 14/85\n"}
+,{"stream_name":"stdout","time":3209.025864681,"data":"[   3208s]    base_e4b_L2 fastapi_14583    done           resolved=False calls=8 182.9s | 22/83\n"}
+,{"stream_name":"stdout","time":3217.003382406,"data":"[   3216s]    base_e4b_L0 fastapi_14953    done           resolved=False calls=4 54.8s | 14/86\n"}
+,{"stream_name":"stdout","time":3221.410899716,"data":"[   3221s]    base_e4b_L2 fastapi_14303    done           resolved=True calls=4 89.0s | 23/84\n"}
+,{"stream_name":"stdout","time":3236.750549827,"data":"[   3236s]    base_e4b_L2 fastapi_13537    done           resolved=True calls=4 94.8s | 24/85\n"}
+,{"stream_name":"stdout","time":3246.459054369,"data":"[   3246s]    base_e4b_L2 fastapi_14297    done           resolved=False calls=3 117.8s | 24/86\n"}
+,{"stream_name":"stdout","time":3267.941812217,"data":"[   3267s]    base_e4b_L2 fastapi_14605    done           resolved=False calls=19 317.5s | 24/87\n"}
+,{"stream_name":"stdout","time":3275.954029007,"data":"[   3275s]    base_e4b_L2 fastapi_15745    done           resolved=False calls=5 219.6s | 24/88\n"}
+,{"stream_name":"stdout","time":3282.82339578,"data":"[   3282s]    base_e4b_L0 fastapi_15763    done           resolved=False calls=22 306.5s | 14/87\n"}
+,{"stream_name":"stdout","time":3315.105075866,"data":"[   3314s]    base_e4b_L2 fastapi_11194    done           resolved=True calls=4 68.6s | 25/89\n"}
+,{"stream_name":"stdout","time":3315.982430122,"data":"[   3315s]    base_e4b_L0 fastapi_13537    done           resolved=False calls=15 174.8s | 14/88\n"}
+,{"stream_name":"stdout","time":3430.793409926,"data":"[   3430s]    base_e4b_L0 fastapi_15745    done           resolved=False calls=18 378.5s | 14/89\n"}
+,{"stream_name":"stdout","time":3440.126681237,"data":"[   3439s]    base_e4b_L2 fastapi_14953    done           resolved=False calls=8 249.6s | 25/90\n"}
+,{"stream_name":"stdout","time":3441.390845776,"data":"[   3441s]    base_e4b_L2 fastapi_14616    done           resolved=True calls=3 220.0s | 26/91\n"}
+,{"stream_name":"stdout","time":3443.184199341,"data":"[   3442s]    base_e4b_L0 requests_6757    done           resolved=False calls=6 175.2s | 14/90\n"}
+,{"stream_name":"stdout","time":3515.744370919,"data":"[   3515s]    base_e4b_L0 fastapi_13786    done           resolved=False calls=5 319.1s | 14/91\n"}
+,{"stream_name":"stdout","time":3518.512362182,"data":"[   3518s]    base_e4b_L2 fastapi_13786    done           resolved=False calls=3 309.5s | 26/92\n"}
+,{"stream_name":"stdout","time":3522.938644512,"data":"[   3522s]    base_e4b_L0 fastapi_14616    done           resolved=False calls=12 305.9s | 14/92\n"}
+,{"stream_name":"stdout","time":3656.481069053,"data":"[   3656s]    base_e4b_L0 requests_6644    done           resolved=False calls=4 340.5s | 14/93\n"}
+,{"stream_name":"stdout","time":3656.484624281,"data":"[   3656s]    base_e4b_L0 requests_6629    done           resolved=False calls=5 373.7s | 14/94\n"}
+,{"stream_name":"stdout","time":3656.600081008,"data":"[   3656s]    base_e4b_L0 fastapi_11194    done           resolved=False calls=15 419.8s | 14/95\n"}
+,{"stream_name":"stdout","time":3658.853634281,"data":"[   3658s]    base_e4b_L2 requests_6757    done           resolved=False calls=6 382.9s | 26/93\n"}
+,{"stream_name":"stdout","time":3669.225424582,"data":"[   3668s]    base_e4b_L2 requests_6644    done           resolved=True calls=5 238.4s | 27/94\n"}
+,{"stream_name":"stdout","time":3806.816959656,"data":"[   3806s]    base_e4b_L2 requests_6629    done           resolved=False calls=5 491.7s | 27/95\n"}
+,{"stream_name":"stdout","time":3806.827459211,"data":"[   3806s]    base_e4b_L2 requests_6589    done           resolved=True calls=4 365.4s | 28/96\n"}
+,{"stream_name":"stdout","time":3810.24006019,"data":"[   3809s]    base_e4b_L0 requests_6589    done           resolved=False calls=7 370.1s | 14/96\n"}
+,{"stream_name":"stdout","time":3823.523411132,"data":"[   3823s]    base_e4b_L0 rich_3180        done           resolved=False calls=5 305.0s | 14/97\n"}
+,{"stream_name":"stdout","time":3879.451859018,"data":"[   3879s]    base_e4b_L2 rich_3777        done           resolved=False calls=6 223.0s | 28/97\n"}
+,{"stream_name":"stdout","time":3905.742052355,"data":"[   3905s]    base_e4b_L2 rich_3180        done           resolved=False calls=3 382.8s | 28/98\n"}
+,{"stream_name":"stdout","time":3910.643633377,"data":"[   3910s]    base_e4b_L0 requests_6592    done           resolved=True calls=4 467.5s | 15/98\n"}
+,{"stream_name":"stdout","time":3915.335424696,"data":"[   3914s]    base_e4b_L2 requests_6592    done           resolved=False calls=4 399.6s | 28/99\n"}
+,{"stream_name":"stdout","time":3932.820216069,"data":"[   3932s]    base_e4b_L2 rich_3468        done           resolved=False calls=9 274.0s | 28/100\n"}
+,{"stream_name":"stdout","time":3936.056909537,"data":"[   3935s]    base_e4b_L0 rich_3468        done           resolved=False calls=10 279.5s | 15/99\n"}
+,{"stream_name":"stdout","time":3950.321664474,"data":"[   3949s]    base_e4b_L2 rich_3296        done           resolved=False calls=3 70.9s | 28/101\n"}
+,{"stream_name":"stdout","time":3962.122965963,"data":"[   3961s]    base_e4b_L0 rich_3777        done           resolved=False calls=9 305.6s | 15/100\n"}
+,{"stream_name":"stdout","time":3964.837772249,"data":"[   3964s]    base_e4b_L2 rich_3782        done           resolved=False calls=10 158.0s | 28/102\n"}
+,{"stream_name":"stdout","time":3983.168098473,"data":"[   3982s]    base_e4b_L2 rich_3518        done           resolved=True calls=4 32.8s | 29/103\n"}
+,{"stream_name":"stdout","time":3998.13455137,"data":"[   3997s]    base_e4b_L0 rich_3675        done           resolved=False calls=8 92.4s | 15/101\n"}
+,{"stream_name":"stdout","time":4025.08123163,"data":"[   4024s]    base_e4b_L0 rich_3296        done           resolved=False calls=7 201.6s | 15/102\n"}
+,{"stream_name":"stdout","time":4060.773598036,"data":"[   4060s]    base_e4b_L0 rich_3772        done           resolved=False calls=14 253.9s | 15/103\n"}
+,{"stream_name":"stdout","time":4063.087713708,"data":"[   4062s]    base_e4b_L2 rich_3675        done           resolved=False calls=8 152.4s | 29/104\n"}
+,{"stream_name":"stdout","time":4072.602387185,"data":"[   4072s]    base_e4b_L0 rich_3676        done           resolved=False calls=7 157.3s | 15/104\n"}
+,{"stream_name":"stdout","time":4074.48576781,"data":"[   4074s]    base_e4b_L2 rich_3535        done           resolved=False calls=7 109.6s | 29/105\n"}
+,{"stream_name":"stdout","time":4080.093298558,"data":"[   4079s]    base_e4b_L2 rich_3772        done           resolved=False calls=14 269.9s | 29/106\n"}
+,{"stream_name":"stdout","time":4083.23381036,"data":"[   4082s]    base_e4b_L0 rich_3518        done           resolved=True calls=13 147.2s | 16/105\n"}
+,{"stream_name":"stdout","time":4112.799844016,"data":"[   4112s]    base_e4b_L0 rich_3535        done           resolved=False calls=10 150.7s | 16/106\n"}
+,{"stream_name":"stdout","time":4114.609809604,"data":"[   4114s]    base_e4b_L0 rich_3782        done           resolved=False calls=11 445.4s | 16/107\n"}
+,{"stream_name":"stdout","time":4142.616910376,"data":"[   4142s]    base_e4b_L2 rich_3506        done           resolved=False calls=4 81.8s | 29/107\n"}
+,{"stream_name":"stdout","time":4171.771426657,"data":"[   4171s]    base_e4b_L2 rich_3480        done           resolved=True calls=6 99.2s | 30/108\n"}
+,{"stream_name":"stdout","time":4180.058793928,"data":"[   4179s]    base_e4b_L2 rich_3521        done           resolved=False calls=6 181.9s | 30/109\n"}
+,{"stream_name":"stdout","time":4207.621787529,"data":"[   4207s]    base_e4b_L2 rich_3676        done           resolved=False calls=16 274.8s | 30/110\n"}
+,{"stream_name":"stdout","time":4222.23562907,"data":"[   4221s]    base_e4b_L0 rich_3471        done           resolved=False calls=8 107.6s | 16/108\n"}
+,{"stream_name":"stdout","time":4232.450928503,"data":"[   4232s]    base_e4b_L2 rich_3470        done           resolved=False calls=4 52.4s | 30/111\n"}
+,{"stream_name":"stdout","time":4234.445922556,"data":"[   4234s]    base_e4b_L0 rich_3472        done           resolved=False calls=10 160.0s | 16/109\n"}
+,{"stream_name":"stdout","time":4238.36108885,"data":"[   4237s]    base_e4b_L2 rich_3472        done           resolved=False calls=9 158.3s | 30/112\n"}
+,{"stream_name":"stdout","time":4244.815012618,"data":"[   4244s]    base_e4b_L0 rich_3506        done           resolved=False calls=7 219.7s | 16/110\n"}
+,{"stream_name":"stdout","time":4254.699840155,"data":"[   4254s]    base_e4b_L2 rich_3454        done           resolved=False calls=5 141.9s | 30/113\n"}
+,{"stream_name":"stderr","time":4266.804791931,"data":"ERROR:asyncio:Unclosed client session\n"}
+,{"stream_name":"stderr","time":4266.804824648,"data":"client_session: \u003caiohttp.client.ClientSession object at 0x787860279220\u003e\n"}
+,{"stream_name":"stdout","time":4292.32041587,"data":"[   4291s]    base_e4b_L0 rich_3521        done           resolved=False calls=13 309.1s | 16/111\n"}
+,{"stream_name":"stdout","time":4296.309450116,"data":"[   4295s]    base_e4b_L2 rich_3471        done           resolved=False calls=6 153.7s | 30/114\n"}
+,{"stream_name":"stdout","time":4347.907736022,"data":"[   4347s]    base_e4b_L2 rich_2943        done           resolved=True calls=3 55.6s | 31/115\n"}
+,{"stream_name":"stdout","time":4382.127605339,"data":"[   4381s]    base_e4b_L2 rich_3469        done           resolved=False calls=5 159.9s | 31/116\n"}
+,{"stream_name":"stdout","time":4389.879243094,"data":"[   4389s]    base_e4b_L0 rich_3454        done           resolved=True calls=12 306.6s | 17/112\n"}
+,{"stream_name":"stdout","time":4390.890181905,"data":"[   4390s]    base_e4b_L0 rich_3470        done           resolved=False calls=14 219.1s | 17/113\n"}
+,{"stream_name":"stdout","time":4391.209703276,"data":"[   4390s]    base_e4b_L0 rich_3469        done           resolved=False calls=16 183.6s | 17/114\n"}
+,{"stream_name":"stdout","time":4403.288049242,"data":"[   4402s]    base_e4b_L2 rich_2725        done           resolved=True calls=4 55.4s | 32/117\n"}
+,{"stream_name":"stdout","time":4537.217994082,"data":"[   4536s]    base_e4b_L0 rich_3052        done           resolved=False calls=9 304.8s | 17/115\n"}
+,{"stream_name":"stdout","time":4537.347269626,"data":"[   4536s]    base_e4b_L2 rich_3052        done           resolved=False calls=11 302.9s | 32/118\n"}
+,{"stream_name":"stdout","time":4546.702467317,"data":"[   4546s]    base_e4b_L0 rich_3278        done           resolved=False calls=8 308.3s | 17/116\n"}
+,{"stream_name":"stdout","time":4547.637278008,"data":"[   4547s]    base_e4b_L2 rich_3278        done           resolved=False calls=16 302.8s | 32/119\n"}
+,{"stream_name":"stdout","time":4560.076420199,"data":"[   4559s]    base_e4b_L0 rich_2943        done           resolved=False calls=11 305.4s | 17/117\n"}
+,{"stream_name":"stdout","time":4562.525924565,"data":"[   4562s]    base_e4b_L2 rich_3105        done           resolved=False calls=4 172.6s | 32/120\n"}
+,{"stream_name":"stdout","time":4566.441459636,"data":"[   4566s]    base_e4b_L0 rich_2725        done           resolved=False calls=10 270.1s | 17/118\n"}
+,{"stream_name":"stdout","time":4594.373972506,"data":"[   4594s]    base_e4b_L0 rich_3006        done           resolved=True calls=4 46.7s | 18/119\n"}
+,{"stream_name":"stdout","time":4594.388189098,"data":"[   4594s]    base_e4b_L2 rich_3130        done           resolved=False calls=5 203.2s | 32/121\n"}
+,{"stream_name":"stdout","time":4604.490934487,"data":"[   4604s]    base_e4b_L2 rich_3006        done           resolved=True calls=4 44.4s | 33/122\n"}
+,{"stream_name":"stdout","time":4609.253202987,"data":"[   4608s]    base_e4b_L2 rich_3067        done           resolved=True calls=3 62.6s | 34/123\n"}
+,{"stream_name":"stdout","time":4634.654208934,"data":"[   4634s]    base_e4b_L2 rich_3043        done           resolved=False calls=3 97.4s | 34/124\n"}
+,{"stream_name":"stdout","time":4642.670942948,"data":"[   4642s]    base_e4b_L2 rich_3064        done           resolved=False calls=6 76.2s | 34/125\n"}
+,{"stream_name":"stdout","time":4654.125482235,"data":"[   4653s]    base_e4b_L0 rich_3105        done           resolved=False calls=9 272.0s | 18/120\n"}
+,{"stream_name":"stdout","time":4669.440550934,"data":"[   4669s]    base_e4b_L0 rich_3480        done           resolved=False calls=16 606.4s | 18/121\n"}
+,{"stream_name":"stdout","time":4670.991627857,"data":"[   4670s]    base_e4b_L0 rich_3043        done           resolved=False calls=12 267.7s | 18/122\n"}
+,{"stream_name":"stdout","time":4699.347492046,"data":"[   4698s]    base_e4b_L0 rich_3067        done           resolved=False calls=13 162.0s | 18/123\n"}
+,{"stream_name":"stdout","time":4699.694230778,"data":"[   4699s]    base_e4b_L2 rich_3061        done           resolved=False calls=5 90.4s | 34/126\n"}
+,{"stream_name":"stdout","time":4700.89362653,"data":"[   4700s]    base_e4b_L0 rich_3130        done           resolved=False calls=14 310.0s | 18/124\n"}
+,{"stream_name":"stdout","time":4723.654077068,"data":"[   4723s]    base_e4b_L2 rich_3063        done           resolved=False calls=7 129.3s | 34/127\n"}
+,{"stream_name":"stdout","time":4740.008129735,"data":"[   4739s]    base_e4b_L0 rich_3061        done           resolved=False calls=15 135.5s | 18/125\n"}
+,{"stream_name":"stdout","time":4743.108833443,"data":"[   4742s]    base_e4b_L0 rich_3063        done           resolved=False calls=12 148.7s | 18/126\n"}
+,{"stream_name":"stdout","time":4768.105680096,"data":"[   4767s]    base_e4b_L0 rich_3064        done           resolved=False calls=24 205.6s | 18/127\n"}
+,{"stream_name":"stdout","time":4774.599522622,"data":"[   4774s] done {'base_e4b_L0': [18, 127], 'base_e4b_L2': [34, 127]}\n"}
+,{"stream_name":"stderr","time":4779.501042618,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4779.501066969,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4779.686573822,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4779.686596268,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4780.398577994,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4781.189246761,"data":"[NbConvertApp] Writing 404995 bytes to __results__.html\n"}
+]

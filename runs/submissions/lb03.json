@@ -1,0 +1,12 @@
+{
+ "name": "lb03",
+ "bundle": "base_e4b",
+ "kernel": "d410qc/g4-submission-lb03",
+ "bundle_sha256": "37cdb634cae8d3e386e8de185fa18613082e406411d0f7653d077f3732d09e7f",
+ "files": [
+  "agent.yaml",
+  "configs/sampling.yaml",
+  "eval_config.yaml",
+  "prompts/system.md"
+ ]
+}

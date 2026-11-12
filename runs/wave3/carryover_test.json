@@ -1,0 +1,59 @@
+{
+ "L2": {
+  "treat": [
+   "wave3:hunk_L2"
+  ],
+  "control": [
+   "wave1:base_L2"
+  ],
+  "n_tasks": 127,
+  "pairings": {
+   "wave3:hunk_L2 vs wave1:base_L2": {
+    "n": 127,
+    "treat_solved": 13,
+    "control_solved": 23,
+    "only_treat": 2,
+    "only_control": 12,
+    "net": -10,
+    "p_mcnemar": 0.012939453125,
+    "d011_outcome": false
+   }
+  },
+  "rule": "mcnemar in every pairing: p < 0.01, same non-zero sign",
+  "verdict": "not shown"
+ },
+ "L0": {
+  "treat": [
+   "wave3:hunk_L0"
+  ],
+  "control": [
+   "wave1:base_L0",
+   "wave2:base_r2_L0"
+  ],
+  "n_tasks": 127,
+  "pairings": {
+   "wave3:hunk_L0 vs wave1:base_L0": {
+    "n": 127,
+    "treat_solved": 4,
+    "control_solved": 8,
+    "only_treat": 1,
+    "only_control": 5,
+    "net": -4,
+    "p_mcnemar": 0.21875,
+    "d011_outcome": false
+   },
+   "wave3:hunk_L0 vs wave2:base_r2_L0": {
+    "n": 127,
+    "treat_solved": 4,
+    "control_solved": 8,
+    "only_treat": 2,
+    "only_control": 6,
+    "net": -4,
+    "p_mcnemar": 0.2890625,
+    "d011_outcome": false
+   }
+  },
+  "rule": "mcnemar in every pairing: p < 0.01, same non-zero sign",
+  "verdict": "not shown"
+ }
+}

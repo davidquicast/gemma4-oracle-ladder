@@ -1,0 +1,6 @@
+{"instance_id": "rich_3105", "repo": "Textualize/rich", "resolved": true, "agent_patch_size": 483, "test_exit_code": 0, "duration_seconds": 46.27, "error": null, "tool_calls": 5, "total_llm_calls": 7, "task_index": 4}
+{"instance_id": "httpx_3672", "repo": "encode/httpx", "resolved": false, "agent_patch_size": 41401, "test_exit_code": 2, "duration_seconds": 96.08, "error": null, "tool_calls": 10, "total_llm_calls": 12, "task_index": 6}
+{"instance_id": "fastapi_13786", "repo": "fastapi/fastapi", "resolved": false, "agent_patch_size": 7763, "test_exit_code": 1, "duration_seconds": 179.36, "error": null, "tool_calls": 19, "total_llm_calls": 21, "task_index": 8}
+{"instance_id": "fastapi_14099", "repo": "fastapi/fastapi", "resolved": false, "agent_patch_size": 0, "test_exit_code": 1, "duration_seconds": 131.49, "error": null, "tool_calls": 7, "total_llm_calls": 9, "task_index": 10}
+{"instance_id": "rich_3480", "repo": "Textualize/rich", "resolved": false, "agent_patch_size": 521, "test_exit_code": 124, "duration_seconds": 368.56, "error": null, "tool_calls": 5, "total_llm_calls": 7, "task_index": 2}
+{"instance_id": "fastapi_14262", "repo": "fastapi/fastapi", "resolved": false, "agent_patch_size": 0, "test_exit_code": -1, "duration_seconds": 301.98, "error": "Agent exceeded session timeout (5.0 min)", "tool_calls": 6, "total_llm_calls": 20, "task_index": 12}

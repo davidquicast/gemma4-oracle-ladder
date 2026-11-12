@@ -1,0 +1,60 @@
+{
+ "run_id": "wave1",
+ "purpose": "Wave 1: oracle ladder on the base bundle, lean and no-thinking arms, and the Personaxis ablation (pax at L0 and L2), all gradable public tasks.",
+ "model": "gemma-4-e2b-it-qat-w4a16-ct",
+ "machine_shape": "NvidiaL4",
+ "arms": [
+  {
+   "name": "base_L0",
+   "bundle": "base",
+   "level": "L0"
+  },
+  {
+   "name": "base_L1",
+   "bundle": "base",
+   "level": "L1"
+  },
+  {
+   "name": "base_L2",
+   "bundle": "base",
+   "level": "L2"
+  },
+  {
+   "name": "base_L3",
+   "bundle": "base",
+   "level": "L3"
+  },
+  {
+   "name": "base_T",
+   "bundle": "base",
+   "level": "T"
+  },
+  {
+   "name": "lean_L0",
+   "bundle": "lean",
+   "level": "L0"
+  },
+  {
+   "name": "lean_L3",
+   "bundle": "lean",
+   "level": "L3"
+  },
+  {
+   "name": "nothink_L0",
+   "bundle": "nothink",
+   "level": "L0"
+  },
+  {
+   "name": "pax_L0",
+   "bundle": "pax",
+   "level": "L0"
+  },
+  {
+   "name": "pax_L2",
+   "bundle": "pax",
+   "level": "L2"
+  }
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 540
+}

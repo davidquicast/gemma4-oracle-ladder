@@ -1,0 +1,22 @@
+{
+ "treat": [
+  "wave2:patch_L3"
+ ],
+ "control": [
+  "wave1:base_L3"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "wave2:patch_L3 vs wave1:base_L3": {
+   "n": 127,
+   "treat_solved": 65,
+   "control_solved": 52,
+   "only_treat": 23,
+   "only_control": 10,
+   "net": 13,
+   "p_mcnemar": 0.03508203336969018,
+   "d011_outcome": false
+  }
+ },
+ "rule": null
+}

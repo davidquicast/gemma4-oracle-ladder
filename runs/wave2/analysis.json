@@ -1,0 +1,583 @@
+{
+ "reference_arm": "base_r2_L3",
+ "n_rows": 381,
+ "status_counts": {
+  "patch_L3": {
+   "done": 127
+  },
+  "base_r2_L3": {
+   "done": 127
+  },
+  "base_r2_L0": {
+   "done": 127
+  }
+ },
+ "n_common_tasks": 127,
+ "arms": {
+  "base_r2_L0": {
+   "k": 8,
+   "n": 127,
+   "rate": 0.063,
+   "ci95": [
+    0.0323,
+    0.1194
+   ],
+   "all_tasks_run": {
+    "k": 8,
+    "n": 127,
+    "rate": 0.063,
+    "ci95": [
+     0.0323,
+     0.1194
+    ]
+   },
+   "no_patch": 38,
+   "median_seconds": 184.8,
+   "total_hours": 7.04,
+   "mean_tool_calls": 7.93,
+   "level": "L0",
+   "bundle": "base"
+  },
+  "base_r2_L3": {
+   "k": 53,
+   "n": 127,
+   "rate": 0.4173,
+   "ci95": [
+    0.3352,
+    0.5043
+   ],
+   "all_tasks_run": {
+    "k": 53,
+    "n": 127,
+    "rate": 0.4173,
+    "ci95": [
+     0.3352,
+     0.5043
+    ]
+   },
+   "no_patch": 20,
+   "median_seconds": 113.3,
+   "total_hours": 5.32,
+   "mean_tool_calls": 5.19,
+   "level": "L3",
+   "bundle": "base"
+  },
+  "patch_L3": {
+   "k": 65,
+   "n": 127,
+   "rate": 0.5118,
+   "ci95": [
+    0.4258,
+    0.5971
+   ],
+   "all_tasks_run": {
+    "k": 65,
+    "n": 127,
+    "rate": 0.5118,
+    "ci95": [
+     0.4258,
+     0.5971
+    ]
+   },
+   "no_patch": 37,
+   "median_seconds": 91.2,
+   "total_hours": 4.61,
+   "mean_tool_calls": 3.98,
+   "level": "L3",
+   "bundle": "patch"
+  }
+ },
+ "paired_vs_reference": {
+  "base_r2_L0": {
+   "n": 127,
+   "arm": 8,
+   "reference": 53,
+   "both": 7,
+   "only_arm": 1,
+   "only_reference": 46,
+   "p_mcnemar": 0.0
+  },
+  "patch_L3": {
+   "n": 127,
+   "arm": 65,
+   "reference": 53,
+   "both": 41,
+   "only_arm": 24,
+   "only_reference": 12,
+   "p_mcnemar": 0.065245
+  }
+ },
+ "by_repo": {
+  "Textualize/rich": {
+   "base_r2_L0": {
+    "k": 1,
+    "n": 47,
+    "rate": 0.0213,
+    "ci95": [
+     0.0038,
+     0.1111
+    ]
+   },
+   "base_r2_L3": {
+    "k": 22,
+    "n": 47,
+    "rate": 0.4681,
+    "ci95": [
+     0.3333,
+     0.6077
+    ]
+   },
+   "patch_L3": {
+    "k": 24,
+    "n": 47,
+    "rate": 0.5106,
+    "ci95": [
+     0.3724,
+     0.6472
+    ]
+   }
+  },
+  "encode/httpx": {
+   "base_r2_L0": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "base_r2_L3": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "patch_L3": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   }
+  },
+  "fastapi/fastapi": {
+   "base_r2_L0": {
+    "k": 4,
+    "n": 66,
+    "rate": 0.0606,
+    "ci95": [
+     0.0238,
+     0.1457
+    ]
+   },
+   "base_r2_L3": {
+    "k": 21,
+    "n": 66,
+    "rate": 0.3182,
+    "ci95": [
+     0.2185,
+     0.4379
+    ]
+   },
+   "patch_L3": {
+    "k": 30,
+    "n": 66,
+    "rate": 0.4545,
+    "ci95": [
+     0.3402,
+     0.5738
+    ]
+   }
+  },
+  "psf/requests": {
+   "base_r2_L0": {
+    "k": 3,
+    "n": 13,
+    "rate": 0.2308,
+    "ci95": [
+     0.0818,
+     0.5026
+    ]
+   },
+   "base_r2_L3": {
+    "k": 10,
+    "n": 13,
+    "rate": 0.7692,
+    "ci95": [
+     0.4974,
+     0.9182
+    ]
+   },
+   "patch_L3": {
+    "k": 11,
+    "n": 13,
+    "rate": 0.8462,
+    "ci95": [
+     0.5777,
+     0.9567
+    ]
+   }
+  }
+ },
+ "by_patch_size": {
+  "1 file, 1 hunk": {
+   "base_r2_L0": {
+    "k": 6,
+    "n": 58,
+    "rate": 0.1034,
+    "ci95": [
+     0.0483,
+     0.2079
+    ]
+   },
+   "base_r2_L3": {
+    "k": 44,
+    "n": 58,
+    "rate": 0.7586,
+    "ci95": [
+     0.6347,
+     0.8504
+    ]
+   },
+   "patch_L3": {
+    "k": 42,
+    "n": 58,
+    "rate": 0.7241,
+    "ci95": [
+     0.598,
+     0.8225
+    ]
+   }
+  },
+  "1 file, 2+ hunks": {
+   "base_r2_L0": {
+    "k": 1,
+    "n": 33,
+    "rate": 0.0303,
+    "ci95": [
+     0.0054,
+     0.1532
+    ]
+   },
+   "base_r2_L3": {
+    "k": 7,
+    "n": 33,
+    "rate": 0.2121,
+    "ci95": [
+     0.1068,
+     0.3775
+    ]
+   },
+   "patch_L3": {
+    "k": 16,
+    "n": 33,
+    "rate": 0.4848,
+    "ci95": [
+     0.325,
+     0.6478
+    ]
+   }
+  },
+  "2+ files": {
+   "base_r2_L0": {
+    "k": 1,
+    "n": 36,
+    "rate": 0.0278,
+    "ci95": [
+     0.0049,
+     0.1417
+    ]
+   },
+   "base_r2_L3": {
+    "k": 2,
+    "n": 36,
+    "rate": 0.0556,
+    "ci95": [
+     0.0154,
+     0.1814
+    ]
+   },
+   "patch_L3": {
+    "k": 7,
+    "n": 36,
+    "rate": 0.1944,
+    "ci95": [
+     0.0975,
+     0.3503
+    ]
+   }
+  }
+ },
+ "solved_tasks": {
+  "base_r2_L0": [
+   "fastapi_14077",
+   "fastapi_14303",
+   "fastapi_14455",
+   "fastapi_14786",
+   "requests_6592",
+   "requests_6629",
+   "requests_7205",
+   "rich_2943"
+  ],
+  "base_r2_L3": [
+   "fastapi_12942",
+   "fastapi_14246",
+   "fastapi_14301",
+   "fastapi_14303",
+   "fastapi_14349",
+   "fastapi_14356",
+   "fastapi_14360",
+   "fastapi_14361",
+   "fastapi_14372",
+   "fastapi_14430",
+   "fastapi_14455",
+   "fastapi_14485",
+   "fastapi_14487",
+   "fastapi_14492",
+   "fastapi_14786",
+   "fastapi_14791",
+   "fastapi_14851",
+   "fastapi_15589",
+   "fastapi_15661",
+   "fastapi_15763",
+   "fastapi_5624",
+   "requests_6589",
+   "requests_6592",
+   "requests_6629",
+   "requests_6644",
+   "requests_7205",
+   "requests_7309",
+   "requests_7315",
+   "requests_7328",
+   "requests_7433",
+   "requests_7502",
+   "rich_2725",
+   "rich_2943",
+   "rich_3006",
+   "rich_3063",
+   "rich_3064",
+   "rich_3067",
+   "rich_3105",
+   "rich_3130",
+   "rich_3296",
+   "rich_3469",
+   "rich_3471",
+   "rich_3472",
+   "rich_3506",
+   "rich_3518",
+   "rich_3535",
+   "rich_3718",
+   "rich_3882",
+   "rich_3905",
+   "rich_3944",
+   "rich_4076",
+   "rich_4077",
+   "rich_4079"
+  ],
+  "patch_L3": [
+   "fastapi_11194",
+   "fastapi_12942",
+   "fastapi_13207",
+   "fastapi_13920",
+   "fastapi_14077",
+   "fastapi_14246",
+   "fastapi_14258",
+   "fastapi_14266",
+   "fastapi_14297",
+   "fastapi_14303",
+   "fastapi_14356",
+   "fastapi_14360",
+   "fastapi_14361",
+   "fastapi_14430",
+   "fastapi_14463",
+   "fastapi_14487",
+   "fastapi_14492",
+   "fastapi_14616",
+   "fastapi_14786",
+   "fastapi_14791",
+   "fastapi_14794",
+   "fastapi_14851",
+   "fastapi_14873",
+   "fastapi_14953",
+   "fastapi_14986",
+   "fastapi_15023",
+   "fastapi_15588",
+   "fastapi_15589",
+   "fastapi_15763",
+   "fastapi_9753",
+   "requests_6589",
+   "requests_6592",
+   "requests_6629",
+   "requests_6644",
+   "requests_6757",
+   "requests_7205",
+   "requests_7315",
+   "requests_7328",
+   "requests_7427",
+   "requests_7433",
+   "requests_7502",
+   "rich_2725",
+   "rich_2943",
+   "rich_3006",
+   "rich_3063",
+   "rich_3105",
+   "rich_3130",
+   "rich_3468",
+   "rich_3469",
+   "rich_3470",
+   "rich_3471",
+   "rich_3472",
+   "rich_3506",
+   "rich_3535",
+   "rich_3676",
+   "rich_3718",
+   "rich_3777",
+   "rich_3882",
+   "rich_3894",
+   "rich_3905",
+   "rich_3944",
+   "rich_4075",
+   "rich_4076",
+   "rich_4077",
+   "rich_4079"
+  ]
+ },
+ "common_tasks": [
+  "fastapi_11194",
+  "fastapi_11355",
+  "fastapi_12942",
+  "fastapi_13207",
+  "fastapi_13537",
+  "fastapi_13713",
+  "fastapi_13786",
+  "fastapi_13920",
+  "fastapi_14077",
+  "fastapi_14099",
+  "fastapi_14246",
+  "fastapi_14258",
+  "fastapi_14262",
+  "fastapi_14266",
+  "fastapi_14297",
+  "fastapi_14301",
+  "fastapi_14303",
+  "fastapi_14306",
+  "fastapi_14349",
+  "fastapi_14356",
+  "fastapi_14360",
+  "fastapi_14361",
+  "fastapi_14371",
+  "fastapi_14372",
+  "fastapi_14419",
+  "fastapi_14430",
+  "fastapi_14448",
+  "fastapi_14455",
+  "fastapi_14458",
+  "fastapi_14459",
+  "fastapi_14463",
+  "fastapi_14479",
+  "fastapi_14482",
+  "fastapi_14485",
+  "fastapi_14487",
+  "fastapi_14492",
+  "fastapi_14512",
+  "fastapi_14583",
+  "fastapi_14605",
+  "fastapi_14609",
+  "fastapi_14616",
+  "fastapi_14786",
+  "fastapi_14791",
+  "fastapi_14794",
+  "fastapi_14851",
+  "fastapi_14873",
+  "fastapi_14953",
+  "fastapi_14962",
+  "fastapi_14964",
+  "fastapi_14978",
+  "fastapi_14986",
+  "fastapi_15023",
+  "fastapi_15030",
+  "fastapi_15280",
+  "fastapi_15588",
+  "fastapi_15589",
+  "fastapi_15661",
+  "fastapi_15745",
+  "fastapi_15763",
+  "fastapi_15785",
+  "fastapi_15800",
+  "fastapi_5077",
+  "fastapi_5624",
+  "fastapi_9425",
+  "fastapi_9555",
+  "fastapi_9753",
+  "httpx_3672",
+  "requests_6589",
+  "requests_6592",
+  "requests_6629",
+  "requests_6644",
+  "requests_6757",
+  "requests_7205",
+  "requests_7309",
+  "requests_7315",
+  "requests_7328",
+  "requests_7427",
+  "requests_7433",
+  "requests_7502",
+  "requests_7505",
+  "rich_2725",
+  "rich_2943",
+  "rich_3006",
+  "rich_3043",
+  "rich_3052",
+  "rich_3061",
+  "rich_3063",
+  "rich_3064",
+  "rich_3067",
+  "rich_3105",
+  "rich_3130",
+  "rich_3180",
+  "rich_3278",
+  "rich_3296",
+  "rich_3454",
+  "rich_3468",
+  "rich_3469",
+  "rich_3470",
+  "rich_3471",
+  "rich_3472",
+  "rich_3480",
+  "rich_3506",
+  "rich_3518",
+  "rich_3521",
+  "rich_3535",
+  "rich_3675",
+  "rich_3676",
+  "rich_3718",
+  "rich_3772",
+  "rich_3777",
+  "rich_3782",
+  "rich_3882",
+  "rich_3894",
+  "rich_3905",
+  "rich_3930",
+  "rich_3934",
+  "rich_3935",
+  "rich_3938",
+  "rich_3942",
+  "rich_3944",
+  "rich_3953",
+  "rich_4006",
+  "rich_4070",
+  "rich_4075",
+  "rich_4076",
+  "rich_4077",
+  "rich_4079"
+ ],
+ "run_ids": [
+  "wave2"
+ ]
+}

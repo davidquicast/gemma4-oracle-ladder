@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-smoke",
+ "script_sha256": "74d647790c53e663d5acd31d656db4724c0bdc9288ddf1ae8c2bb99f836ede67",
+ "payload_sha256": "1010ebd16341ac4a7ba30fd5b9ee829271e3038c40bd9a096d6bcd6c1297b17c",
+ "bundles": {
+  "base_e4b": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}
