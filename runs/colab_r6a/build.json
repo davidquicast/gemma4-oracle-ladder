@@ -1,0 +1,14 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-r6a",
+ "script_sha256": "2ebc4ae5bdb6a217ddbd6127b34f4a0a76953390ba35a9582410dbf4d4814d22",
+ "payload_sha256": "d2c6bdcefce8f717f1062d8986c001c6e07b48f7a791aa93314844f927df86a1",
+ "bundles": {
+  "paxkit": [
+   "README.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}
