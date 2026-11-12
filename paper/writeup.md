@@ -1,6 +1,6 @@
 # Handed the Fix, Still Failing
 
-**An oracle ladder finds where a small software agent loses tasks; a pre-registered edit protocol recovers part of that loss on two models, and the ladder shows where it stops helping**
+**An oracle ladder locates a small agent's losses; a pre-registered edit protocol recovers part of the largest one on two models**
 
 ## Abstract
 
