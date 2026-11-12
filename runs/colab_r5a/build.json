@@ -1,0 +1,13 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-r5a",
+ "script_sha256": "422d4f1e7c98759a74d27cbe71f635fe4b66288a77b28fd2dfdf9760d9238977",
+ "payload_sha256": "9fe38c87b1a0b714658817241261d089d3b08a8f841850f2489e51de27fc2888",
+ "bundles": {
+  "base_e4b": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}
