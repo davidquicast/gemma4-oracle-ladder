@@ -1,0 +1,23 @@
+{
+ "treat": [
+  "wave5:pax2_e4b_L0"
+ ],
+ "control": [
+  "wave4:base_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "wave5:pax2_e4b_L0 vs wave4:base_e4b_L0": {
+   "n": 127,
+   "treat_solved": 15,
+   "control_solved": 18,
+   "only_treat": 6,
+   "only_control": 9,
+   "net": -3,
+   "p_mcnemar": 0.60723876953125,
+   "d011_outcome": false
+  }
+ },
+ "rule": "mcnemar in every pairing: p < 0.01, same non-zero sign",
+ "verdict": "not shown"
+}

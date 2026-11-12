@@ -50,7 +50,7 @@ def payload(config: str) -> None:
 def pull(run_id: str) -> None:
     dest = ROOT / "runs" / run_id / "output"
     dest.mkdir(parents=True, exist_ok=True)
-    print(_kaggle("datasets", "download", f"{OWNER}/g4-colab-out-{run_id.replace('_', '-')}",
+    print(_kaggle("datasets", "download", f"{OWNER}/g4-colab-out-{run_id.replace('_', '-').lower()}",
                   "-p", str(dest), "--unzip", "--force")[-500:])
     print(sorted(p.name for p in dest.iterdir()))
 

@@ -34,7 +34,7 @@ Solve(L2) − Solve(L0) is the localization gap, Solve(L3) − Solve(L2) the syn
 
 **Setup.** Official `swegemma` 0.2.11 harness on four L4 GPUs under the scorer's flags, model `gemma-4-e2b-it-qat-w4a16-ct`, temperature 0.2, at most 8,192 output tokens per turn, and per episode 24 tool calls, 5 minutes and 60 turns. Grading uses the scorer-like sandbox of Kirchner [6]; we keep the 127 of 129 public tasks whose reference patch passes there. Hints are clipped at 16,000 characters, which affects 8 tasks at L3.
 
-**Agents.** `base` is the official starter bundle (nine tools, edits by exact string replacement). `lean` (short prompt, no `write_file`), `nothink` (thinking off) and `pax` (a structured persona) are prompt variants. `patch` is `base` without `edit_file` and `write_file`: the agent sends one unified diff to `git apply` inside `run_command`. `hunk` is `patch` with one command per file and `git apply --recount --reject --unidiff-zero --ignore-whitespace`: header counts are ignored, each hunk applies or is rejected alone, and whitespace errors in context are tolerated. All are plain bundles the scorer accepts.
+**Agents.** `base` is the official starter bundle (nine tools, edits by exact string replacement). `lean` (short prompt, no `write_file`), `nothink` (thinking off) and `pax` (an incomplete Personaxis persona) are prompt variants. `pax2` applies that format in full: ten layers compiled into the prompt, a procedure skill with checks, and sourced knowledge. `patch` is `base` without `edit_file` and `write_file`: the agent sends one unified diff to `git apply` inside `run_command`. `hunk` is `patch` with one command per file and `git apply --recount --reject --unidiff-zero --ignore-whitespace`: header counts are ignored, each hunk applies or is rejected alone, and whitespace errors in context are tolerated. All are plain bundles the scorer accepts.
 
 **Runs.** Wave 1: `base` at five levels and the variants at L0, L2 or L3. Wave 2: `patch` at L3 and reruns of `base` at L3 and L0. Wave 3: `hunk` at L3 twice, at L2 and at L0, then `base` and `hunk` at L3 on E4B. In total 19 arms and 2,413 graded episodes [C-097]; each wave was designed after reading the one before.
 
@@ -82,7 +82,7 @@ The lower levels fail differently. At L2, 90 of 104 unsolved episodes end with a
 
 ### 3.3 Prompt variants and the noise floor
 
-At L0, `lean`, `nothink` and `pax` are indistinguishable from `base` (3 vs 4, 4 vs 4, 2 vs 4) [C-015, C-017, C-018]. The persona meets rejection rule (i) with a net of −6 [C-031].
+At L0, `lean`, `nothink` and `pax` are indistinguishable from `base` (3 vs 4, 4 vs 4, 2 vs 4) [C-015, C-017, C-018]. The first persona meets rejection rule (i) with a net of −6 [C-031]. The full one does not help either (rule fixed first: p < 0.01): on E4B at L0 it solves 15/127 against 18/127 (6 vs 9, p = 0.61) [C-105, C-100, C-106], and 15 against 19 on one A100 (4 vs 8, p = 0.39) [C-109, C-108, C-110]. It loaded its procedure skill in 103 of 127 episodes, its knowledge in one [C-107].
 
 Two identical `base` runs at L3 solve 52 and 53 tasks and disagree on 21 [C-004, C-042, C-045]. At L0 both solve 8 and disagree on 6 [C-043, C-046]. The two `hunk` runs disagree on 28 [C-087]. One task in five or six flips between identical runs, so a paired difference from single runs means little.
 

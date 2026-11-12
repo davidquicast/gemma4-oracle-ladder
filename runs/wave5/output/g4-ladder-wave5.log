@@ -1,0 +1,153 @@
+[{"stream_name":"stdout","time":2.533993889,"data":"[      1s] inputs /kaggle/input/competitions/gemma-4-developer-agent /kaggle/input/datasets/metric/gemma-4-developer-agent-wheelhouse /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-wheels /kaggle/input/datasets/zbigniewkirchner/gemma-4-agent-local-eval-pythons\n"}
+,{"stream_name":"stdout","time":58.067044297,"data":"[     56s] harness installed\n"}
+,{"stream_name":"stdout","time":109.654350372,"data":"[    108s] bundles valid: ['pax2_e4b'] adapters: {}\n"}
+,{"stream_name":"stdout","time":110.642392551,"data":"[    109s] gpus ['NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4', 'NVIDIA L4'] tp 4 dtype bfloat16 cpus 48\n"}
+,{"stream_name":"stdout","time":461.093360412,"data":"[    459s] model ready\n"}
+,{"stream_name":"stdout","time":461.217695845,"data":"[    460s] 127 tasks; 127 gradable of 129\n"}
+,{"stream_name":"stderr","time":476.251792152,"data":"/kaggle/src/script.py:210: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":476.251821722,"data":"  t.extractall(dest)\n"}
+,{"stream_name":"stdout","time":538.620509997,"data":"[    537s] sandbox images built\n"}
+,{"stream_name":"stderr","time":538.621712448,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.\n"}
+,{"stream_name":"stderr","time":538.621733691,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stderr","time":538.621740365,"data":"/kaggle/src/script.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.\n"}
+,{"stream_name":"stderr","time":538.621747729,"data":"  events_compaction_config=EventsCompactionConfig(\n"}
+,{"stream_name":"stderr","time":540.404271015,"data":"/usr/local/lib/python3.12/dist-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.SKILL_TOOLSET is enabled.\n"}
+,{"stream_name":"stderr","time":540.404293213,"data":"  check_feature_enabled()\n"}
+,{"stream_name":"stdout","time":605.202503722,"data":"[    604s]    pax2_e4b_L0 fastapi_15280    done           resolved=False calls=5 66.6s | 0/1\n"}
+,{"stream_name":"stdout","time":630.527196168,"data":"[    629s]    pax2_e4b_L0 fastapi_15030    done           resolved=False calls=5 91.9s | 0/2\n"}
+,{"stream_name":"stdout","time":768.010911097,"data":"[    766s]    pax2_e4b_L0 fastapi_15023    done           resolved=False calls=6 229.4s | 0/3\n"}
+,{"stream_name":"stdout","time":796.329266951,"data":"[    795s]    pax2_e4b_L0 fastapi_14964    done           resolved=False calls=6 257.7s | 0/4\n"}
+,{"stream_name":"stdout","time":809.836930905,"data":"[    808s]    pax2_e4b_L0 fastapi_15589    done           resolved=False calls=9 271.2s | 0/5\n"}
+,{"stream_name":"stderr","time":841.206222752,"data":"/usr/lib/python3.12/asyncio/base_events.py:1984: RuntimeWarning: coroutine 'OpenAIChatCompletion.acompletion' was never awaited\n"}
+,{"stream_name":"stderr","time":841.206249717,"data":"  handle = self._ready.popleft()\n"}
+,{"stream_name":"stderr","time":841.206253186,"data":"RuntimeWarning: Enable tracemalloc to get the object allocation traceback\n"}
+,{"stream_name":"stdout","time":842.569122113,"data":"[    841s]    pax2_e4b_L0 fastapi_15661    done           resolved=False calls=7 303.9s | 0/6\n"}
+,{"stream_name":"stdout","time":845.331558566,"data":"[    844s]    pax2_e4b_L0 fastapi_14986    done           resolved=False calls=8 306.7s | 0/7\n"}
+,{"stream_name":"stdout","time":849.279901982,"data":"[    848s]    pax2_e4b_L0 fastapi_15588    done           resolved=False calls=9 310.6s | 0/8\n"}
+,{"stream_name":"stdout","time":850.051566019,"data":"[    848s]    pax2_e4b_L0 fastapi_14962    done           resolved=False calls=10 311.4s | 0/9\n"}
+,{"stream_name":"stdout","time":850.091247821,"data":"[    848s]    pax2_e4b_L0 fastapi_14978    done           resolved=False calls=11 311.4s | 0/10\n"}
+,{"stream_name":"stdout","time":877.855505589,"data":"[    876s]    pax2_e4b_L0 requests_7502    done           resolved=False calls=8 339.2s | 0/11\n"}
+,{"stream_name":"stdout","time":895.522137842,"data":"[    894s]    pax2_e4b_L0 requests_7315    done           resolved=True calls=11 127.5s | 1/12\n"}
+,{"stream_name":"stdout","time":944.404537984,"data":"[    943s]    pax2_e4b_L0 requests_7427    done           resolved=False calls=10 313.9s | 1/13\n"}
+,{"stream_name":"stdout","time":946.949268576,"data":"[    945s]    pax2_e4b_L0 requests_7505    done           resolved=False calls=15 408.3s | 1/14\n"}
+,{"stream_name":"stdout","time":1057.201789138,"data":"[   1056s]    pax2_e4b_L0 requests_7433    done           resolved=True calls=16 452.0s | 2/15\n"}
+,{"stream_name":"stdout","time":1061.889062198,"data":"[   1060s]    pax2_e4b_L0 rich_4075        done           resolved=False calls=4 184.0s | 2/16\n"}
+,{"stream_name":"stdout","time":1077.137124911,"data":"[   1075s]    pax2_e4b_L0 requests_7205    done           resolved=False calls=5 234.6s | 2/17\n"}
+,{"stream_name":"stdout","time":1082.977346745,"data":"[   1081s]    pax2_e4b_L0 requests_7309    done           resolved=True calls=12 273.1s | 3/18\n"}
+,{"stream_name":"stdout","time":1152.680662006,"data":"[   1151s]    pax2_e4b_L0 rich_4076        done           resolved=False calls=9 302.6s | 3/19\n"}
+,{"stream_name":"stdout","time":1153.985823842,"data":"[   1152s]    pax2_e4b_L0 rich_4077        done           resolved=False calls=12 304.7s | 3/20\n"}
+,{"stream_name":"stdout","time":1158.498647631,"data":"[   1157s]    pax2_e4b_L0 rich_4070        done           resolved=False calls=5 313.2s | 3/21\n"}
+,{"stream_name":"stdout","time":1158.884370608,"data":"[   1157s]    pax2_e4b_L0 rich_4079        done           resolved=False calls=13 308.8s | 3/22\n"}
+,{"stream_name":"stdout","time":1174.307684701,"data":"[   1173s]    pax2_e4b_L0 requests_7328    done           resolved=False calls=10 378.0s | 3/23\n"}
+,{"stream_name":"stdout","time":1198.533249812,"data":"[   1197s]    pax2_e4b_L0 rich_4006        done           resolved=False calls=10 303.0s | 3/24\n"}
+,{"stream_name":"stdout","time":1213.045373222,"data":"[   1211s]    pax2_e4b_L0 fastapi_14786    done           resolved=True calls=8 130.1s | 4/25\n"}
+,{"stream_name":"stdout","time":1232.122735135,"data":"[   1230s]    pax2_e4b_L0 fastapi_14492    done           resolved=True calls=9 79.4s | 5/26\n"}
+,{"stream_name":"stdout","time":1309.086878543,"data":"[   1307s]    pax2_e4b_L0 fastapi_14463    done           resolved=True calls=6 150.6s | 6/27\n"}
+,{"stream_name":"stdout","time":1319.949340452,"data":"[   1318s]    pax2_e4b_L0 fastapi_14609    done           resolved=False calls=8 121.4s | 6/28\n"}
+,{"stream_name":"stdout","time":1337.329801856,"data":"[   1336s]    pax2_e4b_L0 fastapi_14851    done           resolved=False calls=14 390.4s | 6/29\n"}
+,{"stream_name":"stdout","time":1367.734890084,"data":"[   1366s]    pax2_e4b_L0 fastapi_14873    done           resolved=False calls=23 310.5s | 6/30\n"}
+,{"stream_name":"stdout","time":1367.74730108,"data":"[   1366s]    pax2_e4b_L0 fastapi_14258    done           resolved=False calls=16 423.3s | 6/31\n"}
+,{"stream_name":"stdout","time":1373.414517919,"data":"[   1372s]    pax2_e4b_L0 fastapi_13920    done           resolved=False calls=13 311.5s | 6/32\n"}
+,{"stream_name":"stdout","time":1376.469496298,"data":"[   1375s]    pax2_e4b_L0 fastapi_14479    done           resolved=False calls=9 222.5s | 6/33\n"}
+,{"stream_name":"stdout","time":1384.003618172,"data":"[   1382s]    pax2_e4b_L0 fastapi_14794    done           resolved=False calls=16 306.9s | 6/34\n"}
+,{"stream_name":"stdout","time":1465.137515988,"data":"[   1463s]    pax2_e4b_L0 fastapi_14487    done           resolved=False calls=13 145.2s | 6/35\n"}
+,{"stream_name":"stdout","time":1467.763997817,"data":"[   1466s]    pax2_e4b_L0 fastapi_12942    done           resolved=False calls=5 308.9s | 6/36\n"}
+,{"stream_name":"stdout","time":1480.431282531,"data":"[   1479s]    pax2_e4b_L0 fastapi_14099    done           resolved=False calls=22 306.1s | 6/37\n"}
+,{"stream_name":"stdout","time":1492.465752804,"data":"[   1491s]    pax2_e4b_L0 fastapi_14485    done           resolved=False calls=6 124.7s | 6/38\n"}
+,{"stream_name":"stdout","time":1499.359077041,"data":"[   1498s]    pax2_e4b_L0 fastapi_14349    done           resolved=False calls=12 267.2s | 6/39\n"}
+,{"stream_name":"stdout","time":1506.939228289,"data":"[   1505s]    pax2_e4b_L0 fastapi_14372    done           resolved=False calls=9 293.9s | 6/40\n"}
+,{"stream_name":"stdout","time":1589.010747147,"data":"[   1587s]    pax2_e4b_L0 fastapi_14458    done           resolved=False calls=5 212.5s | 6/41\n"}
+,{"stream_name":"stdout","time":1615.341047823,"data":"[   1614s]    pax2_e4b_L0 fastapi_5077     done           resolved=False calls=7 116.0s | 6/42\n"}
+,{"stream_name":"stdout","time":1619.650891705,"data":"[   1618s]    pax2_e4b_L0 fastapi_14512    done           resolved=False calls=12 310.6s | 6/43\n"}
+,{"stream_name":"stdout","time":1623.837071424,"data":"[   1622s]    pax2_e4b_L0 fastapi_14306    done           resolved=False calls=18 250.4s | 6/44\n"}
+,{"stream_name":"stdout","time":1624.999516281,"data":"[   1623s]    pax2_e4b_L0 fastapi_11355    done           resolved=False calls=15 287.7s | 6/45\n"}
+,{"stream_name":"stdout","time":1629.360830116,"data":"[   1628s]    pax2_e4b_L0 fastapi_14448    done           resolved=False calls=9 164.2s | 6/46\n"}
+,{"stream_name":"stdout","time":1678.223621169,"data":"[   1677s]    pax2_e4b_L0 fastapi_14482    done           resolved=False calls=17 310.5s | 6/47\n"}
+,{"stream_name":"stdout","time":1679.386587661,"data":"[   1678s]    pax2_e4b_L0 fastapi_14430    done           resolved=False calls=9 186.9s | 6/48\n"}
+,{"stream_name":"stdout","time":1689.7510956,"data":"[   1688s]    pax2_e4b_L0 fastapi_14459    done           resolved=False calls=23 305.7s | 6/49\n"}
+,{"stream_name":"stdout","time":1712.205236654,"data":"[   1711s]    pax2_e4b_L0 fastapi_9555     done           resolved=False calls=8 205.3s | 6/50\n"}
+,{"stream_name":"stdout","time":1725.581991593,"data":"[   1724s]    pax2_e4b_L0 fastapi_9753     done           resolved=False calls=13 245.2s | 6/51\n"}
+,{"stream_name":"stdout","time":1744.525372032,"data":"[   1743s]    pax2_e4b_L0 fastapi_14455    done           resolved=False calls=15 276.8s | 6/52\n"}
+,{"stream_name":"stdout","time":1789.199778423,"data":"[   1788s]    pax2_e4b_L0 fastapi_14301    done           resolved=True calls=6 111.0s | 7/53\n"}
+,{"stream_name":"stdout","time":1801.787604539,"data":"[   1800s]    pax2_e4b_L0 fastapi_14419    done           resolved=False calls=5 172.4s | 7/54\n"}
+,{"stream_name":"stdout","time":1809.305172254,"data":"[   1808s]    pax2_e4b_L0 fastapi_13207    done           resolved=False calls=15 194.0s | 7/55\n"}
+,{"stream_name":"stdout","time":1846.038524176,"data":"[   1844s]    pax2_e4b_L0 fastapi_5624     done           resolved=False calls=17 221.0s | 7/56\n"}
+,{"stream_name":"stdout","time":1887.252576869,"data":"[   1886s]    pax2_e4b_L0 fastapi_14361    done           resolved=False calls=12 298.2s | 7/57\n"}
+,{"stream_name":"stdout","time":1898.604356206,"data":"[   1897s]    pax2_e4b_L0 rich_3718        done           resolved=False calls=4 96.8s | 7/58\n"}
+,{"stream_name":"stdout","time":1900.440079014,"data":"[   1899s]    pax2_e4b_L0 rich_3934        done           resolved=False calls=4 91.1s | 7/59\n"}
+,{"stream_name":"stdout","time":1908.880762736,"data":"[   1907s]    pax2_e4b_L0 fastapi_14262    done           resolved=False calls=7 229.5s | 7/60\n"}
+,{"stream_name":"stdout","time":1914.164169746,"data":"[   1913s]    pax2_e4b_L0 fastapi_14077    done           resolved=False calls=10 125.0s | 7/61\n"}
+,{"stream_name":"stdout","time":1927.044938198,"data":"[   1925s]    pax2_e4b_L0 fastapi_14360    done           resolved=False calls=21 307.4s | 7/62\n"}
+,{"stream_name":"stdout","time":1929.225659774,"data":"[   1928s]    pax2_e4b_L0 fastapi_14356    done           resolved=False calls=19 305.4s | 7/63\n"}
+,{"stream_name":"stdout","time":2010.450368098,"data":"[   2009s]    pax2_e4b_L0 fastapi_14266    done           resolved=False calls=21 320.7s | 7/64\n"}
+,{"stream_name":"stdout","time":2018.913452507,"data":"[   2017s]    pax2_e4b_L0 rich_3882        done           resolved=False calls=5 110.0s | 7/65\n"}
+,{"stream_name":"stdout","time":2019.545823255,"data":"[   2018s]    pax2_e4b_L0 fastapi_14246    done           resolved=False calls=21 307.3s | 7/66\n"}
+,{"stream_name":"stdout","time":2021.765405427,"data":"[   2020s]    pax2_e4b_L0 rich_3894        done           resolved=False calls=6 107.6s | 7/67\n"}
+,{"stream_name":"stdout","time":2025.099191824,"data":"[   2023s]    pax2_e4b_L0 fastapi_13713    done           resolved=False calls=18 280.6s | 7/68\n"}
+,{"stream_name":"stdout","time":2042.764226332,"data":"[   2041s]    pax2_e4b_L0 fastapi_9425     done           resolved=True calls=19 317.2s | 8/69\n"}
+,{"stream_name":"stdout","time":2105.420078379,"data":"[   2104s]    pax2_e4b_L0 rich_3938        done           resolved=False calls=11 205.0s | 8/70\n"}
+,{"stream_name":"stdout","time":2110.679920106,"data":"[   2109s]    pax2_e4b_L0 fastapi_14791    done           resolved=False calls=3 91.1s | 8/71\n"}
+,{"stream_name":"stdout","time":2122.945194188,"data":"[   2121s]    pax2_e4b_L0 rich_3942        done           resolved=False calls=9 224.3s | 8/72\n"}
+,{"stream_name":"stdout","time":2125.272415223,"data":"[   2124s]    pax2_e4b_L0 rich_3905        done           resolved=False calls=12 196.0s | 8/73\n"}
+,{"stream_name":"stdout","time":2151.99182781,"data":"[   2150s]    pax2_e4b_L0 rich_3953        done           resolved=False calls=15 306.0s | 8/74\n"}
+,{"stream_name":"stdout","time":2192.296003319,"data":"[   2191s]    pax2_e4b_L0 rich_3944        done           resolved=False calls=18 305.0s | 8/75\n"}
+,{"stream_name":"stdout","time":2214.677597584,"data":"[   2213s]    pax2_e4b_L0 fastapi_15800    done           resolved=False calls=10 192.9s | 8/76\n"}
+,{"stream_name":"stdout","time":2224.770232433,"data":"[   2223s]    pax2_e4b_L0 fastapi_14583    done           resolved=False calls=4 101.8s | 8/77\n"}
+,{"stream_name":"stdout","time":2232.701165203,"data":"[   2231s]    pax2_e4b_L0 rich_3935        done           resolved=False calls=10 305.7s | 8/78\n"}
+,{"stream_name":"stdout","time":2238.662178872,"data":"[   2237s]    pax2_e4b_L0 fastapi_14605    done           resolved=False calls=9 133.2s | 8/79\n"}
+,{"stream_name":"stdout","time":2268.52960937,"data":"[   2267s]    pax2_e4b_L0 rich_3930        done           resolved=False calls=8 258.1s | 8/80\n"}
+,{"stream_name":"stdout","time":2281.894664613,"data":"[   2280s]    pax2_e4b_L0 httpx_3672       done           resolved=False calls=10 263.0s | 8/81\n"}
+,{"stream_name":"stdout","time":2289.47543279,"data":"[   2288s]    pax2_e4b_L0 fastapi_15763    done           resolved=False calls=11 178.8s | 8/82\n"}
+,{"stream_name":"stdout","time":2291.133182235,"data":"[   2289s]    pax2_e4b_L0 fastapi_14953    done           resolved=False calls=8 66.4s | 8/83\n"}
+,{"stream_name":"stdout","time":2312.958187926,"data":"[   2311s]    pax2_e4b_L0 fastapi_14303    done           resolved=True calls=6 120.7s | 9/84\n"}
+,{"stream_name":"stdout","time":2326.777444336,"data":"[   2325s]    pax2_e4b_L0 fastapi_14297    done           resolved=False calls=7 174.8s | 9/85\n"}
+,{"stream_name":"stdout","time":2334.865027963,"data":"[   2333s]    pax2_e4b_L0 fastapi_15785    done           resolved=False calls=14 309.8s | 9/86\n"}
+,{"stream_name":"stdout","time":2447.475110536,"data":"[   2446s]    pax2_e4b_L0 fastapi_15745    done           resolved=False calls=14 322.2s | 9/87\n"}
+,{"stream_name":"stdout","time":2456.673391575,"data":"[   2455s]    pax2_e4b_L0 fastapi_14371    done           resolved=False calls=15 413.9s | 9/88\n"}
+,{"stream_name":"stdout","time":2459.978229159,"data":"[   2458s]    pax2_e4b_L0 requests_6757    done           resolved=False calls=6 178.1s | 9/89\n"}
+,{"stream_name":"stdout","time":2565.99502933,"data":"[   2564s]    pax2_e4b_L0 requests_6629    done           resolved=False calls=4 276.5s | 9/90\n"}
+,{"stream_name":"stdout","time":2566.132200734,"data":"[   2564s]    pax2_e4b_L0 fastapi_14616    done           resolved=False calls=12 327.5s | 9/91\n"}
+,{"stream_name":"stdout","time":2569.487436527,"data":"[   2568s]    pax2_e4b_L0 fastapi_13537    done           resolved=False calls=12 354.8s | 9/92\n"}
+,{"stream_name":"stdout","time":2571.202279021,"data":"[   2570s]    pax2_e4b_L0 fastapi_13786    done           resolved=False calls=8 338.5s | 9/93\n"}
+,{"stream_name":"stdout","time":2575.373140488,"data":"[   2574s]    pax2_e4b_L0 fastapi_11194    done           resolved=False calls=11 306.8s | 9/94\n"}
+,{"stream_name":"stdout","time":2630.279146986,"data":"[   2629s]    pax2_e4b_L0 requests_6644    done           resolved=False calls=7 339.1s | 9/95\n"}
+,{"stream_name":"stdout","time":2639.111789707,"data":"[   2637s]    pax2_e4b_L0 rich_3180        done           resolved=False calls=4 304.2s | 9/96\n"}
+,{"stream_name":"stdout","time":2726.250128294,"data":"[   2725s]    pax2_e4b_L0 rich_3777        done           resolved=False calls=8 278.8s | 9/97\n"}
+,{"stream_name":"stdout","time":2727.672082433,"data":"[   2726s]    pax2_e4b_L0 requests_6589    done           resolved=True calls=8 414.7s | 10/98\n"}
+,{"stream_name":"stdout","time":2727.989644184,"data":"[   2726s]    pax2_e4b_L0 requests_6592    done           resolved=True calls=5 401.2s | 11/99\n"}
+,{"stream_name":"stdout","time":2744.043229391,"data":"[   2742s]    pax2_e4b_L0 rich_3676        done           resolved=False calls=6 172.8s | 11/100\n"}
+,{"stream_name":"stdout","time":2745.587570343,"data":"[   2744s]    pax2_e4b_L0 rich_3296        done           resolved=False calls=6 179.5s | 11/101\n"}
+,{"stream_name":"stdout","time":2759.809116925,"data":"[   2758s]    pax2_e4b_L0 rich_3468        done           resolved=False calls=11 303.1s | 11/102\n"}
+,{"stream_name":"stdout","time":2764.088290968,"data":"[   2762s]    pax2_e4b_L0 rich_3782        done           resolved=False calls=12 304.1s | 11/103\n"}
+,{"stream_name":"stdout","time":2777.744660871,"data":"[   2776s]    pax2_e4b_L0 rich_3772        done           resolved=True calls=11 211.7s | 12/104\n"}
+,{"stream_name":"stdout","time":2811.870645804,"data":"[   2810s]    pax2_e4b_L0 rich_3518        done           resolved=False calls=13 236.5s | 12/105\n"}
+,{"stream_name":"stdout","time":2866.813566189,"data":"[   2865s]    pax2_e4b_L0 rich_3471        done           resolved=False calls=8 121.2s | 12/106\n"}
+,{"stream_name":"stdout","time":2871.597444618,"data":"[   2870s]    pax2_e4b_L0 rich_3675        done           resolved=False calls=14 302.1s | 12/107\n"}
+,{"stream_name":"stdout","time":2878.747229316,"data":"[   2877s]    pax2_e4b_L0 rich_3506        done           resolved=False calls=4 152.5s | 12/108\n"}
+,{"stream_name":"stdout","time":2887.26918963,"data":"[   2886s]    pax2_e4b_L0 rich_3472        done           resolved=False calls=10 159.3s | 12/109\n"}
+,{"stream_name":"stdout","time":2940.966666826,"data":"[   2939s]    pax2_e4b_L0 rich_3535        done           resolved=False calls=10 310.7s | 12/110\n"}
+,{"stream_name":"stdout","time":2944.230533098,"data":"[   2943s]    pax2_e4b_L0 rich_3521        done           resolved=False calls=9 305.1s | 12/111\n"}
+,{"stream_name":"stdout","time":2953.026144031,"data":"[   2951s]    pax2_e4b_L0 rich_3454        done           resolved=True calls=10 209.0s | 13/112\n"}
+,{"stream_name":"stdout","time":2974.303263379,"data":"[   2973s]    pax2_e4b_L0 rich_3278        done           resolved=False calls=7 162.4s | 13/113\n"}
+,{"stream_name":"stdout","time":2996.390449608,"data":"[   2995s]    pax2_e4b_L0 rich_3052        done           resolved=False calls=9 218.6s | 13/114\n"}
+,{"stream_name":"stdout","time":3034.431300162,"data":"[   3033s]    pax2_e4b_L0 rich_3469        done           resolved=False calls=24 270.3s | 13/115\n"}
+,{"stream_name":"stdout","time":3051.526692002,"data":"[   3050s]    pax2_e4b_L0 rich_3006        done           resolved=True calls=3 98.5s | 14/116\n"}
+,{"stream_name":"stdout","time":3065.715685815,"data":"[   3064s]    pax2_e4b_L0 rich_3470        done           resolved=False calls=17 305.9s | 14/117\n"}
+,{"stream_name":"stdout","time":3074.548273212,"data":"[   3073s]    pax2_e4b_L0 rich_3067        done           resolved=True calls=7 130.3s | 15/118\n"}
+,{"stream_name":"stdout","time":3116.884136374,"data":"[   3115s]    pax2_e4b_L0 rich_3105        done           resolved=False calls=12 238.1s | 15/119\n"}
+,{"stream_name":"stdout","time":3166.554743383,"data":"[   3165s]    pax2_e4b_L0 rich_3130        done           resolved=False calls=22 279.3s | 15/120\n"}
+,{"stream_name":"stdout","time":3171.034375631,"data":"[   3169s]    pax2_e4b_L0 rich_2943        done           resolved=False calls=8 304.2s | 15/121\n"}
+,{"stream_name":"stdout","time":3176.02009321,"data":"[   3174s]    pax2_e4b_L0 rich_2725        done           resolved=False calls=9 304.4s | 15/122\n"}
+,{"stream_name":"stdout","time":3195.392482265,"data":"[   3194s]    pax2_e4b_L0 rich_3480        done           resolved=False calls=4 467.7s | 15/123\n"}
+,{"stream_name":"stdout","time":3209.287076792,"data":"[   3208s]    pax2_e4b_L0 rich_3043        done           resolved=False calls=14 268.3s | 15/124\n"}
+,{"stream_name":"stdout","time":3216.619765017,"data":"[   3215s]    pax2_e4b_L0 rich_3061        done           resolved=False calls=15 182.2s | 15/125\n"}
+,{"stream_name":"stdout","time":3248.356294653,"data":"[   3247s]    pax2_e4b_L0 rich_3063        done           resolved=False calls=13 252.0s | 15/126\n"}
+,{"stream_name":"stdout","time":3283.337289669,"data":"[   3282s]    pax2_e4b_L0 rich_3064        done           resolved=False calls=9 309.0s | 15/127\n"}
+,{"stream_name":"stdout","time":3289.698040165,"data":"[   3288s] done {'pax2_e4b_L0': [15, 127]}\n"}
+,{"stream_name":"stderr","time":3294.59031159,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3294.590354078,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3294.836011577,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3294.836034035,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3295.691390824,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3296.495828793,"data":"[NbConvertApp] Writing 417215 bytes to __results__.html\n"}
+]

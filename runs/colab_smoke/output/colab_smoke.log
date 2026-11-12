@@ -1,0 +1,18 @@
+[      0s] inputs /content/kinput/comp /content/kinput/gemma-4-developer-agent-wheelhouse /content/kinput/gemma-4-agent-local-eval-wheels /content/kinput/gemma-4-agent-local-eval-pythons
+[     45s] harness installed
+[     51s] bundles valid: ['base_e4b'] adapters: {}
+[     52s] gpus ['NVIDIA A100-SXM4-40GB'] tp 1 dtype bfloat16 cpus 12
+[    186s] model ready
+[    186s] 6 tasks; 127 gradable of 129
+[    217s] sandbox images built
+/content/py312/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.
+  check_feature_enabled()
+/content/payload/run.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  events_compaction_config=EventsCompactionConfig(
+[    313s]    base_e4b_L0 fastapi_14262    done           resolved=False calls=7 96.0s | 0/1
+[    347s]    base_e4b_L0 rich_3105        done           resolved=False calls=22 129.9s | 0/2
+[    355s]    base_e4b_L0 httpx_3672       done           resolved=False calls=9 137.7s | 0/3
+[    436s]    base_e4b_L0 fastapi_13786    done           resolved=False calls=8 218.3s | 0/4
+[    460s]    base_e4b_L0 fastapi_14099    done           resolved=False calls=22 242.9s | 0/5
+[    620s]    base_e4b_L0 rich_3480        done           resolved=False calls=7 403.2s | 0/6
+[    622s] done {'base_e4b_L0': [0, 6]}

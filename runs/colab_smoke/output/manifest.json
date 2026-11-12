@@ -1,0 +1,59 @@
+{
+ "run_id": "colab_smoke",
+ "config": {
+  "arms": [
+   {
+    "bundle": "base_e4b",
+    "level": "L0",
+    "name": "base_e4b_L0"
+   }
+  ],
+  "concurrency": 6,
+  "deadline_minutes": 40,
+  "machine_shape": "colab-A100",
+  "model": "gemma-4-e4b-it-qat-w4a16-ct",
+  "n_tasks": 6,
+  "purpose": "Smoke of the Colab route: base_e4b at L0 on six tasks on one A100, same runner as the Kaggle kernels.",
+  "run_id": "colab_smoke",
+  "seed": 7
+ },
+ "model_path": "/content/kinput/models/gemma-4-e4b-it-qat-w4a16-ct/2",
+ "gpus": [
+  "NVIDIA A100-SXM4-40GB"
+ ],
+ "tensor_parallel": 1,
+ "dtype": "bfloat16",
+ "cpus": 12,
+ "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+ "n_tasks": 6,
+ "task_ids": [
+  "rich_3480",
+  "rich_3105",
+  "httpx_3672",
+  "fastapi_13786",
+  "fastapi_14099",
+  "fastapi_14262"
+ ],
+ "wall_seconds": 622,
+ "summary": {
+  "base_e4b_L0": [
+   0,
+   6
+  ]
+ },
+ "versions": {
+  "vllm": "0.19.1",
+  "torch": "2.10.0",
+  "transformers": "5.13.1",
+  "litellm": "1.82.4",
+  "swegemma": "0.2.11"
+ },
+ "bundles": {
+  "base_e4b": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ]
+ }
+}

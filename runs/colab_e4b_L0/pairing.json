@@ -1,0 +1,23 @@
+{
+ "treat": [
+  "colab_e4b_L0:cb_pax2_e4b_L0"
+ ],
+ "control": [
+  "colab_e4b_L0:cb_base_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "colab_e4b_L0:cb_pax2_e4b_L0 vs colab_e4b_L0:cb_base_e4b_L0": {
+   "n": 127,
+   "treat_solved": 15,
+   "control_solved": 19,
+   "only_treat": 4,
+   "only_control": 8,
+   "net": -4,
+   "p_mcnemar": 0.3876953125,
+   "d011_outcome": false
+  }
+ },
+ "rule": "mcnemar in every pairing: p < 0.01, same non-zero sign",
+ "verdict": "not shown"
+}

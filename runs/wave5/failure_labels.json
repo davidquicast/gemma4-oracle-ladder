@@ -1,0 +1,5050 @@
+{
+ "run_id": "wave5",
+ "scheme": "docs/rules.md (D-010)",
+ "episodes": [
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15280",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.03571428571428571
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15030",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 5,
+   "reference_removed_lines": 35,
+   "reference_recall": 0.004555808656036446
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15023",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 8,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14964",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 8,
+   "reference_recall": 0.05
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15589",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15661",
+   "level": "L0",
+   "resolved": false,
+   "label": "destructive_overwrite",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 1,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 725,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14986",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 9,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15588",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 1,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 5,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 4,
+   "reference_removed_lines": 5,
+   "reference_recall": 0.07142857142857142
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14962",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 6,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14978",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7502",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 4,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7315",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 2,
+   "reference_removed_lines": 2,
+   "reference_recall": null
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7427",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7505",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 7,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7433",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_4075",
+   "level": "L0",
+   "resolved": false,
+   "label": "empty_other",
+   "end": "submit",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7205",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7309",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 9,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_4076",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_4077",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 4,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_4070",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 6,
+   "reference_removed_lines": 57,
+   "reference_recall": 0.11538461538461539
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_4079",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_7328",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 5,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_4006",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 12,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14786",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14492",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 2,
+   "reference_removed_lines": 1,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14463",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14609",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 940,
+   "reference_removed_lines": 1855,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14851",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 4,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14873",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 10,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14258",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 2,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_13920",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 25,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14479",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 2,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14794",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14487",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_12942",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 1,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14099",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 131,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14485",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 6,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14349",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 2,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 6,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14372",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14458",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_5077",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14512",
+   "level": "L0",
+   "resolved": false,
+   "label": "destructive_overwrite",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 5,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 1,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 6,
+   "edit_calls_wellformed": 6,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 637,
+   "reference_removed_lines": 4,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14306",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 4,
+   "reference_removed_lines": 16,
+   "reference_recall": 0.02857142857142857
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_11355",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "submit",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 4,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14448",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 24,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14482",
+   "level": "L0",
+   "resolved": false,
+   "label": "destructive_overwrite",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 3,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 1,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 220,
+   "reference_removed_lines": 7,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14430",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 15,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14459",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 22,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_9555",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 4,
+   "reference_removed_lines": 8,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_9753",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 5,
+    "not_found": 2,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 7,
+   "edit_calls_wellformed": 7,
+   "edit_calls_ok": 5,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 5,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.2
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14455",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14301",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14419",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 20,
+   "reference_recall": 0.025
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_13207",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.09090909090909091
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_5624",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "submit",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 2,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14361",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3718",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 4,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3934",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14262",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 70,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14077",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 1,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 5,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 6,
+   "reference_recall": 0.2
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14360",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 3,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14356",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14266",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 2,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 10,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3882",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14246",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 2,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 4,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3894",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.25
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_13713",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 2,
+    "ambiguous": 1,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.19230769230769232
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_9425",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "stopped",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.5
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3938",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 2,
+   "reference_removed_lines": 5,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14791",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3942",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "submit",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 5,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 5,
+   "edit_calls_wellformed": 5,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 27,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3905",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "submit",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3953",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 1,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 6,
+   "edit_calls_wellformed": 6,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 10,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3944",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 1,
+    "ambiguous": 2,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 6,
+   "edit_calls_wellformed": 6,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15800",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 5,
+   "reference_recall": 0.0088339222614841
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14583",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.041666666666666664
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3935",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14605",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 16,
+   "reference_recall": 0.11538461538461539
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3930",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 544,
+   "reference_recall": 0.0001656726308813784
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "httpx_3672",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 13,
+   "reference_removed_lines": 22,
+   "reference_recall": 0.037037037037037035
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15763",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14953",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.013157894736842105
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14303",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 2,
+   "reference_removed_lines": 2,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14297",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15785",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 15,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_15745",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 291,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14371",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 2,
+    "ambiguous": 4,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 7,
+   "edit_calls_wellformed": 7,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 16,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_6757",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_6629",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.1111111111111111
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_14616",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_13537",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_13786",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 2,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 2,
+   "reference_removed_lines": 83,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "fastapi_11194",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 4,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_6644",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3180",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 38,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3777",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_6589",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "requests_6592",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "stopped",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3676",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3296",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 3,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3468",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 6,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3782",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 3,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 5,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3772",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 16,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3518",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3471",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 3,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3675",
+   "level": "L0",
+   "resolved": false,
+   "label": "empty_other",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 4,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 4,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 13,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3506",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 24,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3472",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3535",
+   "level": "L0",
+   "resolved": false,
+   "label": "no_edit_attempted",
+   "end": "timeout",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 0,
+   "edit_calls_wellformed": 0,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3521",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 5,
+   "reference_removed_lines": 19,
+   "reference_recall": 0.125
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3454",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 2,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 5,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3278",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 0,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3052",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 5,
+   "reference_recall": 0.1111111111111111
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3469",
+   "level": "L0",
+   "resolved": false,
+   "label": "edit_rejected",
+   "end": "tool_budget",
+   "empty_patch": true,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 1,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 1
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 0,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3006",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3470",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3067",
+   "level": "L0",
+   "resolved": true,
+   "label": "solved",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 2,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 2,
+   "edit_calls_wellformed": 2,
+   "edit_calls_ok": 2,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 1.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3105",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 0,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3130",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 7,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_2943",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 3,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 4,
+   "edit_calls_wellformed": 4,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_2725",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 3,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 3,
+   "edit_calls_ok": 3,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 5,
+   "reference_removed_lines": 5,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3480",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 2,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3043",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 5,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 6,
+   "edit_calls_wellformed": 6,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": true,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3061",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 1,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 24,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3063",
+   "level": "L0",
+   "resolved": false,
+   "label": "wrong_patch",
+   "end": "submit",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 1,
+    "not_found": 4,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 0,
+    "overwrite_existing": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "edit_calls_total": 5,
+   "edit_calls_wellformed": 5,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 1
+   },
+   "submitted": true,
+   "last_edit_failed_before_submit": false,
+   "patch_removed_lines": 1,
+   "reference_removed_lines": 1,
+   "reference_recall": 0.0
+  },
+  {
+   "arm": "pax2_e4b_L0",
+   "task": "rich_3064",
+   "level": "L0",
+   "resolved": false,
+   "label": "destructive_overwrite",
+   "end": "timeout",
+   "empty_patch": false,
+   "has_trace": true,
+   "edit_file": {
+    "ok": 0,
+    "not_found": 0,
+    "ambiguous": 0,
+    "identical": 0,
+    "missing_file": 0,
+    "malformed": 0,
+    "other_error": 0
+   },
+   "write_file": {
+    "ok": 1,
+    "overwrite_existing": 1,
+    "malformed": 2,
+    "other_error": 0
+   },
+   "edit_calls_total": 3,
+   "edit_calls_wellformed": 1,
+   "edit_calls_ok": 1,
+   "not_found_classes": null,
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 0
+   },
+   "submitted": false,
+   "last_edit_failed_before_submit": null,
+   "patch_removed_lines": 618,
+   "reference_removed_lines": 9,
+   "reference_recall": 0.0
+  }
+ ],
+ "summary": {
+  "pax2_e4b_L0": {
+   "n": 127,
+   "labels": {
+    "solved": 15,
+    "oracle_clipped": 0,
+    "output_cut_off": 0,
+    "no_edit_attempted": 11,
+    "malformed_call": 0,
+    "edit_rejected": 10,
+    "empty_other": 2,
+    "destructive_overwrite": 4,
+    "incomplete_patch": 0,
+    "wrong_patch": 85
+   },
+   "label_x_end": {
+    "solved": {
+     "submit": 13,
+     "timeout": 0,
+     "tool_budget": 0,
+     "turn_budget": 0,
+     "stopped": 2
+    },
+    "no_edit_attempted": {
+     "submit": 0,
+     "timeout": 11,
+     "tool_budget": 0,
+     "turn_budget": 0,
+     "stopped": 0
+    },
+    "edit_rejected": {
+     "submit": 4,
+     "timeout": 5,
+     "tool_budget": 1,
+     "turn_budget": 0,
+     "stopped": 0
+    },
+    "empty_other": {
+     "submit": 1,
+     "timeout": 1,
+     "tool_budget": 0,
+     "turn_budget": 0,
+     "stopped": 0
+    },
+    "destructive_overwrite": {
+     "submit": 1,
+     "timeout": 3,
+     "tool_budget": 0,
+     "turn_budget": 0,
+     "stopped": 0
+    },
+    "wrong_patch": {
+     "submit": 62,
+     "timeout": 23,
+     "tool_budget": 0,
+     "turn_budget": 0,
+     "stopped": 0
+    }
+   },
+   "end_unsolved": {
+    "submit": 68,
+    "timeout": 43,
+    "tool_budget": 1,
+    "turn_budget": 0,
+    "stopped": 0
+   },
+   "n_unsolved": 112,
+   "edit_file": {
+    "ok": 166,
+    "not_found": 47,
+    "ambiguous": 23,
+    "identical": 1,
+    "missing_file": 0,
+    "malformed": 5,
+    "other_error": 1
+   },
+   "write_file": {
+    "ok": 8,
+    "overwrite_existing": 4,
+    "malformed": 2,
+    "other_error": 11
+   },
+   "nudges": {
+    "token_limit_thinking": 0,
+    "token_limit_tool_call": 0,
+    "plain": 16
+   },
+   "not_found_classes": null,
+   "last_edit_failed_before_submit": 8
+  }
+ }
+}

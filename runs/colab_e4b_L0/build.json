@@ -1,0 +1,41 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-e4b-l0",
+ "script_sha256": "fa6f21961b585e714470ff664cc4899c24daa2cd08ce1ac7b184982e27e331b5",
+ "payload_sha256": "b66d4295f32dbcf8ae8d8e80e6bb82006c6e76363034309839e57e46ae23a9eb",
+ "bundles": {
+  "base_e4b": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ],
+  "pax2_e4b": [
+   "PERSONA.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md",
+   "skills/knowledge/SKILL.md",
+   "skills/knowledge/references/INDEX.md",
+   "skills/knowledge/references/checking-a-fix.md",
+   "skills/knowledge/references/editing-without-rejections.md",
+   "skills/knowledge/references/harness-environment.md",
+   "skills/knowledge/references/localizing-a-defect.md",
+   "skills/knowledge/references/reading-a-traceback.md",
+   "skills/knowledge/references/what-the-grader-runs.md",
+   "skills/repair-a-reported-defect/SKILL.md",
+   "skills/repair-a-reported-defect/scripts/checks/_diff.py",
+   "skills/repair-a-reported-defect/scripts/checks/fix_is_in_source.py",
+   "skills/repair-a-reported-defect/scripts/checks/no_protected_files.py",
+   "skills/repair-a-reported-defect/scripts/checks/no_scratch_files.py"
+  ]
+ }
+}
