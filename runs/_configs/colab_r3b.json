@@ -1,0 +1,9 @@
+{
+ "run_id": "colab_r3b",
+ "purpose": "D-032 round 3 (A100 #2): E4B at L0, 15-minute budget: paxreview (independent review step) and regguard (existing-test regression guard).",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "colab-A100",
+ "arms": [{"name": "cb_paxreview_r2_e4b_L0", "bundle": "paxreview", "level": "L0"}, {"name": "cb_regguard_r2_e4b_L0", "bundle": "regguard", "level": "L0"}],
+ "concurrency": 12,
+ "deadline_minutes": 240
+}

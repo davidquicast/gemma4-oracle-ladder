@@ -1,0 +1,15 @@
+name: worker
+model: gemma-4-e4b-it-qat-w4a16-ct
+description: Locates and changes the source code for the reported defect, without submitting.
+instruction: !include ../prompts/worker.md
+tools:
+  - run_command
+  - read_file
+  - edit_file
+  - write_file
+  - get_status
+  - get_code_neighbors
+  - search_similar_code
+  - get_code_subgraph
+output_key: worker_notes
+generate_content_config: !include ../configs/sampling.yaml

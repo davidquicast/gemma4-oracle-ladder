@@ -1,0 +1,6 @@
+name: swe_agent
+agent_class: SequentialAgent
+description: Freeze a request check, then repair the source until it passes.
+sub_agents:
+  - config_path: sub_agents/scenario.yaml
+  - config_path: sub_agents/fixer.yaml

@@ -1,0 +1,34 @@
+{
+ "treat": [
+  "colab_r1a:cb_base15_e4b_L0"
+ ],
+ "control": [
+  "colab_e4b_L0:cb_base_e4b_L0",
+  "colab_e4b_L0_r2:cb_base_r2_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "colab_r1a:cb_base15_e4b_L0 vs colab_e4b_L0:cb_base_e4b_L0": {
+   "n": 127,
+   "treat_solved": 14,
+   "control_solved": 19,
+   "only_treat": 3,
+   "only_control": 8,
+   "net": -5,
+   "p_mcnemar": 0.2265625,
+   "d011_outcome": false
+  },
+  "colab_r1a:cb_base15_e4b_L0 vs colab_e4b_L0_r2:cb_base_r2_e4b_L0": {
+   "n": 127,
+   "treat_solved": 14,
+   "control_solved": 17,
+   "only_treat": 4,
+   "only_control": 7,
+   "net": -3,
+   "p_mcnemar": 0.548828125,
+   "d011_outcome": false
+  }
+ },
+ "rule": "mcnemar in every pairing: p < 0.01, same non-zero sign",
+ "verdict": "not shown"
+}

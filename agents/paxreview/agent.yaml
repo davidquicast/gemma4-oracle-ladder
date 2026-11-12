@@ -1,0 +1,7 @@
+name: swe_agent
+agent_class: SequentialAgent
+description: A worker changes the source, an independent reviewer judges the diff against the statement, a closer applies the review and submits.
+sub_agents:
+  - config_path: sub_agents/worker.yaml
+  - config_path: sub_agents/review.yaml
+  - config_path: sub_agents/final.yaml

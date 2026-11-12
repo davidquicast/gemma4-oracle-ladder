@@ -1,0 +1,33 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-r4b",
+ "script_sha256": "6b07e920270772737aefb5b2d0799d3e26d9287d73a1747904c8a27913bad166",
+ "payload_sha256": "dde601d311aec20fe948b0abee5e44dc6cd46fdf89eea595af03aef7c69c81a3",
+ "bundles": {
+  "base15": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "eval_config.yaml",
+   "prompts/system.md"
+  ],
+  "paxreview": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md",
+   "prompts/final.md",
+   "prompts/review.md",
+   "prompts/worker.md",
+   "sub_agents/final.yaml",
+   "sub_agents/review.yaml",
+   "sub_agents/worker.yaml"
+  ]
+ }
+}

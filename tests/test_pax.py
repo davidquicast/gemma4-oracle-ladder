@@ -1,4 +1,4 @@
-"""The pax bundle's persona validates against the Personaxis 2.0 schema (skipped without private/)."""
+"""The pax bundle's persona validates against the Personaxis 2.0 schema (skipped without the unpublished spec)."""
 import json
 from pathlib import Path
 

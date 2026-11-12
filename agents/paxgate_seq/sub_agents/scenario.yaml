@@ -1,0 +1,13 @@
+name: scenario
+model: gemma-4-e4b-it-qat-w4a16-ct
+description: Investigates the defect and freezes a failing request check in /tmp.
+instruction: !include ../prompts/scenario.md
+tools:
+  - run_command
+  - read_file
+  - get_status
+  - get_code_neighbors
+  - search_similar_code
+  - get_code_subgraph
+output_key: scenario_notes
+generate_content_config: !include ../configs/sampling.yaml

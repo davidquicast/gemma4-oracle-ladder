@@ -1,0 +1,60 @@
+{
+ "treat": [
+  "colab_r3a:cb_regguard_e4b_L0",
+  "colab_r3b:cb_regguard_r2_e4b_L0"
+ ],
+ "control": [
+  "colab_r1a:cb_base15_e4b_L0",
+  "colab_r2b:cb_base15_r2_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "colab_r3a:cb_regguard_e4b_L0 vs colab_r1a:cb_base15_e4b_L0": {
+   "n": 127,
+   "treat_solved": 14,
+   "control_solved": 14,
+   "only_treat": 6,
+   "only_control": 6,
+   "net": 0,
+   "p_mcnemar": 1.0,
+   "d011_outcome": false
+  },
+  "colab_r3a:cb_regguard_e4b_L0 vs colab_r2b:cb_base15_r2_e4b_L0": {
+   "n": 127,
+   "treat_solved": 14,
+   "control_solved": 12,
+   "only_treat": 7,
+   "only_control": 5,
+   "net": 2,
+   "p_mcnemar": 0.7744140625,
+   "d011_outcome": false
+  },
+  "colab_r3b:cb_regguard_r2_e4b_L0 vs colab_r1a:cb_base15_e4b_L0": {
+   "n": 127,
+   "treat_solved": 17,
+   "control_solved": 14,
+   "only_treat": 7,
+   "only_control": 4,
+   "net": 3,
+   "p_mcnemar": 0.548828125,
+   "d011_outcome": false
+  },
+  "colab_r3b:cb_regguard_r2_e4b_L0 vs colab_r2b:cb_base15_r2_e4b_L0": {
+   "n": 127,
+   "treat_solved": 17,
+   "control_solved": 12,
+   "only_treat": 8,
+   "only_control": 3,
+   "net": 5,
+   "p_mcnemar": 0.2265625,
+   "d011_outcome": false
+  }
+ },
+ "rule": "signflip: D > 0 and p < 0.01",
+ "signflip": {
+  "D": 5,
+  "n_nonzero": 19,
+  "p_two_sided": 0.42841339111328125
+ },
+ "verdict": "not shown"
+}

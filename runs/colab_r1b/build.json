@@ -1,0 +1,22 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-r1b",
+ "script_sha256": "d42017bdddceb982ec2f23bf4ce1cdd6fd5de30d9b209695dd13f06ac14f19d7",
+ "payload_sha256": "d32a12f99f423467bc1f6bf8da6a61923e6eb5f105887fc1ff052461d1bd330c",
+ "bundles": {
+  "paxgate": [
+   "PERSONA.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md"
+  ]
+ }
+}

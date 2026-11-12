@@ -1,0 +1,15 @@
+{
+ "run_id": "colab_r1b",
+ "purpose": "D-028 round 1: E4B at L0 on one Colab A100 with a 15-minute, 60-call per-task budget; arm cb_paxgate_e4b_L0 (bundle paxgate).",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "colab-A100",
+ "arms": [
+  {
+   "name": "cb_paxgate_e4b_L0",
+   "bundle": "paxgate",
+   "level": "L0"
+  }
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 220
+}

@@ -1,0 +1,60 @@
+{
+ "treat": [
+  "colab_e4b_L0_r2:cb_pax3_e4b_L0",
+  "colab_e4b_L0_r2:cb_pax3_r2_e4b_L0"
+ ],
+ "control": [
+  "colab_e4b_L0:cb_base_e4b_L0",
+  "colab_e4b_L0_r2:cb_base_r2_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "colab_e4b_L0_r2:cb_pax3_e4b_L0 vs colab_e4b_L0:cb_base_e4b_L0": {
+   "n": 127,
+   "treat_solved": 17,
+   "control_solved": 19,
+   "only_treat": 8,
+   "only_control": 10,
+   "net": -2,
+   "p_mcnemar": 0.8145294189453125,
+   "d011_outcome": false
+  },
+  "colab_e4b_L0_r2:cb_pax3_e4b_L0 vs colab_e4b_L0_r2:cb_base_r2_e4b_L0": {
+   "n": 127,
+   "treat_solved": 17,
+   "control_solved": 17,
+   "only_treat": 6,
+   "only_control": 6,
+   "net": 0,
+   "p_mcnemar": 1.0,
+   "d011_outcome": false
+  },
+  "colab_e4b_L0_r2:cb_pax3_r2_e4b_L0 vs colab_e4b_L0:cb_base_e4b_L0": {
+   "n": 127,
+   "treat_solved": 16,
+   "control_solved": 19,
+   "only_treat": 2,
+   "only_control": 5,
+   "net": -3,
+   "p_mcnemar": 0.453125,
+   "d011_outcome": false
+  },
+  "colab_e4b_L0_r2:cb_pax3_r2_e4b_L0 vs colab_e4b_L0_r2:cb_base_r2_e4b_L0": {
+   "n": 127,
+   "treat_solved": 16,
+   "control_solved": 17,
+   "only_treat": 2,
+   "only_control": 3,
+   "net": -1,
+   "p_mcnemar": 1.0,
+   "d011_outcome": false
+  }
+ },
+ "rule": "signflip: D > 0 and p < 0.01",
+ "signflip": {
+  "D": -3,
+  "n_nonzero": 16,
+  "p_two_sided": 0.65087890625
+ },
+ "verdict": "not shown"
+}

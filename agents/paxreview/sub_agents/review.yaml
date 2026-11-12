@@ -1,0 +1,10 @@
+name: reviewer
+model: gemma-4-e4b-it-qat-w4a16-ct
+description: Reviews the delivered diff against the statement and accepts it or asks for one revision.
+instruction: !include ../prompts/review.md
+tools:
+  - run_command
+  - read_file
+  - get_status
+output_key: review
+generate_content_config: !include ../configs/sampling.yaml

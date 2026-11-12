@@ -1,0 +1,34 @@
+{
+ "treat": [
+  "colab_r2a2:cb_paxgate2seq_e4b_L0"
+ ],
+ "control": [
+  "colab_r1a:cb_base15_e4b_L0",
+  "colab_r2b:cb_base15_r2_e4b_L0"
+ ],
+ "n_tasks": 127,
+ "pairings": {
+  "colab_r2a2:cb_paxgate2seq_e4b_L0 vs colab_r1a:cb_base15_e4b_L0": {
+   "n": 127,
+   "treat_solved": 14,
+   "control_solved": 14,
+   "only_treat": 8,
+   "only_control": 8,
+   "net": 0,
+   "p_mcnemar": 1.0,
+   "d011_outcome": false
+  },
+  "colab_r2a2:cb_paxgate2seq_e4b_L0 vs colab_r2b:cb_base15_r2_e4b_L0": {
+   "n": 127,
+   "treat_solved": 14,
+   "control_solved": 12,
+   "only_treat": 10,
+   "only_control": 8,
+   "net": 2,
+   "p_mcnemar": 0.8145294189453125,
+   "d011_outcome": false
+  }
+ },
+ "rule": "mcnemar in every pairing: p < 0.01, same non-zero sign",
+ "verdict": "not shown"
+}

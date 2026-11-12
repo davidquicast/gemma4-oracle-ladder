@@ -1,0 +1,47 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-e4b-l0-r3",
+ "script_sha256": "e33bd463e88452849f1ef40f5f29c43a741ab4e06343ffc1638262a1e607cf6f",
+ "payload_sha256": "f3bdd4e711de2b6d1fe51b8e798495f6acb21b8ea12b58b93f6140123880fa6e",
+ "bundles": {
+  "pax3_min": [
+   "PERSONA.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md",
+   "skills/repair-a-reported-defect/SKILL.md",
+   "skills/repair-a-reported-defect/scripts/checks/_diff.py",
+   "skills/repair-a-reported-defect/scripts/checks/fix_is_in_source.py",
+   "skills/repair-a-reported-defect/scripts/checks/no_protected_files.py",
+   "skills/repair-a-reported-defect/scripts/checks/no_scratch_files.py"
+  ],
+  "pax3_traits": [
+   "PERSONA.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md",
+   "skills/repair-a-reported-defect/SKILL.md",
+   "skills/repair-a-reported-defect/scripts/checks/_diff.py",
+   "skills/repair-a-reported-defect/scripts/checks/fix_is_in_source.py",
+   "skills/repair-a-reported-defect/scripts/checks/no_protected_files.py",
+   "skills/repair-a-reported-defect/scripts/checks/no_scratch_files.py"
+  ]
+ }
+}

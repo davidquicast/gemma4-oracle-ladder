@@ -1,0 +1,12 @@
+{
+ "run_id": "colab_r2a",
+ "purpose": "D-030 round 2 on A100 #1: a second run of paxgate (gate in the prompt) and paxgate_seq (gate enforced by a two-step SequentialAgent), E4B at L0, 15-minute budget.",
+ "model": "gemma-4-e4b-it-qat-w4a16-ct",
+ "machine_shape": "colab-A100",
+ "arms": [
+  {"name": "cb_paxgate_r2_e4b_L0", "bundle": "paxgate", "level": "L0"},
+  {"name": "cb_paxgateseq_e4b_L0", "bundle": "paxgate_seq", "level": "L0"}
+ ],
+ "concurrency": 12,
+ "deadline_minutes": 240
+}

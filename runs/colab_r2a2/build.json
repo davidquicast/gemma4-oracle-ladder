@@ -1,0 +1,41 @@
+{
+ "kernel": "d410qc/g4-ladder-colab-r2a2",
+ "script_sha256": "515426a95c678107e5154d5931052f859182ef9cc6d6508fb38359145bcf6678",
+ "payload_sha256": "a458055c748ae33fc74a836d7f96809e90961d2fc3df536fab647ec3c1b08eeb",
+ "bundles": {
+  "paxgate2": [
+   "PERSONA.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md"
+  ],
+  "paxgate2_seq": [
+   "PERSONA.md",
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "creation-report.md",
+   "eval_config.yaml",
+   "knowledge/INDEX.md",
+   "knowledge/checking-a-fix.md",
+   "knowledge/editing-without-rejections.md",
+   "knowledge/harness-environment.md",
+   "knowledge/localizing-a-defect.md",
+   "knowledge/reading-a-traceback.md",
+   "knowledge/what-the-grader-runs.md",
+   "personaxis.md",
+   "prompts/fixer.md",
+   "prompts/scenario.md",
+   "sub_agents/fixer.yaml",
+   "sub_agents/scenario.yaml"
+  ]
+ }
+}

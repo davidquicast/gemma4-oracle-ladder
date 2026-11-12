@@ -6,6 +6,5 @@ __pycache__/
 # Competition data and third-party notebooks are not redistributable.
 data/
 # Unpublished material that must never be pushed.
-private/
 # Generated kernel payloads (rebuilt by tools/build_kernel.py).
 kernels/*/build/

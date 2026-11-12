@@ -1,0 +1,624 @@
+[      0s] inputs /content/kinput/comp /content/kinput/gemma-4-developer-agent-wheelhouse /content/kinput/gemma-4-agent-local-eval-wheels /content/kinput/gemma-4-agent-local-eval-pythons
+[     45s] harness installed
+[     51s] bundles valid: ['paxgate2', 'paxgate2_seq'] adapters: {}
+[     52s] gpus ['NVIDIA A100-SXM4-40GB'] tp 1 dtype bfloat16 cpus 12
+[    185s] model ready
+[    185s] 127 tasks; 127 gradable of 129
+[    248s] sandbox images built
+/content/py312/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.
+  check_feature_enabled()
+/content/payload/colab_r2a2/run.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  events_compaction_config=EventsCompactionConfig(
+/content/payload/colab_r2a2/run.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  events_compaction_config=EventsCompactionConfig(
+[    379s] cb_paxgate2seq_e4b_L0 fastapi_15030    done           resolved=False calls=9 131.0s | 0/1
+[    380s] cb_paxgate2_e4b_L0 fastapi_15280    done           resolved=False calls=14 131.9s | 0/1
+[    389s] cb_paxgate2_e4b_L0 fastapi_15030    done           resolved=False calls=13 140.2s | 0/2
+[    391s] cb_paxgate2seq_e4b_L0 fastapi_14962    done           resolved=False calls=12 142.6s | 0/2
+[    406s] cb_paxgate2_e4b_L0 fastapi_15589    done           resolved=False calls=22 157.6s | 0/3
+[    423s] cb_paxgate2seq_e4b_L0 fastapi_15661    done           resolved=False calls=10 174.3s | 0/3
+[    453s] cb_paxgate2_e4b_L0 fastapi_15023    done           resolved=False calls=7 63.9s | 0/4
+Error during sandbox execution for task fastapi_15280
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 929, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 460, in make_openai_chat_completion_request
+    raise e
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 437, in make_openai_chat_completion_request
+    await openai_aclient.chat.completions.with_raw_response.create(
+  File "/content/py312/lib/python3.12/site-packages/openai/_legacy_response.py", line 382, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 3414, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/openai/_base_client.py", line 2085, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/openai/_base_client.py", line 1870, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - This model's maximum context length is 32768 tokens. However, you requested 8192 output tokens and your prompt contains at least 24577 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=24577)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/litellm/main.py", line 620, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 989, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - This model's maximum context length is 32768 tokens. However, you requested 8192 output tokens and your prompt contains at least 24577 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=24577)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 946, in _run_one_step_async
+    async for llm_response in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1328, in _call_llm_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1306, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1389, in _run_and_handle_error
+    async for response in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 418, in _run_and_handle_error
+    raise model_error
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 391, in _run_and_handle_error
+    async for llm_response in agen:
+  File "/content/py312/lib/python3.12/site-packages/adk_submission/resolvers/generation.py", line 322, in _patched_generate_content_async
+    async for llm_response in orig_generate_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 2467, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 513, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/utils.py", line 2072, in wrapper_async
+    raise e
+  File "/content/py312/lib/python3.12/site-packages/litellm/utils.py", line 1892, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/main.py", line 639, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/content/py312/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 400, in exception_type
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 32768 tokens. However, you requested 8192 output tokens and your prompt contains at least 24577 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=24577)
+[    453s] cb_paxgate2seq_e4b_L0 fastapi_15280    done           resolved=False calls=10 205.0s | 0/4
+[    459s] cb_paxgate2_e4b_L0 fastapi_15588    done           resolved=False calls=16 210.7s | 0/5
+[    467s] cb_paxgate2_e4b_L0 fastapi_15661    done           resolved=False calls=17 218.3s | 0/6
+[    476s] cb_paxgate2seq_e4b_L0 fastapi_15589    done           resolved=False calls=22 227.6s | 0/5
+[    484s] cb_paxgate2_e4b_L0 fastapi_14962    done           resolved=False calls=18 235.2s | 0/7
+[    495s] cb_paxgate2seq_e4b_L0 fastapi_14964    done           resolved=False calls=11 115.0s | 0/6
+Error during sandbox execution for task fastapi_14986
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `scenario_notes`.'
+[    539s] cb_paxgate2seq_e4b_L0 fastapi_14986    done           resolved=False calls=10 116.4s | 0/7
+[    546s] cb_paxgate2_e4b_L0 fastapi_14986    done           resolved=False calls=17 140.3s | 0/8
+[    573s] cb_paxgate2_e4b_L0 fastapi_14964    done           resolved=False calls=18 193.7s | 0/9
+[    610s] cb_paxgate2seq_e4b_L0 fastapi_15588    done           resolved=False calls=22 361.9s | 0/8
+[    628s] cb_paxgate2seq_e4b_L0 fastapi_15023    done           resolved=False calls=21 237.1s | 0/9
+[    653s] cb_paxgate2_e4b_L0 fastapi_14978    done           resolved=False calls=23 200.5s | 0/10
+[    667s] cb_paxgate2_e4b_L0 requests_7505    done           resolved=False calls=13 208.1s | 0/11
+[    671s] cb_paxgate2_e4b_L0 requests_7433    done           resolved=True calls=14 175.2s | 1/12
+[    679s] cb_paxgate2_e4b_L0 requests_7502    done           resolved=True calls=20 203.2s | 2/13
+[    692s] cb_paxgate2_e4b_L0 requests_7315    done           resolved=True calls=15 81.3s | 3/14
+[    693s] cb_paxgate2seq_e4b_L0 requests_7505    done           resolved=False calls=22 226.5s | 0/10
+[    696s] cb_paxgate2seq_e4b_L0 requests_7502    done           resolved=True calls=17 212.4s | 1/11
+[    736s] cb_paxgate2seq_e4b_L0 requests_7427    done           resolved=False calls=15 163.3s | 1/12
+[    745s] cb_paxgate2_e4b_L0 requests_7427    done           resolved=False calls=22 198.7s | 3/15
+[    764s] cb_paxgate2seq_e4b_L0 fastapi_14978    done           resolved=False calls=32 310.2s | 1/13
+[    850s] cb_paxgate2_e4b_L0 requests_7328    done           resolved=False calls=10 196.9s | 3/16
+[    883s] cb_paxgate2seq_e4b_L0 requests_7205    done           resolved=True calls=12 189.3s | 2/14
+[    903s] cb_paxgate2_e4b_L0 requests_7205    done           resolved=False calls=19 211.0s | 3/17
+[    905s] cb_paxgate2_e4b_L0 rich_4077        done           resolved=False calls=11 159.9s | 3/18
+[    914s] cb_paxgate2_e4b_L0 rich_4070        done           resolved=False calls=16 218.2s | 3/19
+[    923s] cb_paxgate2seq_e4b_L0 requests_7309    done           resolved=True calls=18 243.7s | 3/15
+[    925s] cb_paxgate2_e4b_L0 requests_7309    done           resolved=True calls=22 254.4s | 4/20
+[    932s] cb_paxgate2seq_e4b_L0 requests_7433    done           resolved=True calls=28 393.2s | 4/16
+Error during sandbox execution for task requests_7328
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `scenario_notes`.'
+[    942s] cb_paxgate2seq_e4b_L0 requests_7328    done           resolved=False calls=17 274.7s | 4/17
+[    954s] cb_paxgate2seq_e4b_L0 rich_4077        done           resolved=False calls=10 190.5s | 4/18
+[    980s] cb_paxgate2seq_e4b_L0 rich_4075        done           resolved=False calls=9 57.5s | 4/19
+[   1007s] cb_paxgate2seq_e4b_L0 requests_7315    done           resolved=False calls=33 378.5s | 4/20
+[   1008s] cb_paxgate2seq_e4b_L0 rich_4076        done           resolved=False calls=13 103.2s | 4/21
+[   1021s] cb_paxgate2_e4b_L0 rich_4075        done           resolved=False calls=14 106.3s | 4/21
+[   1153s] cb_paxgate2_e4b_L0 rich_4076        done           resolved=False calls=12 250.4s | 4/22
+[   1174s] cb_paxgate2seq_e4b_L0 rich_4079        done           resolved=False calls=22 291.7s | 4/22
+[   1180s] cb_paxgate2_e4b_L0 rich_4079        done           resolved=False calls=20 329.7s | 4/23
+[   1224s] cb_paxgate2_e4b_L0 fastapi_14851    done           resolved=False calls=14 243.9s | 4/24
+[   1251s] cb_paxgate2seq_e4b_L0 fastapi_14851    done           resolved=True calls=11 244.7s | 5/23
+[   1283s] cb_paxgate2seq_e4b_L0 fastapi_13920    done           resolved=False calls=10 108.4s | 5/24
+[   1294s] cb_paxgate2seq_e4b_L0 fastapi_14258    done           resolved=False calls=24 339.7s | 5/25
+[   1296s] cb_paxgate2seq_e4b_L0 rich_4070        done           resolved=False calls=33 560.1s | 5/26
+[   1302s] cb_paxgate2_e4b_L0 fastapi_13920    done           resolved=False calls=17 149.3s | 4/25
+[   1317s] cb_paxgate2seq_e4b_L0 rich_4006        done           resolved=False calls=26 384.4s | 5/27
+[   1318s] cb_paxgate2_e4b_L0 fastapi_14786    done           resolved=True calls=8 66.6s | 5/26
+[   1331s] cb_paxgate2seq_e4b_L0 fastapi_14794    done           resolved=False calls=14 106.1s | 5/28
+[   1365s] cb_paxgate2_e4b_L0 fastapi_14873    done           resolved=False calls=27 356.8s | 5/27
+[   1368s] cb_paxgate2seq_e4b_L0 fastapi_14786    done           resolved=False calls=6 85.2s | 5/29
+[   1386s] cb_paxgate2_e4b_L0 fastapi_14492    done           resolved=False calls=14 92.0s | 5/28
+[   1396s] cb_paxgate2seq_e4b_L0 fastapi_14873    done           resolved=False calls=28 375.5s | 5/30
+[   1402s] cb_paxgate2_e4b_L0 fastapi_14463    done           resolved=True calls=10 84.2s | 6/29
+[   1420s] cb_paxgate2seq_e4b_L0 fastapi_14492    done           resolved=False calls=12 123.7s | 5/31
+[   1424s] cb_paxgate2_e4b_L0 fastapi_14794    done           resolved=False calls=25 244.1s | 6/30
+[   1455s] cb_paxgate2_e4b_L0 fastapi_14609    done           resolved=False calls=6 52.7s | 6/31
+[   1469s] cb_paxgate2seq_e4b_L0 fastapi_14479    done           resolved=False calls=18 152.7s | 5/32
+[   1504s] cb_paxgate2_e4b_L0 fastapi_14479    done           resolved=False calls=20 201.8s | 6/32
+[   1523s] cb_paxgate2seq_e4b_L0 fastapi_14463    done           resolved=True calls=18 192.6s | 6/33
+[   1528s] cb_paxgate2seq_e4b_L0 fastapi_12942    done           resolved=False calls=16 160.5s | 6/34
+[   1532s] cb_paxgate2_e4b_L0 rich_4006        done           resolved=False calls=28 607.0s | 6/33
+[   1558s] cb_paxgate2_e4b_L0 fastapi_14099    done           resolved=False calls=15 171.8s | 6/34
+[   1568s] cb_paxgate2seq_e4b_L0 fastapi_14099    done           resolved=False calls=12 171.6s | 6/35
+[   1590s] cb_paxgate2_e4b_L0 fastapi_14258    done           resolved=False calls=58 648.0s | 6/35
+[   1590s] cb_paxgate2_e4b_L0 fastapi_14487    done           resolved=False calls=10 58.1s | 6/36
+[   1607s] cb_paxgate2_e4b_L0 fastapi_14372    done           resolved=False calls=29 183.4s | 6/37
+Error during sandbox execution for task fastapi_14372
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `scenario_notes`.'
+[   1633s] cb_paxgate2seq_e4b_L0 fastapi_14372    done           resolved=False calls=9 177.9s | 6/36
+[   1644s] cb_paxgate2seq_e4b_L0 fastapi_14487    done           resolved=False calls=9 85.9s | 6/37
+[   1663s] cb_paxgate2seq_e4b_L0 fastapi_14512    done           resolved=False calls=14 134.4s | 6/38
+[   1683s] cb_paxgate2_e4b_L0 fastapi_14512    done           resolved=False calls=13 159.7s | 6/38
+[   1694s] cb_paxgate2seq_e4b_L0 fastapi_14485    done           resolved=False calls=3 86.9s | 6/39
+[   1722s] cb_paxgate2seq_e4b_L0 fastapi_14349    done           resolved=False calls=22 218.0s | 6/40
+[   1732s] cb_paxgate2_e4b_L0 fastapi_14485    done           resolved=False calls=18 142.2s | 6/39
+[   1745s] cb_paxgate2_e4b_L0 fastapi_12942    done           resolved=True calls=23 379.8s | 7/40
+[   1748s] cb_paxgate2_e4b_L0 fastapi_14349    done           resolved=False calls=23 278.6s | 7/41
+[   1765s] cb_paxgate2seq_e4b_L0 fastapi_14609    done           resolved=False calls=46 345.0s | 6/41
+[   1787s] cb_paxgate2_e4b_L0 fastapi_14306    done           resolved=False calls=14 123.7s | 7/42
+[   1845s] cb_paxgate2seq_e4b_L0 fastapi_14459    done           resolved=False calls=4 99.9s | 6/42
+[   1846s] cb_paxgate2seq_e4b_L0 fastapi_11355    done           resolved=False calls=27 255.7s | 6/43
+[   1858s] cb_paxgate2_e4b_L0 fastapi_14482    done           resolved=False calls=19 225.5s | 7/43
+[   1884s] cb_paxgate2_e4b_L0 fastapi_14448    done           resolved=False calls=9 135.6s | 7/44
+[   1901s] cb_paxgate2_e4b_L0 fastapi_14455    done           resolved=False calls=15 114.4s | 7/45
+[   1901s] cb_paxgate2_e4b_L0 fastapi_14458    done           resolved=False calls=13 207.4s | 7/46
+[   1905s] cb_paxgate2seq_e4b_L0 fastapi_14458    done           resolved=False calls=9 183.2s | 6/44
+[   1913s] cb_paxgate2_e4b_L0 fastapi_11355    done           resolved=False calls=27 345.2s | 7/47
+[   1920s] cb_paxgate2seq_e4b_L0 fastapi_14306    done           resolved=False calls=26 237.5s | 6/45
+[   1932s] cb_paxgate2_e4b_L0 fastapi_14459    done           resolved=False calls=23 199.6s | 7/48
+[   1941s] cb_paxgate2_e4b_L0 fastapi_9753     done           resolved=False calls=7 95.1s | 7/49
+[   1973s] cb_paxgate2seq_e4b_L0 fastapi_14448    done           resolved=False calls=8 207.8s | 6/46
+[   2023s] cb_paxgate2_e4b_L0 fastapi_14361    done           resolved=False calls=6 90.6s | 7/50
+[   2027s] cb_paxgate2seq_e4b_L0 fastapi_14430    done           resolved=False calls=7 125.9s | 6/47
+[   2045s] cb_paxgate2_e4b_L0 fastapi_5077     done           resolved=False calls=15 143.6s | 7/51
+[   2071s] cb_paxgate2seq_e4b_L0 fastapi_14361    done           resolved=False calls=11 130.4s | 6/48
+[   2107s] cb_paxgate2seq_e4b_L0 fastapi_9555     done           resolved=False calls=8 186.4s | 6/49
+[   2112s] cb_paxgate2_e4b_L0 fastapi_14430    done           resolved=False calls=22 228.0s | 7/52
+[   2115s] cb_paxgate2seq_e4b_L0 fastapi_5077     done           resolved=False calls=22 209.9s | 6/50
+[   2122s] cb_paxgate2_e4b_L0 fastapi_9555     done           resolved=False calls=24 209.3s | 7/53
+[   2193s] cb_paxgate2_e4b_L0 fastapi_14360    done           resolved=False calls=14 166.5s | 7/54
+[   2193s] cb_paxgate2_e4b_L0 fastapi_13207    done           resolved=False calls=19 220.5s | 7/55
+[   2215s] cb_paxgate2seq_e4b_L0 fastapi_13207    done           resolved=False calls=14 192.7s | 6/51
+[   2223s] cb_paxgate2_e4b_L0 fastapi_14419    done           resolved=False calls=10 100.9s | 7/56
+[   2278s] cb_paxgate2seq_e4b_L0 fastapi_14482    done           resolved=False calls=44 634.0s | 6/52
+[   2284s] cb_paxgate2seq_e4b_L0 fastapi_14455    done           resolved=False calls=52 438.8s | 6/53
+[   2288s] cb_paxgate2seq_e4b_L0 fastapi_5624     done           resolved=False calls=17 172.7s | 6/54
+[   2314s] cb_paxgate2_e4b_L0 fastapi_5624     done           resolved=False calls=23 202.0s | 7/57
+[   2322s] cb_paxgate2seq_e4b_L0 fastapi_14360    done           resolved=False calls=13 277.4s | 6/55
+[   2334s] cb_paxgate2_e4b_L0 fastapi_14262    done           resolved=False calls=11 110.9s | 7/58
+[   2345s] cb_paxgate2seq_e4b_L0 fastapi_14301    done           resolved=False calls=13 129.3s | 6/56
+[   2391s] cb_paxgate2seq_e4b_L0 fastapi_9753     done           resolved=False calls=21 533.1s | 6/57
+[   2404s] cb_paxgate2_e4b_L0 fastapi_14356    done           resolved=False calls=29 333.1s | 7/59
+[   2421s] cb_paxgate2_e4b_L0 fastapi_14301    done           resolved=True calls=16 227.5s | 8/60
+[   2468s] cb_paxgate2seq_e4b_L0 fastapi_14419    done           resolved=False calls=26 274.3s | 6/58
+[   2469s] cb_paxgate2seq_e4b_L0 fastapi_14356    done           resolved=False calls=35 362.0s | 6/59
+[   2486s] cb_paxgate2_e4b_L0 fastapi_14077    done           resolved=False calls=12 64.7s | 8/61
+[   2503s] cb_paxgate2seq_e4b_L0 fastapi_14246    done           resolved=False calls=13 180.9s | 6/60
+[   2545s] cb_paxgate2seq_e4b_L0 rich_3718        done           resolved=False calls=7 59.4s | 6/61
+[   2546s] cb_paxgate2_e4b_L0 rich_3718        done           resolved=False calls=12 77.5s | 8/62
+[   2561s] cb_paxgate2seq_e4b_L0 fastapi_14262    done           resolved=False calls=12 282.9s | 6/62
+[   2572s] cb_paxgate2_e4b_L0 fastapi_14246    done           resolved=False calls=29 258.0s | 8/63
+[   2582s] cb_paxgate2_e4b_L0 rich_3934        done           resolved=False calls=13 79.3s | 8/64
+[   2609s] cb_paxgate2_e4b_L0 fastapi_9425     done           resolved=False calls=38 275.1s | 8/65
+[   2636s] cb_paxgate2seq_e4b_L0 fastapi_9425     done           resolved=False calls=31 291.3s | 6/63
+[   2636s] cb_paxgate2_e4b_L0 fastapi_14266    done           resolved=False calls=22 352.3s | 8/66
+[   2640s] cb_paxgate2seq_e4b_L0 rich_3934        done           resolved=False calls=8 94.9s | 6/64
+[   2644s] cb_paxgate2seq_e4b_L0 fastapi_13713    done           resolved=False calls=23 239.9s | 6/65
+[   2651s] cb_paxgate2_e4b_L0 rich_3944        done           resolved=False calls=10 79.0s | 8/67
+[   2675s] cb_paxgate2_e4b_L0 fastapi_13713    done           resolved=False calls=16 284.1s | 8/68
+[   2680s] cb_paxgate2seq_e4b_L0 fastapi_14077    done           resolved=True calls=14 212.3s | 7/66
+[   2681s] cb_paxgate2_e4b_L0 rich_3942        done           resolved=False calls=9 72.2s | 8/69
+[   2689s] cb_paxgate2seq_e4b_L0 rich_3953        done           resolved=False calls=11 128.4s | 7/67
+[   2706s] cb_paxgate2_e4b_L0 rich_3953        done           resolved=False calls=16 160.2s | 8/70
+[   2739s] cb_paxgate2_e4b_L0 rich_3894        done           resolved=False calls=6 63.2s | 8/71
+[   2739s] cb_paxgate2_e4b_L0 rich_3882        done           resolved=False calls=9 94.9s | 8/72
+[   2763s] cb_paxgate2seq_e4b_L0 rich_3882        done           resolved=False calls=16 112.8s | 7/68
+[   2797s] cb_paxgate2seq_e4b_L0 rich_3944        done           resolved=False calls=28 214.7s | 7/69
+[   2808s] cb_paxgate2_e4b_L0 rich_3935        done           resolved=False calls=11 126.3s | 8/73
+[   2814s] cb_paxgate2seq_e4b_L0 rich_3942        done           resolved=False calls=19 178.2s | 7/70
+[   2857s] cb_paxgate2seq_e4b_L0 rich_3894        done           resolved=False calls=13 176.8s | 7/71
+[   2869s] cb_paxgate2_e4b_L0 fastapi_14791    done           resolved=False calls=6 55.0s | 8/74
+[   2880s] cb_paxgate2seq_e4b_L0 rich_3935        done           resolved=False calls=15 191.3s | 7/72
+[   2894s] cb_paxgate2seq_e4b_L0 rich_3938        done           resolved=False calls=31 254.6s | 7/73
+[   2924s] cb_paxgate2_e4b_L0 rich_3905        done           resolved=False calls=26 217.1s | 8/75
+[   2933s] cb_paxgate2seq_e4b_L0 rich_3930        done           resolved=False calls=14 169.9s | 7/74
+[   2972s] cb_paxgate2seq_e4b_L0 rich_3905        done           resolved=True calls=34 233.4s | 8/75
+[   2973s] cb_paxgate2seq_e4b_L0 fastapi_14266    done           resolved=False calls=51 685.0s | 8/76
+[   2986s] cb_paxgate2_e4b_L0 httpx_3672       done           resolved=False calls=23 189.3s | 8/76
+[   2987s] cb_paxgate2_e4b_L0 rich_3938        done           resolved=False calls=39 351.0s | 8/77
+[   3021s] cb_paxgate2_e4b_L0 rich_3930        done           resolved=False calls=20 282.1s | 8/78
+[   3056s] cb_paxgate2seq_e4b_L0 fastapi_15800    done           resolved=False calls=20 175.6s | 8/77
+[   3081s] cb_paxgate2seq_e4b_L0 fastapi_14371    done           resolved=False calls=11 108.9s | 8/78
+[   3095s] cb_paxgate2seq_e4b_L0 httpx_3672       done           resolved=False calls=20 287.2s | 8/79
+[   3107s] cb_paxgate2_e4b_L0 fastapi_14371    done           resolved=False calls=15 173.4s | 8/79
+[   3145s] cb_paxgate2_e4b_L0 fastapi_14583    done           resolved=False calls=9 88.7s | 8/80
+[   3182s] cb_paxgate2seq_e4b_L0 fastapi_15763    done           resolved=False calls=22 161.3s | 8/80
+[   3211s] cb_paxgate2_e4b_L0 fastapi_14297    done           resolved=False calls=6 66.8s | 8/81
+[   3250s] cb_paxgate2_e4b_L0 fastapi_14605    done           resolved=False calls=32 276.5s | 8/82
+[   3250s] cb_paxgate2seq_e4b_L0 fastapi_14605    done           resolved=False calls=17 263.2s | 8/81
+[   3253s] cb_paxgate2_e4b_L0 fastapi_14303    done           resolved=True calls=6 41.3s | 9/83
+[   3316s] cb_paxgate2seq_e4b_L0 fastapi_14583    done           resolved=False calls=19 234.6s | 8/82
+[   3348s] cb_paxgate2seq_e4b_L0 fastapi_14791    done           resolved=False calls=40 491.0s | 8/83
+[   3360s] cb_paxgate2_e4b_L0 fastapi_15800    done           resolved=False calls=42 490.5s | 9/84
+[   3369s] cb_paxgate2_e4b_L0 fastapi_15745    done           resolved=False calls=35 274.5s | 9/85
+[   3376s] cb_paxgate2_e4b_L0 fastapi_14953    done           resolved=False calls=6 60.4s | 9/86
+[   3390s] cb_paxgate2seq_e4b_L0 fastapi_15785    done           resolved=False calls=58 466.2s | 8/84
+[   3398s] cb_paxgate2_e4b_L0 fastapi_15763    done           resolved=False calls=38 410.7s | 9/87
+[   3435s] cb_paxgate2_e4b_L0 fastapi_15785    done           resolved=False calls=54 540.0s | 9/88
+[   3445s] cb_paxgate2seq_e4b_L0 fastapi_14297    done           resolved=True calls=15 262.9s | 9/85
+[   3461s] cb_paxgate2seq_e4b_L0 fastapi_13537    done           resolved=False calls=33 208.5s | 9/86
+[   3611s] cb_paxgate2_e4b_L0 fastapi_13537    done           resolved=False calls=33 360.9s | 9/89
+[   3613s] cb_paxgate2seq_e4b_L0 fastapi_14953    done           resolved=False calls=18 265.4s | 9/87
+[   3628s] cb_paxgate2_e4b_L0 fastapi_14616    done           resolved=False calls=14 252.1s | 9/90
+[   3701s] cb_paxgate2_e4b_L0 requests_6757    done           resolved=False calls=11 255.6s | 9/91
+[   3707s] cb_paxgate2seq_e4b_L0 fastapi_15745    done           resolved=False calls=44 600.4s | 9/88
+[   3728s] cb_paxgate2seq_e4b_L0 fastapi_11194    done           resolved=False calls=20 293.1s | 9/89
+[   3751s] cb_paxgate2_e4b_L0 fastapi_13786    done           resolved=False calls=14 391.4s | 9/92
+[   3756s] cb_paxgate2seq_e4b_L0 requests_6757    done           resolved=False calls=17 295.1s | 9/90
+[   3774s] cb_paxgate2seq_e4b_L0 fastapi_13786    done           resolved=False calls=16 404.3s | 9/91
+[   3783s] cb_paxgate2_e4b_L0 requests_6589    done           resolved=True calls=5 75.6s | 10/93
+[   3800s] cb_paxgate2seq_e4b_L0 fastapi_14616    done           resolved=False calls=26 410.5s | 9/92
+[   3806s] cb_paxgate2_e4b_L0 requests_6629    done           resolved=False calls=16 195.5s | 10/94
+[   3819s] cb_paxgate2_e4b_L0 requests_6592    done           resolved=True calls=9 68.2s | 11/95
+[   3839s] cb_paxgate2_e4b_L0 requests_6644    done           resolved=False calls=18 210.8s | 11/96
+[   3840s] cb_paxgate2seq_e4b_L0 requests_6644    done           resolved=False calls=10 139.4s | 9/93
+[   3885s] cb_paxgate2seq_e4b_L0 requests_6592    done           resolved=False calls=14 128.7s | 9/94
+[   3892s] cb_paxgate2seq_e4b_L0 requests_6589    done           resolved=False calls=14 164.1s | 9/95
+[   3958s] cb_paxgate2_e4b_L0 rich_3777        done           resolved=False calls=13 157.9s | 11/97
+[   3995s] cb_paxgate2_e4b_L0 fastapi_11194    done           resolved=False calls=47 597.3s | 11/98
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x79a392069a60>
+[   4039s] cb_paxgate2seq_e4b_L0 rich_3468        done           resolved=False calls=10 200.3s | 9/96
+[   4059s] cb_paxgate2seq_e4b_L0 rich_3782        done           resolved=False calls=21 174.2s | 9/97
+[   4078s] cb_paxgate2seq_e4b_L0 requests_6629    done           resolved=False calls=41 464.4s | 9/98
+[   4086s] cb_paxgate2_e4b_L0 rich_3180        done           resolved=False calls=16 312.1s | 11/99
+[   4141s] cb_paxgate2seq_e4b_L0 fastapi_14303    done           resolved=False calls=25 891.7s | 9/99
+[   4149s] cb_paxgate2_e4b_L0 rich_3468        done           resolved=False calls=34 329.5s | 11/100
+[   4157s] cb_paxgate2_e4b_L0 rich_3675        done           resolved=False calls=14 98.1s | 11/101
+[   4185s] cb_paxgate2seq_e4b_L0 rich_3777        done           resolved=False calls=34 378.7s | 9/100
+[   4197s] cb_paxgate2seq_e4b_L0 rich_3675        done           resolved=False calls=15 119.1s | 9/101
+[   4213s] cb_paxgate2seq_e4b_L0 rich_3180        done           resolved=False calls=31 429.8s | 9/102
+[   4255s] cb_paxgate2_e4b_L0 rich_3518        done           resolved=False calls=11 106.4s | 11/102
+[   4288s] cb_paxgate2seq_e4b_L0 rich_3535        done           resolved=False calls=7 90.8s | 9/103
+[   4307s] cb_paxgate2_e4b_L0 rich_3535        done           resolved=False calls=14 122.1s | 11/103
+[   4309s] cb_paxgate2seq_e4b_L0 rich_3296        done           resolved=True calls=22 269.8s | 10/104
+[   4327s] cb_paxgate2_e4b_L0 rich_3782        done           resolved=False calls=30 487.4s | 11/104
+[   4330s] cb_paxgate2_e4b_L0 rich_3772        done           resolved=False calls=20 438.4s | 11/105
+[   4331s] cb_paxgate2_e4b_L0 rich_3676        done           resolved=False calls=24 245.3s | 11/106
+Error during sandbox execution for task rich_3676
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 929, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 460, in make_openai_chat_completion_request
+    raise e
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 437, in make_openai_chat_completion_request
+    await openai_aclient.chat.completions.with_raw_response.create(
+  File "/content/py312/lib/python3.12/site-packages/openai/_legacy_response.py", line 382, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 3414, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/openai/_base_client.py", line 2085, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/openai/_base_client.py", line 1870, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - This model's maximum context length is 32768 tokens. However, you requested 8192 output tokens and your prompt contains at least 24577 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=24577)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/litellm/main.py", line 620, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 989, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - This model's maximum context length is 32768 tokens. However, you requested 8192 output tokens and your prompt contains at least 24577 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=24577)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 946, in _run_one_step_async
+    async for llm_response in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1328, in _call_llm_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1306, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1389, in _run_and_handle_error
+    async for response in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 418, in _run_and_handle_error
+    raise model_error
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 391, in _run_and_handle_error
+    async for llm_response in agen:
+  File "/content/py312/lib/python3.12/site-packages/adk_submission/resolvers/generation.py", line 322, in _patched_generate_content_async
+    async for llm_response in orig_generate_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 2467, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 513, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/utils.py", line 2072, in wrapper_async
+    raise e
+  File "/content/py312/lib/python3.12/site-packages/litellm/utils.py", line 1892, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/main.py", line 639, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/content/py312/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 400, in exception_type
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 32768 tokens. However, you requested 8192 output tokens and your prompt contains at least 24577 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=24577)
+[   4338s] cb_paxgate2seq_e4b_L0 rich_3676        done           resolved=False calls=8 196.4s | 10/105
+[   4380s] cb_paxgate2seq_e4b_L0 rich_3518        done           resolved=False calls=24 222.9s | 10/106
+[   4421s] cb_paxgate2_e4b_L0 rich_3296        done           resolved=False calls=34 425.5s | 11/107
+[   4421s] cb_paxgate2_e4b_L0 rich_3506        done           resolved=False calls=9 133.7s | 11/108
+[   4441s] cb_paxgate2seq_e4b_L0 rich_3472        done           resolved=False calls=14 110.2s | 10/107
+[   4443s] cb_paxgate2_e4b_L0 rich_3521        done           resolved=False calls=22 230.6s | 11/109
+[   4443s] cb_paxgate2seq_e4b_L0 rich_3772        done           resolved=False calls=24 485.2s | 10/108
+[   4447s] cb_paxgate2seq_e4b_L0 rich_3521        done           resolved=False calls=13 192.2s | 10/109
+[   4448s] cb_paxgate2_e4b_L0 rich_3454        done           resolved=True calls=9 110.2s | 12/110
+[   4452s] cb_paxgate2seq_e4b_L0 rich_3506        done           resolved=False calls=12 145.2s | 10/110
+[   4493s] cb_paxgate2seq_e4b_L0 rich_3471        done           resolved=False calls=9 72.1s | 10/111
+[   4519s] cb_paxgate2seq_e4b_L0 rich_3454        done           resolved=True calls=15 139.2s | 11/112
+[   4576s] cb_paxgate2_e4b_L0 rich_3471        done           resolved=False calls=15 155.7s | 12/111
+[   4576s] cb_paxgate2_e4b_L0 rich_3052        done           resolved=False calls=10 128.7s | 12/112
+[   4587s] cb_paxgate2_e4b_L0 rich_3472        done           resolved=False calls=33 256.5s | 12/113
+[   4623s] cb_paxgate2_e4b_L0 rich_3278        done           resolved=False calls=13 129.4s | 12/114
+Error during sandbox execution for task rich_3052
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `scenario_notes`.'
+[   4635s] cb_paxgate2seq_e4b_L0 rich_3052        done           resolved=False calls=29 183.4s | 11/113
+[   4654s] cb_paxgate2seq_e4b_L0 rich_2943        done           resolved=True calls=9 77.4s | 12/114
+[   4658s] cb_paxgate2seq_e4b_L0 rich_3278        done           resolved=False calls=14 138.6s | 12/115
+[   4735s] cb_paxgate2_e4b_L0 rich_3480        done           resolved=False calls=8 425.8s | 12/115
+[   4745s] cb_paxgate2_e4b_L0 rich_2725        done           resolved=False calls=19 158.2s | 12/116
+[   4748s] cb_paxgate2_e4b_L0 rich_3469        done           resolved=False calls=36 304.8s | 12/117
+[   4757s] cb_paxgate2_e4b_L0 rich_3105        done           resolved=False calls=24 122.1s | 12/118
+[   4772s] cb_paxgate2seq_e4b_L0 rich_3469        done           resolved=False calls=30 325.4s | 12/116
+[   4799s] cb_paxgate2_e4b_L0 rich_3470        done           resolved=False calls=35 357.8s | 12/119
+[   4811s] cb_paxgate2seq_e4b_L0 rich_3105        done           resolved=False calls=14 157.3s | 12/117
+[   4824s] cb_paxgate2_e4b_L0 rich_2943        done           resolved=False calls=33 247.5s | 12/120
+[   4835s] cb_paxgate2seq_e4b_L0 rich_3480        done           resolved=False calls=18 507.7s | 12/118
+[   4842s] cb_paxgate2_e4b_L0 rich_3130        done           resolved=False calls=24 183.7s | 12/121
+[   4867s] cb_paxgate2_e4b_L0 rich_3067        done           resolved=False calls=14 110.0s | 12/122
+[   4870s] cb_paxgate2seq_e4b_L0 rich_2725        done           resolved=True calls=26 247.3s | 13/119
+[   4902s] cb_paxgate2_e4b_L0 rich_3043        done           resolved=False calls=25 157.5s | 12/123
+[   4905s] cb_paxgate2seq_e4b_L0 rich_3470        done           resolved=False calls=52 461.8s | 13/120
+[   4921s] cb_paxgate2seq_e4b_L0 rich_3006        done           resolved=True calls=9 109.3s | 14/121
+[   4921s] cb_paxgate2_e4b_L0 rich_3006        done           resolved=False calls=7 122.3s | 12/124
+[   4930s] cb_paxgate2seq_e4b_L0 rich_3130        done           resolved=False calls=18 194.9s | 14/122
+[   4946s] cb_paxgate2_e4b_L0 rich_3063        done           resolved=False calls=10 104.1s | 12/125
+[   4960s] cb_paxgate2_e4b_L0 rich_3064        done           resolved=False calls=21 136.4s | 12/126
+[   4985s] cb_paxgate2seq_e4b_L0 rich_3063        done           resolved=False calls=7 117.5s | 14/123
+[   4991s] cb_paxgate2seq_e4b_L0 rich_3043        done           resolved=False calls=30 243.2s | 14/124
+[   5008s] cb_paxgate2seq_e4b_L0 rich_3064        done           resolved=False calls=26 173.0s | 14/125
+[   5026s] cb_paxgate2seq_e4b_L0 rich_3067        done           resolved=False calls=38 253.4s | 14/126
+[   5026s] cb_paxgate2_e4b_L0 rich_3061        done           resolved=False calls=22 156.4s | 12/127
+[   5074s] cb_paxgate2seq_e4b_L0 rich_3061        done           resolved=False calls=14 171.7s | 14/127
+[   5081s] done {'cb_paxgate2_e4b_L0': [12, 127], 'cb_paxgate2seq_e4b_L0': [14, 127]}

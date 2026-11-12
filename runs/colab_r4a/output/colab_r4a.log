@@ -1,0 +1,397 @@
+[      0s] inputs /content/kinput/comp /content/kinput/gemma-4-developer-agent-wheelhouse /content/kinput/gemma-4-agent-local-eval-wheels /content/kinput/gemma-4-agent-local-eval-pythons
+[     44s] harness installed
+[     52s] bundles valid: ['base15', 'paxreview'] adapters: {}
+[     52s] gpus ['NVIDIA A100-SXM4-40GB'] tp 1 dtype bfloat16 cpus 12
+[    207s] model ready
+[    207s] 127 tasks; 127 gradable of 129
+[    271s] sandbox images built
+/content/py312/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.AGENT_CONFIG is enabled.
+  check_feature_enabled()
+/content/payload/colab_r4a/run.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  events_compaction_config=EventsCompactionConfig(
+/content/payload/colab_r4a/run.py:399: UserWarning: [EXPERIMENTAL] EventsCompactionConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  events_compaction_config=EventsCompactionConfig(
+[    338s] cb_base15_r3_e4b_L0 fastapi_15030    done           resolved=False calls=5 66.7s | 0/1
+[    343s] cb_base15_r3_e4b_L0 fastapi_14962    done           resolved=False calls=3 71.6s | 0/2
+[    351s] cb_base15_r3_e4b_L0 fastapi_15661    done           resolved=False calls=4 79.7s | 0/3
+[    358s] cb_paxreview_r3_e4b_L0 fastapi_15030    done           resolved=False calls=4 86.9s | 0/1
+[    362s] cb_paxreview_r3_e4b_L0 fastapi_15661    done           resolved=False calls=6 91.3s | 0/2
+[    364s] cb_paxreview_r3_e4b_L0 fastapi_15588    done           resolved=False calls=2 92.6s | 0/3
+[    364s] cb_base15_r3_e4b_L0 fastapi_15588    done           resolved=False calls=6 92.7s | 0/4
+[    387s] cb_paxreview_r3_e4b_L0 fastapi_14962    done           resolved=False calls=6 115.7s | 0/4
+Error during sandbox execution for task fastapi_15589
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `worker_notes`.'
+[    402s] cb_paxreview_r3_e4b_L0 fastapi_15589    done           resolved=False calls=5 131.5s | 0/5
+[    408s] cb_base15_r3_e4b_L0 fastapi_15280    done           resolved=False calls=9 136.8s | 0/5
+[    411s] cb_paxreview_r3_e4b_L0 fastapi_15023    done           resolved=False calls=7 60.5s | 0/6
+[    418s] cb_base15_r3_e4b_L0 fastapi_15023    done           resolved=False calls=8 60.3s | 0/6
+[    552s] cb_base15_r3_e4b_L0 fastapi_14978    done           resolved=False calls=13 165.6s | 0/7
+[    553s] cb_base15_r3_e4b_L0 fastapi_14964    done           resolved=False calls=6 210.3s | 0/8
+[    554s] cb_base15_r3_e4b_L0 fastapi_15589    done           resolved=False calls=15 283.4s | 0/9
+[    560s] cb_base15_r3_e4b_L0 fastapi_14986    done           resolved=False calls=11 196.5s | 0/10
+[    572s] cb_paxreview_r3_e4b_L0 fastapi_14986    done           resolved=False calls=10 209.7s | 0/7
+[    573s] cb_paxreview_r3_e4b_L0 fastapi_14964    done           resolved=False calls=15 235.8s | 0/8
+[    575s] cb_paxreview_r3_e4b_L0 fastapi_15280    done           resolved=False calls=16 304.1s | 0/9
+[    619s] cb_paxreview_r3_e4b_L0 requests_7502    done           resolved=True calls=13 207.5s | 1/10
+[    661s] cb_paxreview_r3_e4b_L0 requests_7505    done           resolved=False calls=26 258.8s | 1/11
+[    666s] cb_paxreview_r3_e4b_L0 requests_7433    done           resolved=True calls=12 114.1s | 2/12
+[    670s] cb_base15_r3_e4b_L0 requests_7315    done           resolved=True calls=7 96.2s | 1/11
+[    688s] cb_base15_r3_e4b_L0 requests_7433    done           resolved=False calls=15 135.4s | 1/12
+[    689s] cb_paxreview_r3_e4b_L0 requests_7427    done           resolved=False calls=10 134.9s | 2/13
+[    705s] cb_base15_r3_e4b_L0 requests_7502    done           resolved=False calls=21 286.3s | 1/13
+[    709s] cb_base15_r3_e4b_L0 requests_7505    done           resolved=False calls=23 300.8s | 1/14
+[    713s] cb_paxreview_r3_e4b_L0 requests_7315    done           resolved=False calls=13 141.1s | 2/14
+[    727s] cb_base15_r3_e4b_L0 requests_7427    done           resolved=False calls=10 167.2s | 1/15
+[    732s] cb_paxreview_r3_e4b_L0 requests_7328    done           resolved=False calls=8 156.9s | 2/15
+[    751s] cb_base15_r3_e4b_L0 requests_7309    done           resolved=True calls=11 84.6s | 2/16
+[    757s] cb_paxreview_r3_e4b_L0 requests_7205    done           resolved=False calls=6 86.9s | 2/16
+[    764s] cb_base15_r3_e4b_L0 requests_7205    done           resolved=True calls=8 76.1s | 3/17
+[    765s] cb_paxreview_r3_e4b_L0 rich_4077        done           resolved=True calls=4 56.2s | 3/17
+[    772s] cb_paxreview_r3_e4b_L0 requests_7309    done           resolved=True calls=12 111.2s | 4/18
+[    773s] cb_base15_r3_e4b_L0 requests_7328    done           resolved=True calls=9 154.7s | 4/18
+[    807s] cb_paxreview_r3_e4b_L0 fastapi_14978    done           resolved=False calls=32 442.9s | 4/19
+[    846s] cb_paxreview_r3_e4b_L0 rich_4075        done           resolved=False calls=6 81.7s | 4/20
+[    847s] cb_base15_r3_e4b_L0 rich_4075        done           resolved=False calls=6 82.0s | 4/19
+[    863s] cb_paxreview_r3_e4b_L0 rich_4079        done           resolved=False calls=13 135.7s | 4/21
+[    871s] cb_base15_r3_e4b_L0 rich_4079        done           resolved=False calls=10 138.5s | 4/20
+[    950s] cb_base15_r3_e4b_L0 rich_4077        done           resolved=False calls=22 236.6s | 4/21
+[    958s] cb_base15_r3_e4b_L0 fastapi_14851    done           resolved=False calls=7 95.3s | 4/22
+[    970s] cb_paxreview_r3_e4b_L0 fastapi_14258    done           resolved=False calls=18 163.5s | 4/22
+[    977s] cb_paxreview_r3_e4b_L0 rich_4070        done           resolved=False calls=9 287.9s | 4/23
+[    978s] cb_paxreview_r3_e4b_L0 rich_4076        done           resolved=False calls=19 227.2s | 4/24
+[    996s] cb_base15_r3_e4b_L0 rich_4070        done           resolved=False calls=35 291.7s | 4/23
+[   1010s] cb_base15_r3_e4b_L0 rich_4076        done           resolved=False calls=13 253.8s | 4/24
+[   1030s] cb_paxreview_r3_e4b_L0 fastapi_14873    done           resolved=False calls=18 159.4s | 4/25
+[   1048s] cb_paxreview_r3_e4b_L0 fastapi_13920    done           resolved=False calls=8 90.0s | 4/26
+[   1053s] cb_base15_r3_e4b_L0 fastapi_14786    done           resolved=True calls=4 42.7s | 5/25
+[   1056s] cb_paxreview_r3_e4b_L0 fastapi_14786    done           resolved=True calls=6 59.9s | 5/27
+[   1080s] cb_base15_r3_e4b_L0 fastapi_14258    done           resolved=False calls=19 233.6s | 5/26
+[   1089s] cb_paxreview_r3_e4b_L0 fastapi_14492    done           resolved=False calls=8 59.4s | 5/28
+[   1113s] cb_paxreview_r3_e4b_L0 fastapi_14794    done           resolved=False calls=18 136.3s | 5/29
+[   1114s] cb_base15_r3_e4b_L0 fastapi_14492    done           resolved=False calls=9 65.4s | 5/27
+[   1114s] cb_base15_r3_e4b_L0 fastapi_14794    done           resolved=False calls=18 136.0s | 5/28
+[   1135s] cb_paxreview_r3_e4b_L0 fastapi_14479    done           resolved=False calls=6 81.5s | 5/30
+[   1144s] cb_base15_r3_e4b_L0 fastapi_13920    done           resolved=False calls=14 174.1s | 5/29
+[   1155s] cb_paxreview_r3_e4b_L0 fastapi_14463    done           resolved=True calls=6 75.8s | 6/31
+[   1156s] cb_base15_r3_e4b_L0 fastapi_14463    done           resolved=True calls=6 67.0s | 6/30
+[   1162s] cb_base15_r3_e4b_L0 rich_4006        done           resolved=False calls=8 388.5s | 6/31
+[   1190s] cb_paxreview_r3_e4b_L0 rich_4006        done           resolved=False calls=14 417.9s | 6/32
+[   1212s] cb_paxreview_r3_e4b_L0 fastapi_14609    done           resolved=False calls=6 67.3s | 6/33
+[   1218s] cb_base15_r3_e4b_L0 fastapi_14873    done           resolved=False calls=27 268.1s | 6/32
+[   1238s] cb_paxreview_r3_e4b_L0 fastapi_12942    done           resolved=False calls=11 124.5s | 6/34
+[   1253s] cb_base15_r3_e4b_L0 fastapi_14479    done           resolved=False calls=13 196.4s | 6/33
+[   1270s] cb_base15_r3_e4b_L0 fastapi_14372    done           resolved=False calls=16 108.2s | 6/34
+[   1293s] cb_paxreview_r3_e4b_L0 fastapi_14099    done           resolved=False calls=19 178.5s | 6/35
+[   1296s] cb_paxreview_r3_e4b_L0 fastapi_14851    done           resolved=False calls=28 449.4s | 6/36
+[   1306s] cb_paxreview_r3_e4b_L0 fastapi_14372    done           resolved=False calls=7 149.8s | 6/37
+[   1307s] cb_paxreview_r3_e4b_L0 fastapi_14349    done           resolved=False calls=7 116.4s | 6/38
+[   1315s] cb_base15_r3_e4b_L0 fastapi_14099    done           resolved=False calls=15 180.8s | 6/35
+[   1317s] cb_base15_r3_e4b_L0 fastapi_12942    done           resolved=False calls=15 203.5s | 6/36
+[   1328s] cb_base15_r3_e4b_L0 fastapi_14487    done           resolved=False calls=8 57.5s | 6/37
+[   1329s] cb_base15_r3_e4b_L0 fastapi_14349    done           resolved=False calls=13 117.1s | 6/38
+[   1333s] cb_paxreview_r3_e4b_L0 fastapi_14487    done           resolved=False calls=7 80.6s | 6/39
+[   1386s] cb_base15_r3_e4b_L0 fastapi_11355    done           resolved=False calls=5 89.8s | 6/39
+[   1401s] cb_paxreview_r3_e4b_L0 fastapi_14512    done           resolved=False calls=12 183.1s | 6/40
+[   1436s] cb_base15_r3_e4b_L0 fastapi_14609    done           resolved=False calls=25 280.7s | 6/40
+[   1442s] cb_base15_r3_e4b_L0 fastapi_14482    done           resolved=False calls=9 124.5s | 6/41
+[   1455s] cb_paxreview_r3_e4b_L0 fastapi_11355    done           resolved=False calls=17 162.5s | 6/41
+[   1458s] cb_base15_r3_e4b_L0 fastapi_14306    done           resolved=False calls=7 128.9s | 6/42
+[   1470s] cb_base15_r3_e4b_L0 fastapi_14512    done           resolved=False calls=20 231.9s | 6/43
+[   1484s] cb_paxreview_r3_e4b_L0 fastapi_14459    done           resolved=False calls=5 83.5s | 6/42
+[   1484s] cb_base15_r3_e4b_L0 fastapi_14485    done           resolved=False calls=8 177.8s | 6/44
+[   1516s] cb_paxreview_r3_e4b_L0 fastapi_14306    done           resolved=False calls=14 188.8s | 6/43
+[   1529s] cb_paxreview_r3_e4b_L0 fastapi_14458    done           resolved=False calls=10 196.1s | 6/44
+[   1530s] cb_base15_r3_e4b_L0 fastapi_14455    done           resolved=False calls=4 60.0s | 6/45
+[   1530s] cb_base15_r3_e4b_L0 fastapi_14448    done           resolved=False calls=7 75.1s | 6/46
+[   1532s] cb_paxreview_r3_e4b_L0 fastapi_14485    done           resolved=False calls=12 225.7s | 6/45
+[   1545s] cb_base15_r3_e4b_L0 fastapi_14458    done           resolved=False calls=5 158.8s | 6/47
+[   1584s] cb_paxreview_r3_e4b_L0 fastapi_14482    done           resolved=False calls=12 268.4s | 6/46
+[   1590s] cb_paxreview_r3_e4b_L0 fastapi_9753     done           resolved=False calls=8 105.2s | 6/47
+[   1597s] cb_base15_r3_e4b_L0 fastapi_14459    done           resolved=False calls=14 160.7s | 6/48
+[   1604s] cb_paxreview_r3_e4b_L0 fastapi_14448    done           resolved=False calls=18 162.5s | 6/48
+[   1610s] cb_base15_r3_e4b_L0 fastapi_5077     done           resolved=False calls=6 79.3s | 6/49
+[   1613s] cb_base15_r3_e4b_L0 fastapi_9555     done           resolved=False calls=8 68.3s | 6/50
+[   1615s] cb_base15_r3_e4b_L0 fastapi_9753     done           resolved=True calls=10 130.3s | 7/51
+[   1625s] cb_paxreview_r3_e4b_L0 fastapi_9555     done           resolved=False calls=6 92.6s | 6/49
+[   1642s] cb_paxreview_r3_e4b_L0 fastapi_14430    done           resolved=False calls=5 125.3s | 6/50
+[   1645s] cb_paxreview_r3_e4b_L0 fastapi_5077     done           resolved=False calls=10 115.2s | 6/51
+[   1696s] cb_paxreview_r3_e4b_L0 fastapi_14455    done           resolved=False calls=23 238.0s | 6/52
+[   1731s] cb_base15_r3_e4b_L0 fastapi_5624     done           resolved=False calls=9 86.3s | 7/52
+[   1740s] cb_paxreview_r3_e4b_L0 fastapi_14361    done           resolved=False calls=11 156.6s | 6/53
+[   1741s] cb_base15_r3_e4b_L0 fastapi_14360    done           resolved=False calls=14 128.0s | 7/53
+[   1772s] cb_base15_r3_e4b_L0 fastapi_14356    done           resolved=False calls=7 147.3s | 7/54
+[   1795s] cb_base15_r3_e4b_L0 fastapi_14430    done           resolved=False calls=12 265.5s | 7/55
+[   1808s] cb_paxreview_r3_e4b_L0 fastapi_5624     done           resolved=False calls=16 166.2s | 6/54
+[   1810s] cb_base15_r3_e4b_L0 fastapi_14301    done           resolved=True calls=6 68.7s | 8/56
+[   1813s] cb_paxreview_r3_e4b_L0 fastapi_14419    done           resolved=False calls=5 117.7s | 6/55
+[   1825s] cb_paxreview_r3_e4b_L0 fastapi_14360    done           resolved=False calls=20 214.9s | 6/56
+[   1826s] cb_base15_r3_e4b_L0 fastapi_13207    done           resolved=False calls=23 222.1s | 8/57
+[   1826s] cb_base15_r3_e4b_L0 fastapi_14419    done           resolved=False calls=6 94.9s | 8/58
+[   1829s] cb_paxreview_r3_e4b_L0 fastapi_14301    done           resolved=True calls=7 88.6s | 7/57
+Error during sandbox execution for task fastapi_14266
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `worker_notes`.'
+[   1836s] cb_paxreview_r3_e4b_L0 fastapi_14266    done           resolved=False calls=2 28.5s | 7/58
+[   1852s] cb_paxreview_r3_e4b_L0 fastapi_13207    done           resolved=False calls=20 255.2s | 7/59
+[   1864s] cb_base15_r3_e4b_L0 fastapi_14361    done           resolved=False calls=13 274.8s | 8/59
+[   1867s] cb_paxreview_r3_e4b_L0 fastapi_14356    done           resolved=False calls=29 252.5s | 7/60
+[   1872s] cb_base15_r3_e4b_L0 fastapi_9425     done           resolved=True calls=7 45.9s | 9/60
+[   1891s] cb_base15_r3_e4b_L0 fastapi_14246    done           resolved=False calls=5 66.8s | 9/61
+[   1898s] cb_base15_r3_e4b_L0 fastapi_14262    done           resolved=False calls=7 103.7s | 9/62
+[   1905s] cb_paxreview_r3_e4b_L0 fastapi_9425     done           resolved=True calls=5 78.5s | 8/61
+[   1936s] cb_base15_r3_e4b_L0 fastapi_14077    done           resolved=False calls=12 71.6s | 9/63
+[   1945s] cb_base15_r3_e4b_L0 rich_3718        done           resolved=False calls=4 72.6s | 9/64
+[   1971s] cb_paxreview_r3_e4b_L0 fastapi_14246    done           resolved=False calls=20 158.0s | 8/62
+[   1994s] cb_paxreview_r3_e4b_L0 rich_3953        done           resolved=False calls=7 88.9s | 8/63
+[   2033s] cb_paxreview_r3_e4b_L0 rich_3718        done           resolved=False calls=11 165.2s | 8/64
+[   2059s] cb_paxreview_r3_e4b_L0 fastapi_13713    done           resolved=False calls=16 229.8s | 8/65
+[   2063s] cb_paxreview_r3_e4b_L0 fastapi_14077    done           resolved=False calls=21 211.1s | 8/66
+[   2069s] cb_base15_r3_e4b_L0 rich_3934        done           resolved=False calls=10 170.4s | 9/65
+[   2073s] cb_base15_r3_e4b_L0 rich_3953        done           resolved=False calls=7 136.6s | 9/66
+[   2093s] cb_paxreview_r3_e4b_L0 rich_3942        done           resolved=False calls=7 99.5s | 8/67
+[   2096s] cb_paxreview_r3_e4b_L0 rich_3934        done           resolved=False calls=13 204.7s | 8/68
+[   2106s] cb_base15_r3_e4b_L0 fastapi_13713    done           resolved=False calls=21 269.6s | 9/67
+[   2109s] cb_paxreview_r3_e4b_L0 rich_3944        done           resolved=False calls=17 164.4s | 8/69
+[   2110s] cb_base15_r3_e4b_L0 rich_3942        done           resolved=False calls=5 77.0s | 9/68
+[   2127s] cb_base15_r3_e4b_L0 rich_3882        done           resolved=False calls=5 54.6s | 9/69
+[   2151s] cb_base15_r3_e4b_L0 rich_3944        done           resolved=False calls=14 179.3s | 9/70
+[   2154s] cb_base15_r3_e4b_L0 rich_3894        done           resolved=False calls=4 57.6s | 9/71
+[   2159s] cb_paxreview_r3_e4b_L0 rich_3894        done           resolved=False calls=4 66.2s | 8/70
+[   2159s] cb_paxreview_r3_e4b_L0 fastapi_14262    done           resolved=False calls=14 387.6s | 8/71
+[   2177s] cb_base15_r3_e4b_L0 rich_3938        done           resolved=False calls=10 113.7s | 9/72
+[   2208s] cb_paxreview_r3_e4b_L0 rich_3938        done           resolved=False calls=10 149.1s | 8/72
+[   2210s] cb_base15_r3_e4b_L0 rich_3935        done           resolved=False calls=4 101.3s | 9/73
+[   2243s] cb_paxreview_r3_e4b_L0 rich_3935        done           resolved=False calls=4 136.9s | 8/73
+[   2256s] cb_paxreview_r3_e4b_L0 fastapi_14791    done           resolved=False calls=4 79.7s | 8/74
+[   2264s] cb_paxreview_r3_e4b_L0 rich_3905        done           resolved=True calls=14 154.5s | 9/75
+[   2272s] cb_base15_r3_e4b_L0 httpx_3672       done           resolved=False calls=10 112.1s | 9/74
+[   2273s] cb_base15_r3_e4b_L0 fastapi_14791    done           resolved=False calls=4 64.9s | 9/75
+[   2278s] cb_base15_r3_e4b_L0 rich_3905        done           resolved=False calls=20 150.7s | 9/76
+[   2294s] cb_paxreview_r3_e4b_L0 rich_3882        done           resolved=False calls=22 224.9s | 9/76
+[   2323s] cb_paxreview_r3_e4b_L0 rich_3930        done           resolved=False calls=8 172.0s | 9/77
+[   2378s] cb_base15_r3_e4b_L0 fastapi_15785    done           resolved=False calls=13 114.3s | 9/77
+[   2404s] cb_paxreview_r3_e4b_L0 httpx_3672       done           resolved=False calls=19 244.6s | 9/78
+[   2407s] cb_base15_r3_e4b_L0 fastapi_15800    done           resolved=False calls=15 164.1s | 9/78
+[   2411s] cb_paxreview_r3_e4b_L0 fastapi_14605    done           resolved=False calls=11 133.4s | 9/79
+[   2429s] cb_paxreview_r3_e4b_L0 fastapi_15785    done           resolved=False calls=16 172.3s | 9/80
+[   2429s] cb_base15_r3_e4b_L0 fastapi_14371    done           resolved=False calls=13 156.2s | 9/79
+[   2445s] cb_base15_r3_e4b_L0 fastapi_14605    done           resolved=False calls=11 151.2s | 9/80
+[   2451s] cb_base15_r3_e4b_L0 rich_3930        done           resolved=False calls=13 297.7s | 9/81
+[   2457s] cb_paxreview_r3_e4b_L0 fastapi_15763    done           resolved=False calls=15 134.2s | 9/81
+[   2458s] cb_paxreview_r3_e4b_L0 fastapi_15800    done           resolved=False calls=21 247.4s | 9/82
+[   2459s] cb_paxreview_r3_e4b_L0 fastapi_14371    done           resolved=False calls=19 187.1s | 9/83
+[   2474s] cb_paxreview_r3_e4b_L0 fastapi_14583    done           resolved=False calls=6 70.1s | 9/84
+[   2514s] cb_base15_r3_e4b_L0 fastapi_14583    done           resolved=False calls=7 106.8s | 9/82
+[   2514s] cb_base15_r3_e4b_L0 fastapi_15763    done           resolved=False calls=15 135.7s | 9/83
+[   2519s] cb_base15_r3_e4b_L0 fastapi_14303    done           resolved=True calls=4 61.7s | 10/84
+[   2525s] cb_base15_r3_e4b_L0 fastapi_14266    done           resolved=False calls=35 714.9s | 10/85
+[   2530s] cb_paxreview_r3_e4b_L0 fastapi_14297    done           resolved=False calls=5 101.3s | 9/85
+[   2532s] cb_paxreview_r3_e4b_L0 fastapi_14303    done           resolved=True calls=4 80.9s | 10/86
+[   2540s] cb_base15_r3_e4b_L0 fastapi_14297    done           resolved=False calls=6 94.8s | 10/86
+[   2556s] cb_base15_r3_e4b_L0 fastapi_15745    done           resolved=False calls=12 127.2s | 10/87
+[   2577s] cb_paxreview_r3_e4b_L0 fastapi_14953    done           resolved=False calls=12 103.4s | 10/87
+[   2597s] cb_paxreview_r3_e4b_L0 fastapi_13537    done           resolved=False calls=5 139.4s | 10/88
+[   2615s] cb_paxreview_r3_e4b_L0 fastapi_15745    done           resolved=False calls=15 203.5s | 10/89
+[   2619s] cb_base15_r3_e4b_L0 fastapi_14953    done           resolved=False calls=16 104.9s | 10/88
+[   2702s] cb_base15_r3_e4b_L0 fastapi_14616    done           resolved=False calls=9 171.7s | 10/89
+[   2703s] cb_paxreview_r3_e4b_L0 fastapi_14616    done           resolved=False calls=7 178.1s | 10/90
+[   2706s] cb_base15_r3_e4b_L0 fastapi_13537    done           resolved=False calls=24 247.5s | 10/90
+[   2709s] cb_paxreview_r3_e4b_L0 requests_6757    done           resolved=False calls=7 153.3s | 10/91
+[   2722s] cb_base15_r3_e4b_L0 requests_6757    done           resolved=False calls=11 144.4s | 10/91
+[   2746s] cb_paxreview_r3_e4b_L0 requests_6644    done           resolved=True calls=7 127.0s | 11/92
+[   2747s] cb_base15_r3_e4b_L0 requests_6629    done           resolved=False calls=4 131.8s | 10/92
+[   2757s] cb_paxreview_r3_e4b_L0 requests_6629    done           resolved=False calls=4 159.4s | 11/93
+[   2762s] cb_base15_r3_e4b_L0 fastapi_11194    done           resolved=False calls=17 221.8s | 10/93
+[   2783s] cb_paxreview_r3_e4b_L0 fastapi_11194    done           resolved=False calls=17 251.0s | 11/94
+[   2786s] cb_base15_r3_e4b_L0 requests_6589    done           resolved=True calls=4 79.5s | 11/94
+[   2814s] cb_paxreview_r3_e4b_L0 requests_6589    done           resolved=True calls=8 111.3s | 12/95
+[   2815s] cb_base15_r3_e4b_L0 fastapi_13786    done           resolved=False calls=18 296.2s | 11/95
+[   2833s] cb_paxreview_r3_e4b_L0 rich_3180        done           resolved=False calls=5 87.3s | 12/96
+[   2846s] cb_base15_r3_e4b_L0 rich_3777        done           resolved=False calls=7 84.4s | 11/96
+[   2861s] cb_base15_r3_e4b_L0 requests_6592    done           resolved=True calls=11 138.6s | 12/97
+[   2866s] cb_base15_r3_e4b_L0 rich_3180        done           resolved=False calls=6 119.3s | 12/98
+[   2872s] cb_base15_r3_e4b_L0 requests_6644    done           resolved=False calls=17 170.5s | 12/99
+[   2888s] cb_paxreview_r3_e4b_L0 rich_3468        done           resolved=False calls=7 104.3s | 12/97
+[   2890s] cb_paxreview_r3_e4b_L0 requests_6592    done           resolved=True calls=11 180.5s | 13/98
+[   2925s] cb_base15_r3_e4b_L0 rich_3782        done           resolved=False calls=5 110.7s | 12/100
+[   2942s] cb_paxreview_r3_e4b_L0 rich_3777        done           resolved=False calls=9 185.4s | 13/99
+Error during sandbox execution for task rich_3772
+Traceback (most recent call last):
+  File "/content/py312/lib/python3.12/site-packages/swegemma/harness/agent_runner.py", line 806, in run_agent_sandbox
+    async for _event in runner.run_async(
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 613, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 596, in _run_with_trace
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 858, in _exec_with_plugin
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/runners.py", line 585, in execute
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 78, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 295, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 488, in _run_async_impl
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 869, in run_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 888, in _run_one_step_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 977, in _preprocess_async
+    async for event in agen:
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 129, in run_async
+    await _build_instructions(invocation_context, llm_request)
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 110, in _build_instructions
+    si = await _process_agent_instruction(agent, invocation_context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/flows/llm_flows/instructions.py", line 56, in _process_agent_instruction
+    si = await instructions_utils.inject_session_state(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 124, in inject_session_state
+    return await _async_sub(r'{+[^{}]*}+', _replace_match, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 75, in _async_sub
+    replacement = await repl_async_fn(match)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/py312/lib/python3.12/site-packages/google/adk/utils/instructions_utils.py", line 122, in _replace_match
+    raise KeyError(f'Context variable not found: `{var_name}`.')
+KeyError: 'Context variable not found: `worker_notes`.'
+[   2947s] cb_paxreview_r3_e4b_L0 rich_3772        done           resolved=False calls=10 114.0s | 13/100
+[   2950s] cb_base15_r3_e4b_L0 rich_3468        done           resolved=False calls=28 164.6s | 12/101
+[   2991s] cb_paxreview_r3_e4b_L0 rich_3296        done           resolved=False calls=10 130.9s | 13/101
+[   2993s] cb_base15_r3_e4b_L0 rich_3296        done           resolved=False calls=6 127.2s | 12/102
+[   3016s] cb_base15_r3_e4b_L0 rich_3675        done           resolved=False calls=17 127.9s | 12/103
+[   3026s] cb_base15_r3_e4b_L0 rich_3676        done           resolved=False calls=8 100.1s | 12/104
+[   3053s] cb_base15_r3_e4b_L0 rich_3518        done           resolved=False calls=9 105.8s | 12/105
+[   3082s] cb_paxreview_r3_e4b_L0 rich_3518        done           resolved=False calls=12 139.4s | 13/102
+[   3092s] cb_paxreview_r3_e4b_L0 rich_3535        done           resolved=False calls=9 142.0s | 13/103
+[   3099s] cb_paxreview_r3_e4b_L0 fastapi_13786    done           resolved=False calls=39 584.4s | 13/104
+[   3116s] cb_paxreview_r3_e4b_L0 rich_3676        done           resolved=False calls=13 226.6s | 13/105
+[   3152s] cb_base15_r3_e4b_L0 rich_3535        done           resolved=False calls=17 160.7s | 12/106
+[   3168s] cb_paxreview_r3_e4b_L0 rich_3675        done           resolved=False calls=38 295.4s | 13/106
+[   3178s] cb_paxreview_r3_e4b_L0 rich_3521        done           resolved=False calls=11 184.6s | 13/107
+[   3184s] cb_base15_r3_e4b_L0 rich_3506        done           resolved=False calls=4 131.6s | 12/107
+[   3186s] cb_paxreview_r3_e4b_L0 rich_3472        done           resolved=False calls=8 87.8s | 13/108
+[   3192s] cb_base15_r3_e4b_L0 rich_3521        done           resolved=False calls=12 176.8s | 12/108
+[   3235s] cb_base15_r3_e4b_L0 rich_3772        done           resolved=False calls=10 389.0s | 12/109
+[   3252s] cb_base15_r3_e4b_L0 rich_3471        done           resolved=False calls=9 67.6s | 12/110
+[   3252s] cb_paxreview_r3_e4b_L0 rich_3782        done           resolved=False calls=39 437.8s | 13/109
+[   3282s] cb_base15_r3_e4b_L0 rich_3454        done           resolved=True calls=9 113.8s | 13/111
+[   3290s] cb_base15_r3_e4b_L0 rich_3472        done           resolved=False calls=21 173.3s | 13/112
+[   3310s] cb_paxreview_r3_e4b_L0 rich_3471        done           resolved=False calls=14 132.6s | 13/110
+[   3335s] cb_base15_r3_e4b_L0 rich_3470        done           resolved=False calls=19 142.4s | 13/113
+[   3380s] cb_paxreview_r3_e4b_L0 rich_3506        done           resolved=False calls=13 354.2s | 13/111
+[   3382s] cb_base15_r3_e4b_L0 rich_3052        done           resolved=False calls=6 100.2s | 13/114
+[   3392s] cb_paxreview_r3_e4b_L0 rich_3278        done           resolved=False calls=4 102.4s | 13/112
+[   3406s] cb_paxreview_r3_e4b_L0 rich_3469        done           resolved=False calls=15 171.0s | 13/113
+[   3431s] cb_paxreview_r3_e4b_L0 rich_3470        done           resolved=False calls=14 244.4s | 13/114
+[   3434s] cb_base15_r3_e4b_L0 rich_3278        done           resolved=False calls=9 123.3s | 13/115
+[   3448s] cb_base15_r3_e4b_L0 rich_2943        done           resolved=True calls=9 68.3s | 14/116
+[   3456s] cb_paxreview_r3_e4b_L0 rich_3052        done           resolved=False calls=17 204.1s | 13/115
+[   3465s] cb_paxreview_r3_e4b_L0 rich_2725        done           resolved=False calls=3 83.0s | 13/116
+[   3470s] cb_paxreview_r3_e4b_L0 rich_3454        done           resolved=True calls=15 318.1s | 14/117
+[   3481s] cb_base15_r3_e4b_L0 rich_3469        done           resolved=False calls=12 229.1s | 14/117
+[   3495s] cb_base15_r3_e4b_L0 rich_3480        done           resolved=False calls=8 403.0s | 14/118
+[   3503s] cb_paxreview_r3_e4b_L0 rich_2943        done           resolved=False calls=20 167.9s | 14/118
+[   3549s] cb_base15_r3_e4b_L0 rich_3006        done           resolved=True calls=4 46.5s | 15/119
+[   3553s] cb_paxreview_r3_e4b_L0 rich_3105        done           resolved=False calls=15 146.5s | 14/119
+[   3556s] cb_paxreview_r3_e4b_L0 rich_3006        done           resolved=True calls=5 60.9s | 15/120
+[   3583s] cb_base15_r3_e4b_L0 rich_2725        done           resolved=False calls=21 190.7s | 15/120
+[   3583s] cb_base15_r3_e4b_L0 rich_3043        done           resolved=False calls=9 118.3s | 15/121
+[   3585s] cb_base15_r3_e4b_L0 rich_3105        done           resolved=False calls=25 154.2s | 15/122
+[   3586s] cb_base15_r3_e4b_L0 rich_3130        done           resolved=False calls=9 137.7s | 15/123
+[   3608s] cb_paxreview_r3_e4b_L0 rich_3043        done           resolved=False calls=13 152.4s | 15/121
+[   3608s] cb_paxreview_r3_e4b_L0 rich_3067        done           resolved=False calls=13 138.3s | 15/122
+[   3622s] cb_base15_r3_e4b_L0 rich_3067        done           resolved=False calls=16 141.0s | 15/124
+[   3635s] cb_paxreview_r3_e4b_L0 rich_3064        done           resolved=False calls=11 86.4s | 15/123
+[   3667s] cb_paxreview_r3_e4b_L0 rich_3063        done           resolved=False calls=14 110.9s | 15/124
+[   3675s] cb_base15_r3_e4b_L0 rich_3061        done           resolved=False calls=13 90.2s | 15/125
+[   3707s] cb_base15_r3_e4b_L0 rich_3063        done           resolved=False calls=14 124.0s | 15/126
+[   3719s] cb_base15_r3_e4b_L0 rich_3064        done           resolved=False calls=13 166.6s | 15/127
+[   3739s] cb_paxreview_r3_e4b_L0 rich_3480        done           resolved=False calls=23 657.3s | 15/125
+[   3748s] cb_paxreview_r3_e4b_L0 rich_3061        done           resolved=False calls=18 164.5s | 15/126
+[   3772s] cb_paxreview_r3_e4b_L0 rich_3130        done           resolved=False calls=31 338.0s | 15/127
+[   3778s] done {'cb_paxreview_r3_e4b_L0': [15, 127], 'cb_base15_r3_e4b_L0': [15, 127]}
